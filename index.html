@@ -5,94 +5,98 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SignSculpt در حال آماده شدن</title>
 <style>
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
-}
+    /* تنظیمات پایه */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+    }
 
-.container {
-    max-width: 800px;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    position: relative;
-}
+    .container {
+        max-width: 800px;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        position: relative;
+    }
 
-h1 {
-    color: #00796b;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
+    h1 {
+        color: #00796b;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
 
-p {
-    color: #555;
-    font-size: 18px;
-    margin-bottom: 30px;
-}
+    p {
+        color: #555;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
 
-.workers {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
+    /* کارگران و ابزار */
+    .workers {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
 
-.worker {
-    width: 120px;
-    position: relative;
-    animation: bounce 1s infinite alternate;
-}
+    .worker {
+        width: 120px;
+        position: relative;
+        animation: bounce 1s infinite alternate;
+    }
 
-.worker img {
-    width: 100%;
-    border-radius: 10px;
-}
+    .worker img {
+        width: 100%;
+        border-radius: 10px;
+    }
 
-.tool {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    animation: swing 1s infinite alternate;
-}
+    .tool {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        animation: swing 1s infinite alternate;
+    }
 
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
-}
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-20px); }
+    }
 
-@keyframes swing {
-    0% { transform: rotate(-20deg); }
-    100% { transform: rotate(20deg); }
-}
+    @keyframes swing {
+        0% { transform: rotate(-20deg); }
+        100% { transform: rotate(20deg); }
+    }
 
-.cloud {
-    position: absolute;
-    width: 200px;
-    height: 60px;
-    background: rgba(255,255,255,0.7);
-    border-radius: 50%;
-    top: 20%;
-    animation: cloudmove 25s linear infinite;
-}
+    /* ابر و گرد و خاک انیمیشنی */
+    .cloud {
+        position: absolute;
+        width: 200px;
+        height: 60px;
+        background: rgba(255,255,255,0.7);
+        border-radius: 50%;
+        top: 20%;
+        animation: cloudmove 25s linear infinite;
+    }
 
-.cloud:nth-child(2) { top: 10%; width: 150px; animation-duration: 35s; }
-.cloud:nth-child(3) { top: 30%; width: 180px; animation-duration: 40s; }
+    .cloud:nth-child(2) { top: 10%; width: 150px; animation-duration: 35s; }
+    .cloud:nth-child(3) { top: 30%; width: 180px; animation-duration: 40s; }
 
-@keyframes cloudmove {
-    0% { left: -250px; }
-    100% { left: 100%; }
-}
+    @keyframes cloudmove {
+        0% { left: -250px; }
+        100% { left: 100%; }
+    }
+
 </style>
 </head>
 <body>
@@ -117,7 +121,7 @@ p {
                 <img class="tool" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="ابزار">
             </div>
         </div>
-        <p>کارگران اینجا مشغول کارند، لطفاً بعداً دوباره مراجعه کنید.</p>
+        <p>کارگران, مشغول کارند، لطفاً بعداً دوباره مراجعه کنید.</p>
     </div>
 </body>
 </html>
