@@ -2,108 +2,131 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>SignSculpt</title>
+  <title>SignSculpt - نمونه کارها</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- فونت -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- GLightbox برای نمونه‌کارها -->
+  <!-- GLightbox -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
-  <!-- AOS انیمیشن هنگام اسکرول -->
+  <!-- AOS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
 
   <style>
     * { box-sizing: border-box; }
-    body { margin:0; background:#f7f7f7; font-family:'Vazirmatn',sans-serif; color:#111; }
-    .container { max-width:900px; margin:80px auto; padding:60px 40px; border:1px solid rgba(0,0,0,0.08); background:#fff; border-radius:8px; }
-    .hero { text-align:center; margin-bottom:70px; }
-    .hero h1 { font-size:42px; font-weight:600; line-height:1.6; margin:0; letter-spacing:-0.5px; }
-    .hero span { display:block; font-size:14px; color:#777; margin-top:20px; letter-spacing:2px; }
-    .about { text-align:center; font-size:16px; line-height:2; color:#444; margin-bottom:50px; }
-    .divider { width:60px; height:1px; background:#c9a24d; margin:0 auto 50px; opacity:0.6; border-radius:1px; }
-    .contact { text-align:center; font-size:15px; line-height:2.2; color:#222; }
-    .contact div { margin-bottom:30px; }
-    .contact span { display:block; color:#777; font-size:13px; letter-spacing:1px; }
-    footer { text-align:center; margin-top:80px; font-size:12px; color:#888; }
-
-    /* فرم تماس */
-    form { max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px; }
-    input, textarea { padding:12px; font-size:14px; border:1px solid rgba(0,0,0,0.2); border-radius:5px; width:100%; }
-    button { padding:12px; border:none; background:#c9a24d; color:#fff; font-weight:600; cursor:pointer; border-radius:5px; transition:0.3s; }
-    button:hover { background:#b08b3f; }
-
-    /* شبکه های اجتماعی */
-    .socials { display:flex; justify-content:center; gap:25px; margin-bottom:50px; font-size:22px; color:#111; }
-    .socials a { color:inherit; transition:0.3s; }
-    .socials a:hover { color:#c9a24d; }
-
-    /* لودینگ */
-    #loading { position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;display:flex;justify-content:center;align-items:center;z-index:9999; }
-    #loading span { width:15px;height:15px;margin:5px;background:#c9a24d;display:inline-block;border-radius:50%;animation:loading 0.6s infinite alternate; }
-    #loading span:nth-child(2){ animation-delay:0.2s; }
-    #loading span:nth-child(3){ animation-delay:0.4s; }
-    @keyframes loading { to{transform: translateY(-15px);} }
-
-    @media (max-width:600px){ .container { margin:40px 15px; padding:40px 20px; } .hero h1 { font-size:32px; } }
+    body { margin:0; font-family:'Vazirmatn',sans-serif; background: linear-gradient(160deg,#B4B184,#F5F1E6); color:#111; }
+    .container { max-width:1200px; margin:80px auto; padding:40px; }
+    h1 { text-align:center; font-size:42px; margin-bottom:30px; }
+    .tabs { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-bottom:50px; }
+    .tabs button { padding:10px 20px; border:none; border-radius:5px; cursor:pointer; background:#fff; font-weight:600; transition:0.3s; }
+    .tabs button.active { background:#c9a24d; color:#fff; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .grid-item { position:relative; overflow:hidden; border-radius:8px; cursor:pointer; }
+    .grid-item img { width:100%; display:block; border-radius:8px; transition:0.3s; }
+    .grid-item:hover img { transform:scale(1.05); }
+    .grid-item span { position:absolute; bottom:10px; right:10px; background:rgba(0,0,0,0.5); color:#fff; padding:5px 10px; border-radius:5px; font-size:13px; }
+    footer { text-align:center; margin-top:60px; font-size:12px; color:#444; }
   </style>
 </head>
 <body>
 
-<!-- لودینگ -->
-<div id="loading">
-  <span></span><span></span><span></span>
-</div>
+<div class="container">
+  <h1 data-aos="fade-up">نمونه کارها</h1>
 
-<div class="container" style="display:none;">
-  <section class="hero" data-aos="fade-up">
-    <h1>ما فرم می‌سازیم<br>نه فقط سازه</h1>
-    <span>DESIGN & BUILD WITH MEANING</span>
-  </section>
-
-  <section class="about" data-aos="fade-up">
-    SignSculpt یک استودیوی طراحی و ساخت است<br>
-    با تمرکز بر فرم، هویت و اجرای دقیق<br>
-    سادگی برای ما یک انتخاب است، نه محدودیت
-  </section>
-
-  <div class="divider" data-aos="fade-up"></div>
-
-  <!-- شبکه های اجتماعی -->
-  <div class="socials" data-aos="fade-up">
-    <a href="https://www.instagram.com/sign.sculpt" target="_blank" title="Instagram">&#x1F4F7;</a>
-    <a href="https://t.me/+989148127104" target="_blank" title="Telegram">&#x1F4AC;</a>
-    <a href="https://wa.me/989148127104" target="_blank" title="WhatsApp">&#x2709;&#xFE0F;</a>
+  <!-- Tabs دسته‌ها -->
+  <div class="tabs" data-aos="fade-up">
+    <button class="tab-btn active" data-category="all">همه</button>
+    <button class="tab-btn" data-category="composite">کامپوزیت</button>
+    <button class="tab-btn" data-category="thermo">ترمو وود</button>
+    <button class="tab-btn" data-category="chlnm">چلنیوم</button>
+    <button class="tab-btn" data-category="parametric">پارامتریک</button>
+    <button class="tab-btn" data-category="element">المان</button>
+    <button class="tab-btn" data-category="origami">اوریگامی</button>
+    <button class="tab-btn" data-category="verona">ورونای</button>
   </div>
 
-  <!-- فرم تماس -->
-  <form action="https://formspree.io/f/mnqlwzvd" method="POST" data-aos="fade-up">
-    <input type="text" name="name" placeholder="نام شما" required>
-    <input type="email" name="email" placeholder="ایمیل شما" required>
-    <textarea name="message" rows="5" placeholder="پیام شما" required></textarea>
-    <button type="submit">ارسال پیام</button>
-  </form>
+  <!-- Grid نمونه‌کارها -->
+  <div class="grid" data-aos="fade-up">
+    <!-- مثال آیتم‌ها -->
+    <div class="grid-item" data-category="composite">
+      <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="کامپوزیت نما و تابلو">
+        <img src="https://via.placeholder.com/400x300" alt="کامپوزیت">
+        <span>کامپوزیت</span>
+      </a>
+    </div>
+    <div class="grid-item" data-category="thermo">
+      <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="ترمو وود">
+        <img src="https://via.placeholder.com/400x300" alt="ترمو وود">
+        <span>ترمو وود</span>
+      </a>
+    </div>
+    <div class="grid-item" data-category="chlnm">
+      <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="چلنیوم">
+        <img src="https://via.placeholder.com/400x300" alt="چلنیوم">
+        <span>چلنیوم</span>
+      </a>
+    </div>
+    <div class="grid-item" data-category="parametric">
+      <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="پارامتریک">
+        <img src="https://via.placeholder.com/400x300" alt="پارامتریک">
+        <span>پارامتریک</span>
+      </a>
+    </div>
+    <div class="grid-item" data-category="element">
+      <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="المان">
+        <img src="https://via.placeholder.com/400x300" alt="المان">
+        <span>المان</span>
+      </a>
+    </div>
+    <div class="grid-item" data-category="origami">
+      <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="اوریگامی">
+        <img src="https://via.placeholder.com/400x300" alt="اوریگامی">
+        <span>اوریگامی</span>
+      </a>
+    </div>
+    <div class="grid-item" data-category="verona">
+      <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="ورونای">
+        <img src="https://via.placeholder.com/400x300" alt="ورونای">
+        <span>ورونای</span>
+      </a>
+    </div>
+  </div>
 
   <footer data-aos="fade-up">
     © SignSculpt Studio
   </footer>
 </div>
 
-<!-- اسکریپت ها -->
+<!-- اسکریپت‌ها -->
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  // لودینگ
-  window.addEventListener('load', function(){
-    document.getElementById('loading').style.display = 'none';
-    document.querySelector('.container').style.display = 'block';
-  });
+  // GLightbox
+  const lightbox = GLightbox({ touchNavigation:true, loop:true });
 
   // AOS
-  AOS.init({
-    duration: 1000,
-    once: true
+  AOS.init({ duration:1000, once:true });
+
+  // Filter نمونه‌کارها
+  const tabs = document.querySelectorAll('.tab-btn');
+  const items = document.querySelectorAll('.grid-item');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const category = tab.getAttribute('data-category');
+      items.forEach(item => {
+        if(category === 'all' || item.getAttribute('data-category') === category){
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
   });
 </script>
 
