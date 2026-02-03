@@ -1,39 +1,82 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>SignSculpt - نمونه کارها</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>SignSculpt Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- فونت -->
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- فونت فارسی -->
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- GLightbox -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<!-- GLightbox برای نمونه‌کارها -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+<!-- AOS انیمیشن هنگام اسکرول -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
 
-  <style>
-    * { box-sizing: border-box; }
-    body { margin:0; font-family:'Vazirmatn',sans-serif; background: linear-gradient(160deg,#B4B184,#F5F1E6); color:#111; }
-    .container { max-width:1200px; margin:80px auto; padding:40px; }
-    h1 { text-align:center; font-size:42px; margin-bottom:30px; }
-    .tabs { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-bottom:50px; }
-    .tabs button { padding:10px 20px; border:none; border-radius:5px; cursor:pointer; background:#fff; font-weight:600; transition:0.3s; }
-    .tabs button.active { background:#c9a24d; color:#fff; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-    .grid-item { position:relative; overflow:hidden; border-radius:8px; cursor:pointer; }
-    .grid-item img { width:100%; display:block; border-radius:8px; transition:0.3s; }
-    .grid-item:hover img { transform:scale(1.05); }
-    .grid-item span { position:absolute; bottom:10px; right:10px; background:rgba(0,0,0,0.5); color:#fff; padding:5px 10px; border-radius:5px; font-size:13px; }
-    footer { text-align:center; margin-top:60px; font-size:12px; color:#444; }
-  </style>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Vazirmatn',sans-serif; background: linear-gradient(160deg,#B4B184,#F5F1E6); color:#111; }
+  a { text-decoration:none; color:inherit; }
+  .container { max-width:1200px; margin:0 auto; padding:50px 20px; }
+  
+  /* Hero / خوش آمدگویی */
+  .hero { text-align:center; margin-bottom:60px; }
+  .hero h1 { font-size:42px; font-weight:600; margin-bottom:15px; }
+  .hero span { font-size:16px; color:#555; letter-spacing:1px; }
+  
+  /* سوییچ زبان */
+  .lang-switch { position:fixed; top:20px; left:20px; display:flex; gap:10px; }
+  .lang-switch button { border:none; background:#fff; padding:5px 12px; border-radius:5px; cursor:pointer; font-weight:600; transition:0.3s; }
+  .lang-switch button.active { background:#c9a24d; color:#fff; }
+
+  /* شبکه های اجتماعی */
+  .socials { display:flex; justify-content:center; gap:25px; margin-bottom:50px; font-size:24px; }
+  .socials a { transition:0.3s; }
+  .socials a:hover { color:#c9a24d; }
+
+  /* نمونه کارها */
+  .tabs { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-bottom:40px; }
+  .tabs button { padding:10px 20px; border:none; border-radius:5px; cursor:pointer; background:#fff; font-weight:600; transition:0.3s; }
+  .tabs button.active { background:#c9a24d; color:#fff; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+  .grid-item { position:relative; overflow:hidden; border-radius:8px; cursor:pointer; }
+  .grid-item img { width:100%; display:block; border-radius:8px; transition:0.3s; }
+  .grid-item:hover img { transform:scale(1.05); }
+  .grid-item span { position:absolute; bottom:10px; right:10px; background:rgba(0,0,0,0.5); color:#fff; padding:5px 10px; border-radius:5px; font-size:13px; }
+
+  /* فرم تماس */
+  form { max-width:500px; margin:50px auto; display:flex; flex-direction:column; gap:15px; }
+  input, textarea { padding:12px; font-size:14px; border:1px solid rgba(0,0,0,0.2); border-radius:5px; width:100%; }
+  button.submit { padding:12px; border:none; background:#c9a24d; color:#fff; font-weight:600; cursor:pointer; border-radius:5px; transition:0.3s; }
+  button.submit:hover { background:#b08b3f; }
+
+  footer { text-align:center; margin:60px 0 20px; font-size:12px; color:#444; }
+
+  @media (max-width:600px){ .hero h1 { font-size:32px; } }
+</style>
 </head>
 <body>
 
+<!-- سوییچ زبان -->
+<div class="lang-switch">
+  <button class="active" data-lang="fa">فارسی</button>
+  <button data-lang="en">EN</button>
+</div>
+
 <div class="container">
-  <h1 data-aos="fade-up">نمونه کارها</h1>
+  <!-- Hero / خوش آمدگویی -->
+  <section class="hero" data-aos="fade-up">
+    <h1>از طراحی تا اجرا | پشتیبان شما</h1>
+    <span>Design & Build with Support</span>
+  </section>
+
+  <!-- شبکه های اجتماعی -->
+  <div class="socials" data-aos="fade-up">
+    <a href="https://www.instagram.com/sign.sculpt" target="_blank" title="Instagram">📸</a>
+    <a href="https://t.me/+989148127104" target="_blank" title="Telegram">💬</a>
+    <a href="https://wa.me/989148127104" target="_blank" title="WhatsApp">📱</a>
+  </div>
 
   <!-- Tabs دسته‌ها -->
   <div class="tabs" data-aos="fade-up">
@@ -94,12 +137,19 @@
     </div>
   </div>
 
+  <!-- فرم تماس -->
+  <form action="https://formspree.io/f/mnqlwzvd" method="POST" data-aos="fade-up">
+    <input type="text" name="name" placeholder="نام شما" required>
+    <input type="email" name="email" placeholder="ایمیل شما" required>
+    <textarea name="message" rows="5" placeholder="پیام شما" required></textarea>
+    <button type="submit" class="submit">ارسال پیام</button>
+  </form>
+
   <footer data-aos="fade-up">
     © SignSculpt Studio
   </footer>
 </div>
 
-<!-- اسکریپت‌ها -->
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
@@ -126,6 +176,22 @@
           item.style.display = 'none';
         }
       });
+    });
+  });
+
+  // سوییچ زبان (فارسی/انگلیسی)
+  const langButtons = document.querySelectorAll('.lang-switch button');
+  langButtons.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      langButtons.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      if(btn.dataset.lang==='en'){
+        document.querySelector('.hero h1').textContent='Design & Build with Support';
+        document.querySelector('.hero span').textContent='Professional Studio';
+      } else {
+        document.querySelector('.hero h1').textContent='از طراحی تا اجرا | پشتیبان شما';
+        document.querySelector('.hero span').textContent='Design & Build with Support';
+      }
     });
   });
 </script>
