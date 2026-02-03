@@ -6,7 +6,6 @@
 <title>SignSculpt</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-    /* --- Reset & Base --- */
     * {margin:0; padding:0; box-sizing:border-box;}
     body {
         font-family: 'Roboto', sans-serif;
@@ -19,7 +18,6 @@
     a {color:#1e90ff; text-decoration:none;}
     a:hover {text-decoration:underline;}
 
-    /* --- Header --- */
     header {
         text-align:center;
         padding:80px 20px;
@@ -29,14 +27,9 @@
     header h1 {font-size:3rem; font-weight:700; margin-bottom:20px;}
     header p {font-size:1.2rem; color:#bbb;}
 
-    /* --- Main --- */
-    main {
-        flex:1;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        padding:40px 20px;
-    }
+    main {flex:1; padding:40px 20px; display:flex; flex-direction:column; align-items:center; gap:60px;}
+
+    /* --- Contact Card --- */
     .contact-card {
         background-color: #1e1e1e;
         padding:40px 30px;
@@ -70,7 +63,44 @@
     .icon-links a:hover {background-color:#1e90ff;}
     .icon-links svg {width:24px; height:24px; fill:#fff;}
 
-    /* --- Footer --- */
+    /* --- Portfolio Section --- */
+    .portfolio {
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap:30px;
+        width:100%;
+        max-width:1200px;
+    }
+    .project-card {
+        background-color:#1e1e1e;
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow:0 6px 18px rgba(0,0,0,0.4);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor:pointer;
+    }
+    .project-card img {
+        width:100%;
+        display:block;
+    }
+    .project-card .project-info {
+        padding:20px;
+        text-align:center;
+    }
+    .project-card h3 {
+        font-size:1.5rem;
+        margin-bottom:10px;
+        color:#fff;
+    }
+    .project-card p {
+        font-size:1rem;
+        color:#bbb;
+    }
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow:0 12px 30px rgba(0,0,0,0.6);
+    }
+
     footer {
         text-align:center;
         padding:20px;
@@ -80,17 +110,8 @@
         box-shadow:0 -2px 6px rgba(0,0,0,0.3);
     }
 
-    /* --- Animations --- */
     @keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
     @keyframes slideUp {from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);}}
-
-    /* --- Responsive --- */
-    @media (max-width:600px){
-        header h1{font-size:2rem;}
-        header p{font-size:1rem;}
-        .contact-card h2{font-size:1.5rem;}
-        .contact-card p{font-size:1rem;}
-    }
 </style>
 </head>
 <body>
@@ -101,26 +122,54 @@
 </header>
 
 <main>
-    <div class="contact-card">
-        <h2>تماس با ما</h2>
-        <p>📍 مکان: تبریز</p>
-        <p>📞 شماره تماس / واتساپ / تلگرام: <a href="tel:+989148127104">09148127104</a></p>
-        <p>📱 اینستاگرام: <a href="https://www.instagram.com/sign.sculpt/" target="_blank">@sign.sculpt</a></p>
-        <div class="icon-links">
-            <!-- واتساپ -->
-            <a href="https://wa.me/989148127104" target="_blank" title="WhatsApp">
-                <svg viewBox="0 0 24 24"><path d="M16.7 13.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-.9 1.2c-.1.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.6-2.1-.1-.3 0-.5.1-.7.1-.2.2-.3.3-.5.1-.2.1-.3 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.4-.5-.7-.5-.3 0-.6 0-.9 0-.3 0-.7.1-1 .3-.3.2-.9.9-.9 2.2s.9 2.6 1 2.8c.1.2 1.6 2.4 3.9 3.3 2.3.9 2.3.6 2.7.5.4-.1 1.3-.5 1.5-1s.2-.8.1-1c-.1-.2-.2-.3-.5-.5z"/></svg>
-            </a>
-            <!-- تلگرام -->
-            <a href="https://t.me/09148127104" target="_blank" title="Telegram">
-                <svg viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12 0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.627-5.373-12-12-12zm5.23 8.59l-1.28 6.04c-.1.44-.37.55-.75.34l-2.09-1.54-1.01.97c-.11.11-.2.2-.4.2l.14-2.01 3.66-3.31c.16-.14-.03-.22-.25-.08l-4.53 2.85-1.95-.61c-.42-.13-.43-.42.09-.62l7.61-2.94c.36-.14.67.09.56.61z"/></svg>
-            </a>
-            <!-- اینستاگرام -->
-            <a href="https://www.instagram.com/sign.sculpt/" target="_blank" title="Instagram">
-                <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.4a4.91 4.91 0 011.77 1.05 4.91 4.91 0 011.05 1.77c.16.46.346 1.26.4 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.4 2.43a4.91 4.91 0 01-1.05 1.77 4.91 4.91 0 01-1.77 1.05c-.46.16-1.26.346-2.43.4-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.4a4.91 4.91 0 01-1.77-1.05 4.91 4.91 0 01-1.05-1.77c-.16-.46-.346-1.26-.4-2.43C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.054-1.17.24-1.97.4-2.43a4.91 4.91 0 011.05-1.77 4.91 4.91 0 011.77-1.05c.46-.16 1.26-.346 2.43-.4C8.416 2.212 8.8 2.2 12 2.2zm0 1.8c-3.146 0-3.513.012-4.752.07-1.025.046-1.582.217-1.95.363a3.14 3.14 0 00-1.14.73 3.14 3.14 0 00-.73 1.14c-.146.368-.317.925-.363 1.95-.058 1.239-.07 1.606-.07 4.752s.012 3.513.07 4.752c.046 1.025.217 1.582.363 1.95.166.42.395.783.73 1.14a3.14 3.14 0 001.14.73c.368.146.925.317 1.95.363 1.239.058 1.606.07 4.752.07s3.513-.012 4.752-.07c1.025-.046 1.582-.217 1.95-.363a3.14 3.14 0 001.14-.73 3.14 3.14 0 00.73-1.14c.146-.368.317-.925.363-1.95.058-1.239.07-1.606.07-4.752s-.012-3.513-.07-4.752c-.046-1.025-.217-1.582-.363-1.95a3.14 3.14 0 00-.73-1.14 3.14 3.14 0 00-1.14-.73c-.368-.146-.925-.317-1.95-.363-1.239-.058-1.606-.07-4.752-.07zm0 4.8a5.2 5.2 0 110 10.4 5.2 5.2 0 010-10.4zm0 1.8a3.4 3.4 0 100 6.8 3.4 3.4 0 000-6.8zm6.5-.9a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
-            </a>
+
+<!-- Contact Card -->
+<div class="contact-card">
+    <h2>تماس با ما</h2>
+    <p>📍 مکان: تبریز</p>
+    <p>📞 شماره تماس / واتساپ / تلگرام: <a href="tel:+989148127104">09148127104</a></p>
+    <p>📱 اینستاگرام: <a href="https://www.instagram.com/sign.sculpt/" target="_blank">@sign.sculpt</a></p>
+    <div class="icon-links">
+        <!-- واتساپ -->
+        <a href="https://wa.me/989148127104" target="_blank" title="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M16.7 13.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-.9 1.2c-.1.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.6-2.1-.1-.3 0-.5.1-.7.1-.2.2-.3.3-.5.1-.2.1-.3 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.4-.5-.7-.5-.3 0-.6 0-.9 0-.3 0-.7.1-1 .3-.3.2-.9.9-.9 2.2s.9 2.6 1 2.8c.1.2 1.6 2.4 3.9 3.3 2.3.9 2.3.6 2.7.5.4-.1 1.3-.5 1.5-1s.2-.8.1-1c-.1-.2-.2-.3-.5-.5z"/></svg>
+        </a>
+        <!-- تلگرام -->
+        <a href="https://t.me/09148127104" target="_blank" title="Telegram">
+            <svg viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12 0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.627-5.373-12-12-12zm5.23 8.59l-1.28 6.04c-.1.44-.37.55-.75.34l-2.09-1.54-1.01.97c-.11.11-.2.2-.4.2l.14-2.01 3.66-3.31c.16-.14-.03-.22-.25-.08l-4.53 2.85-1.95-.61c-.42-.13-.43-.42.09-.62l7.61-2.94c.36-.14.67.09.56.61z"/></svg>
+        </a>
+        <!-- اینستاگرام -->
+        <a href="https://www.instagram.com/sign.sculpt/" target="_blank" title="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.4a4.91 4.91 0 011.77 1.05 4.91 4.91 0 011.05 1.77c.16.46.346 1.26.4 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.4 2.43a4.91 4.91 0 01-1.05 1.77 4.91 4.91 0 01-1.77 1.05c-.46.16-1.26.346-2.43.4-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.4a4.91 4.91 0 01-1.77-1.05 4.91 4.91 0 01-1.05-1.77c-.16-.46-.346-1.26-.4-2.43C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.054-1.17.24-1.97.4-2.43a4.91 4.91 0 011.05-1.77 4.91 4.91 0 011.77-1.05c.46-.16 1.26-.346 2.43-.4C8.416 2.212 8.8 2.2 12 2.2zm0 1.8c-3.146 0-3.513.012-4.752.07-1.025.046-1.582.217-1.95.363a3.14 3.14 0 00-1.14.73 3.14 3.14 0 00-.73 1.14c-.146.368-.317.925-.363 1.95-.058 1.239-.07 1.606-.07 4.752s.012 3.513.07 4.752c.046 1.025.217 1.582.363 1.95.166.42.395.783.73 1.14a3.14 3.14 0 001.14.73c.368.146.925.317 1.95.363 1.239.058 1.606.07 4.752.07s3.513-.012 4.752-.07c1.025-.046 1.582-.217 1.95-.363a3.14 3.14 0 001.14-.73 3.14 3.14 0 00.73-1.14c.146-.368.317-.925.363-1.95.058-1.239.07-1.606.07-4.752s-.012-3.513-.07-4.752c-.046-1.025-.217-1.582-.363-1.95a3.14 3.14 0 00-.73-1.14 3.14 3.14 0 00-1.14-.73c-.368-.146-.925-.317-1.95-.363-1.239-.058-1.606-.07-4.752-.07zm0 4.8a5.2 5.2 0 110 10.4 5.2 5.2 0 010-10.4zm0 1.8a3.4 3.4 0 100 6.8 3.4 3.4 0 000-6.8zm6.5-.9a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+        </a>
+    </div>
+</div>
+
+<!-- Portfolio Section -->
+<div class="portfolio">
+    <div class="project-card">
+        <img src="https://via.placeholder.com/400x250.png?text=Project+1" alt="Project 1">
+        <div class="project-info">
+            <h3>نمونه کار ۱</h3>
+            <p>توضیح کوتاه درباره پروژه ۱.</p>
         </div>
     </div>
+    <div class="project-card">
+        <img src="https://via.placeholder.com/400x250.png?text=Project+2" alt="Project 2">
+        <div class="project-info">
+            <h3>نمونه کار ۲</h3>
+            <p>توضیح کوتاه درباره پروژه ۲.</p>
+        </div>
+    </div>
+    <div class="project-card">
+        <img src="https://via.placeholder.com/400x250.png?text=Project+3" alt="Project 3">
+        <div class="project-info">
+            <h3>نمونه کار ۳</h3>
+            <p>توضیح کوتاه درباره پروژه ۳.</p>
+        </div>
+    </div>
+</div>
+
 </main>
 
 <footer>
