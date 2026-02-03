@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SignSculpt</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-    /* Reset */
     * {margin:0; padding:0; box-sizing:border-box;}
     body {font-family: 'Roboto', sans-serif; background: linear-gradient(135deg, #fdfdfd, #e6f0ff); color:#333; line-height:1.6; overflow-x:hidden;}
     a {text-decoration:none; color:inherit;}
-    
+
     /* Header */
     header {
         padding: 80px 20px;
@@ -33,7 +32,7 @@
         transform: translateY(20px);
         animation: fadeSlideIn 1s forwards 0.6s;
     }
-    
+
     @keyframes gradientMove {
         0%{background: linear-gradient(135deg, #cce0ff, #ffffff);}
         50%{background: linear-gradient(135deg, #dcefff, #ffffff);}
@@ -43,9 +42,8 @@
         to {opacity:1; transform: translateY(0);}
     }
 
-    /* Main */
     main {max-width:1000px; margin:40px auto; padding:0 20px;}
-    
+
     /* Contact Cards */
     .contact {
         display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:40px;
@@ -60,16 +58,45 @@
     .card:nth-child(2){animation-delay:0.5s;}
     .card:nth-child(3){animation-delay:0.7s;}
     .card:nth-child(4){animation-delay:0.9s;}
-    
+
     .card:hover {transform: translateY(-8px); box-shadow:0 16px 35px rgba(0,0,0,0.15);}
     .card h3 {margin-bottom:12px; color:#1a73e8;}
     .card p {margin-bottom:8px; color:#555;}
     .card a {display:block; margin-top:8px; color:#1a73e8; font-weight:500; transition: color 0.3s;}
     .card a:hover {color:#0b4cc5;}
 
-    @keyframes fadeSlideUp {
-        to {opacity:1; transform: translateY(0);}
+    @keyframes fadeSlideUp {to {opacity:1; transform: translateY(0);}}
+
+    /* Portfolio */
+    .portfolio {
+        margin-top:60px;
+        text-align:center;
     }
+    .portfolio h2 {font-size:2.5rem; color:#1a73e8; margin-bottom:30px;}
+    .grid {display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:20px;}
+    .project {
+        position:relative;
+        overflow:hidden;
+        border-radius:12px;
+        cursor:pointer;
+        transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .project img {width:100%; display:block; transition: transform 0.4s;}
+    .project:hover img {transform: scale(1.1);}
+    .overlay {
+        position:absolute;
+        top:0; left:0;
+        width:100%; height:100%;
+        background: rgba(26,115,232,0.7);
+        color:#fff;
+        display:flex; flex-direction:column; justify-content:center; align-items:center;
+        opacity:0; transition: opacity 0.4s;
+        text-align:center;
+        padding:15px;
+    }
+    .project:hover .overlay {opacity:1;}
+    .overlay h3 {margin-bottom:10px; font-size:1.3rem;}
+    .overlay p {font-size:1rem;}
 
     /* Footer */
     footer {text-align:center; padding:30px 20px; margin-top:50px; font-size:0.9rem; color:#888;}
@@ -83,36 +110,70 @@
 <body>
 
 <header>
-    <h1>خوش آمدید به SignSculpt</h1>
-    <p>صفحه اصلی شما آماده نمایش است. ما در حال ساخت بهترین‌ها برای شما هستیم!</p>
+    <h1>Welcome to SignSculpt</h1>
+    <p>Your homepage is live! We are crafting the best for you.</p>
 </header>
 
 <main>
     <section class="contact">
         <div class="card">
-            <h3>تماس / Contact</h3>
+            <h3>Contact</h3>
             <p>📞 0914-812-7104</p>
             <a href="https://wa.me/989148127104" target="_blank">WhatsApp</a>
         </div>
         <div class="card">
-            <h3>تلگرام / Telegram</h3>
+            <h3>Telegram</h3>
             <p>🟢 @signsculpt</p>
             <a href="https://t.me/signsculpt" target="_blank">Chat Telegram</a>
         </div>
         <div class="card">
-            <h3>اینستاگرام / Instagram</h3>
+            <h3>Instagram</h3>
             <p>📸 @sign.sculpt</p>
             <a href="https://instagram.com/sign.sculpt" target="_blank">Visit Instagram</a>
         </div>
         <div class="card">
-            <h3>لوکیشن / Location</h3>
-            <p>📍 تبریز / Tabriz, Iran</p>
+            <h3>Location</h3>
+            <p>📍 Tabriz, Iran</p>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="grid">
+            <div class="project">
+                <img src="https://via.placeholder.com/400x300?text=Project+1" alt="Project 1">
+                <div class="overlay">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/400x300?text=Project+2" alt="Project 2">
+                <div class="overlay">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/400x300?text=Project+3" alt="Project 3">
+                <div class="overlay">
+                    <h3>Project 3</h3>
+                    <p>Description of project 3</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/400x300?text=Project+4" alt="Project 4">
+                <div class="overlay">
+                    <h3>Project 4</h3>
+                    <p>Description of project 4</p>
+                </div>
+            </div>
         </div>
     </section>
 </main>
 
 <footer>
-    © 2026 SignSculpt. All rights reserved. تمامی حقوق محفوظ است.
+    © 2026 SignSculpt. All rights reserved.
 </footer>
 
 </body>
