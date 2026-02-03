@@ -1,277 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SignSculpt</title>
+  <meta charset="UTF-8">
+  <title>SignSculpt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- فونت -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  <!-- GLightbox برای نمونه‌کارها -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background: #f7f9fc;
-    color: #333;
-}
+  <!-- AOS انیمیشن هنگام اسکرول -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
 
-/* Wrapper with soft border */
-.wrapper {
-    max-width: 1200px;
-    margin: 30px auto;
-    background: #ffffff;
-    border: 1px solid #e6e9f0;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-    overflow: hidden;
-}
+  <style>
+    * { box-sizing: border-box; }
+    body { margin:0; background:#f7f7f7; font-family:'Vazirmatn',sans-serif; color:#111; }
+    .container { max-width:900px; margin:80px auto; padding:60px 40px; border:1px solid rgba(0,0,0,0.08); background:#fff; border-radius:8px; }
+    .hero { text-align:center; margin-bottom:70px; }
+    .hero h1 { font-size:42px; font-weight:600; line-height:1.6; margin:0; letter-spacing:-0.5px; }
+    .hero span { display:block; font-size:14px; color:#777; margin-top:20px; letter-spacing:2px; }
+    .about { text-align:center; font-size:16px; line-height:2; color:#444; margin-bottom:50px; }
+    .divider { width:60px; height:1px; background:#c9a24d; margin:0 auto 50px; opacity:0.6; border-radius:1px; }
+    .contact { text-align:center; font-size:15px; line-height:2.2; color:#222; }
+    .contact div { margin-bottom:30px; }
+    .contact span { display:block; color:#777; font-size:13px; letter-spacing:1px; }
+    footer { text-align:center; margin-top:80px; font-size:12px; color:#888; }
 
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-    border-bottom: 1px solid #eef1f6;
-}
+    /* فرم تماس */
+    form { max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px; }
+    input, textarea { padding:12px; font-size:14px; border:1px solid rgba(0,0,0,0.2); border-radius:5px; width:100%; }
+    button { padding:12px; border:none; background:#c9a24d; color:#fff; font-weight:600; cursor:pointer; border-radius:5px; transition:0.3s; }
+    button:hover { background:#b08b3f; }
 
-nav a {
-    color: #1a73e8;
-    font-weight: 500;
-    text-decoration: none;
-}
+    /* شبکه های اجتماعی */
+    .socials { display:flex; justify-content:center; gap:25px; margin-bottom:50px; font-size:22px; color:#111; }
+    .socials a { color:inherit; transition:0.3s; }
+    .socials a:hover { color:#c9a24d; }
 
-nav a:hover {
-    text-decoration: underline;
-}
+    /* لودینگ */
+    #loading { position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;display:flex;justify-content:center;align-items:center;z-index:9999; }
+    #loading span { width:15px;height:15px;margin:5px;background:#c9a24d;display:inline-block;border-radius:50%;animation:loading 0.6s infinite alternate; }
+    #loading span:nth-child(2){ animation-delay:0.2s; }
+    #loading span:nth-child(3){ animation-delay:0.4s; }
+    @keyframes loading { to{transform: translateY(-15px);} }
 
-/* Header */
-header {
-    padding: 80px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #eaf2ff, #ffffff);
-}
-
-header h1 {
-    font-size: 3rem;
-    color: #1a73e8;
-    margin-bottom: 15px;
-}
-
-header p {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-/* Main */
-main {
-    padding: 60px 20px;
-}
-
-/* Contact cards */
-.contact {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    margin-bottom: 80px;
-}
-
-.card {
-    background: #fff;
-    border: 1px solid #eef1f6;
-    border-radius: 14px;
-    padding: 30px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-}
-
-.card h3 {
-    color: #1a73e8;
-    margin-bottom: 15px;
-}
-
-.card p {
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 18px;
-    background: #1a73e8;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.card a:hover {
-    background: #0b4cc5;
-}
-
-/* Portfolio */
-.portfolio h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #1a73e8;
-    margin-bottom: 40px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-.project {
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid #eef1f6;
-    transition: transform 0.4s ease;
-}
-
-.project img {
-    width: 100%;
-    display: block;
-}
-
-.project:hover {
-    transform: translateY(-6px);
-}
-
-/* Footer */
-footer {
-    padding: 30px 20px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #888;
-    border-top: 1px solid #eef1f6;
-}
-
-/* Acrobat (bottom corner) */
-.acrobat {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 70px;
-    opacity: 0.6;
-    pointer-events: none;
-    animation: flip 4s ease-in-out infinite;
-    z-index: 999;
-}
-
-.acrobat svg {
-    width: 100%;
-    height: auto;
-    stroke: #1a73e8;
-    stroke-width: 4;
-    fill: none;
-    stroke-linecap: round;
-}
-
-@keyframes flip {
-    0%   { transform: rotate(0deg) translateY(0); }
-    25%  { transform: rotate(20deg) translateY(-8px); }
-    50%  { transform: rotate(-20deg) translateY(-15px); }
-    75%  { transform: rotate(10deg) translateY(-8px); }
-    100% { transform: rotate(0deg) translateY(0); }
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2.2rem;
-    }
-}
-</style>
+    @media (max-width:600px){ .container { margin:40px 15px; padding:40px 20px; } .hero h1 { font-size:32px; } }
+  </style>
 </head>
-
 <body>
 
-<div class="wrapper">
-
-<nav>
-    <a href="#contact">Contact</a>
-    <a href="#portfolio">Portfolio</a>
-</nav>
-
-<header>
-    <h1>SignSculpt</h1>
-    <p>We design and build modern digital experiences</p>
-</header>
-
-<main>
-
-<section class="contact" id="contact">
-    <div class="card">
-        <h3>Contact</h3>
-        <p>0914 812 7104</p>
-        <a href="https://wa.me/989148127104" target="_blank">WhatsApp</a>
-    </div>
-
-    <div class="card">
-        <h3>Telegram</h3>
-        <p>@signsculpt</p>
-        <a href="https://t.me/signsculpt" target="_blank">Open</a>
-    </div>
-
-    <div class="card">
-        <h3>Instagram</h3>
-        <p>@sign.sculpt</p>
-        <a href="https://instagram.com/sign.sculpt" target="_blank">View</a>
-    </div>
-
-    <div class="card">
-        <h3>Location</h3>
-        <p>Tabriz, Iran</p>
-    </div>
-</section>
-
-<section class="portfolio" id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="grid">
-        <div class="project">
-            <img src="https://via.placeholder.com/400x300?text=Project+1">
-        </div>
-        <div class="project">
-            <img src="https://via.placeholder.com/400x300?text=Project+2">
-        </div>
-        <div class="project">
-            <img src="https://via.placeholder.com/400x300?text=Project+3">
-        </div>
-    </div>
-</section>
-
-</main>
-
-<footer>
-    © 2026 SignSculpt. All rights reserved.
-</footer>
-
+<!-- لودینگ -->
+<div id="loading">
+  <span></span><span></span><span></span>
 </div>
 
-<!-- Acrobat SVG -->
-<div class="acrobat">
-    <svg viewBox="0 0 100 100">
-        <circle cx="50" cy="18" r="8"/>
-        <line x1="50" y1="26" x2="50" y2="55"/>
-        <line x1="50" y1="35" x2="30" y2="45"/>
-        <line x1="50" y1="35" x2="70" y2="45"/>
-        <line x1="50" y1="55" x2="35" y2="80"/>
-        <line x1="50" y1="55" x2="65" y2="80"/>
-    </svg>
+<div class="container" style="display:none;">
+  <section class="hero" data-aos="fade-up">
+    <h1>ما فرم می‌سازیم<br>نه فقط سازه</h1>
+    <span>DESIGN & BUILD WITH MEANING</span>
+  </section>
+
+  <section class="about" data-aos="fade-up">
+    SignSculpt یک استودیوی طراحی و ساخت است<br>
+    با تمرکز بر فرم، هویت و اجرای دقیق<br>
+    سادگی برای ما یک انتخاب است، نه محدودیت
+  </section>
+
+  <div class="divider" data-aos="fade-up"></div>
+
+  <!-- شبکه های اجتماعی -->
+  <div class="socials" data-aos="fade-up">
+    <a href="https://www.instagram.com/sign.sculpt" target="_blank" title="Instagram">&#x1F4F7;</a>
+    <a href="https://t.me/+989148127104" target="_blank" title="Telegram">&#x1F4AC;</a>
+    <a href="https://wa.me/989148127104" target="_blank" title="WhatsApp">&#x2709;&#xFE0F;</a>
+  </div>
+
+  <!-- فرم تماس -->
+  <form action="https://formspree.io/f/mnqlwzvd" method="POST" data-aos="fade-up">
+    <input type="text" name="name" placeholder="نام شما" required>
+    <input type="email" name="email" placeholder="ایمیل شما" required>
+    <textarea name="message" rows="5" placeholder="پیام شما" required></textarea>
+    <button type="submit">ارسال پیام</button>
+  </form>
+
+  <footer data-aos="fade-up">
+    © SignSculpt Studio
+  </footer>
 </div>
+
+<!-- اسکریپت ها -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // لودینگ
+  window.addEventListener('load', function(){
+    document.getElementById('loading').style.display = 'none';
+    document.querySelector('.container').style.display = 'block';
+  });
+
+  // AOS
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
 
 </body>
 </html>
