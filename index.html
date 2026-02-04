@@ -237,6 +237,24 @@
 
     فعالیت ما به‌صورت آنلاین و پروژه‌ای است. <br>
   برای مشاوره و همکاری، از طریق تلفن، ایمیل یا شبکه‌های اجتماعی با ما در ارتباط باشید.
+<!-- شمارنده بازدید ساده -->
+<div id="visitor-counter" style="text-align:center; margin-top:20px; font-weight:600; color:#555;">
+  تعداد بازدید سایت: <span id="count">0</span>
+</div>
+
+<script>
+// بررسی LocalStorage برای ذخیره تعداد بازدیدها
+let count = localStorage.getItem('siteVisitCount');
+
+if (!count) {
+  count = 0;
+}
+count = parseInt(count) + 1;
+localStorage.setItem('siteVisitCount', count);
+
+// نمایش تعداد
+document.getElementById('count').textContent = count;
+</script>
   </footer>
      © SignSculpt Studio
 </footer>
