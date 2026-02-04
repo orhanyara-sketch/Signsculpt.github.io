@@ -15,49 +15,50 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
 
 <style>
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body { font-family:'Vazirmatn',sans-serif; background: linear-gradient(160deg,#B4B184,#F5F1E6); color:#111; }
-  a { text-decoration:none; color:inherit; }
-  .container { max-width:1200px; margin:0 auto; padding:50px 20px; }
-  
-  /* Hero / خوش آمدگویی */
-  .hero { text-align:center; margin-bottom:60px; }
-  .hero h1 { font-size:42px; font-weight:600; margin-bottom:15px; }
-  .hero span { font-size:16px; color:#555; letter-spacing:1px; }
-  
-  /* سوییچ زبان */
-  .lang-switch { position:fixed; top:20px; left:20px; display:flex; gap:10px; }
-  .lang-switch button { border:none; background:#fff; padding:5px 12px; border-radius:5px; cursor:pointer; font-weight:600; transition:0.3s; }
-  .lang-switch button.active { background:#c9a24d; color:#fff; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Vazirmatn',sans-serif; background: linear-gradient(160deg,#B4B184,#F5F1E6); color:#111; }
+a { text-decoration:none; color:inherit; }
+.container { max-width:1200px; margin:0 auto; padding:50px 20px; border-radius:10px; }
 
-  /* نمونه‌کارها */
-  .work-section { display:flex; justify-content:space-between; gap:30px; margin-bottom:50px; flex-wrap:wrap; }
-  .tabs { display:flex; flex-direction:column; gap:10px; }
-  .tabs button { padding:10px 15px; border:none; border-radius:5px; cursor:pointer; background:#fff; font-weight:600; transition:0.3s; text-align:right; }
-  .tabs button.active { background:#c9a24d; color:#fff; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; flex:1; }
-  .grid-item { position:relative; overflow:hidden; border-radius:8px; cursor:pointer; }
-  .grid-item img { width:100%; display:block; border-radius:8px; transition:0.3s; }
-  .grid-item:hover img { transform:scale(1.05); }
-  .grid-item span { position:absolute; bottom:10px; right:10px; background:rgba(0,0,0,0.5); color:#fff; padding:5px 10px; border-radius:5px; font-size:13px; }
+.hero { text-align:center; margin-bottom:60px; }
+.hero h1 { font-size:42px; font-weight:600; margin-bottom:15px; }
+.hero span { font-size:16px; color:#555; letter-spacing:1px; }
 
-  /* فرم تماس */
-  form { max-width:500px; margin:50px auto; display:flex; flex-direction:column; gap:15px; }
-  input, textarea { padding:12px; font-size:14px; border:1px solid rgba(0,0,0,0.2); border-radius:5px; width:100%; }
-  button.submit { padding:12px; border:none; background:#c9a24d; color:#fff; font-weight:600; cursor:pointer; border-radius:5px; transition:0.3s; }
-  button.submit:hover { background:#b08b3f; }
+.lang-switch { position:fixed; top:20px; left:20px; display:flex; gap:10px; }
+.lang-switch button { border:none; background:#fff; padding:5px 12px; border-radius:5px; cursor:pointer; font-weight:600; transition:0.3s; }
+.lang-switch button.active { background:#c9a24d; color:#fff; }
 
-  /* شبکه های اجتماعی پایین */
-  .socials { display:flex; justify-content:center; gap:25px; margin:40px auto 60px; font-size:24px; }
-  .socials a { transition:0.3s; }
-  .socials a:hover { color:#c9a24d; }
+.work-section { display:flex; justify-content:space-between; gap:30px; margin-bottom:50px; flex-wrap:wrap; }
+.tabs { display:flex; flex-direction:column; gap:10px; }
+.tabs button { padding:10px 15px; border:none; border-radius:5px; cursor:pointer; background:#fff; font-weight:600; transition:0.3s; text-align:right; }
+.tabs button.active { background:#c9a24d; color:#fff; }
 
-  footer { text-align:center; margin:60px 0 20px; font-size:12px; color:#444; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; flex:1; }
+.grid-item { position:relative; overflow:hidden; border-radius:8px; cursor:pointer; }
+.grid-item img { width:100%; display:block; border-radius:8px; transition:0.3s; }
+.grid-item:hover img { transform:scale(1.05); }
+.grid-item span { position:absolute; bottom:10px; right:10px; background:rgba(0,0,0,0.5); color:#fff; padding:5px 10px; border-radius:5px; font-size:13px; }
 
-  @media (max-width:900px){ 
-    .work-section { flex-direction:column; }
-    .tabs { flex-direction:row; flex-wrap:wrap; justify-content:center; }
-  }
+form { max-width:500px; margin:50px auto; display:flex; flex-direction:column; gap:15px; }
+input, textarea { padding:12px; font-size:14px; border:1px solid rgba(0,0,0,0.2); border-radius:5px; width:100%; }
+button.submit { padding:12px; border:none; background:#c9a24d; color:#fff; font-weight:600; cursor:pointer; border-radius:5px; transition:0.3s; }
+button.submit:hover { background:#b08b3f; }
+
+.socials { display:flex; justify-content:center; gap:25px; margin:40px auto 60px; font-size:24px; }
+.socials a { transition:0.3s; }
+.socials a:hover { color:#c9a24d; }
+
+footer { text-align:center; margin:60px 0 20px; font-size:12px; color:#444; }
+
+.article-section { max-width:900px; margin:60px auto; gap:30px; display:flex; flex-direction:column; }
+.article { background:#fff8f0; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+.article h2 { font-size:22px; margin-bottom:10px; color:#6B5B3B; }
+.article p { font-size:14px; line-height:1.7; color:#333; }
+
+@media (max-width:900px){ 
+  .work-section { flex-direction:column; }
+  .tabs { flex-direction:row; flex-wrap:wrap; justify-content:center; }
+}
 </style>
 </head>
 <body>
@@ -77,7 +78,6 @@
 
   <!-- بخش نمونه‌کارها با تب سمت راست -->
   <div class="work-section" data-aos="fade-up">
-    <!-- دسته‌ها / تب‌ها سمت راست -->
     <div class="tabs">
       <button class="tab-btn active" data-category="all">همه</button>
       <button class="tab-btn" data-category="composite">کامپوزیت</button>
@@ -89,7 +89,6 @@
       <button class="tab-btn" data-category="verona">ورونای</button>
     </div>
 
-    <!-- Grid نمونه‌کارها -->
     <div class="grid">
       <div class="grid-item" data-category="composite">
         <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="کامپوزیت نما و تابلو">
@@ -115,24 +114,22 @@
           <span>پارامتریک</span>
         </a>
       </div>
-      <div class="grid-item" data-category="element">
-        <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="المان">
-          <img src="https://via.placeholder.com/400x300" alt="المان">
-          <span>المان</span>
-        </a>
-      </div>
-      <div class="grid-item" data-category="origami">
-        <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="اوریگامی">
-          <img src="https://via.placeholder.com/400x300" alt="اوریگامی">
-          <span>اوریگامی</span>
-        </a>
-      </div>
-      <div class="grid-item" data-category="verona">
-        <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="ورونای">
-          <img src="https://via.placeholder.com/400x300" alt="ورونای">
-          <span>ورونای</span>
-        </a>
-      </div>
+    </div>
+  </div>
+
+  <!-- بخش مقالات متریال‌ها -->
+  <div class="article-section" data-aos="fade-up">
+    <div class="article">
+      <h2>کامپوزیت</h2>
+      <p>کامپوزیت یکی از متریال‌های مدرن و پرکاربرد در طراحی نما و تابلوهای تبلیغاتی است. این متریال با ترکیب چند ماده مختلف، استحکام بالا و وزن سبک را همزمان فراهم می‌کند. استفاده از کامپوزیت به طراحان امکان می‌دهد تا طرح‌های پیچیده و منحنی‌های زیبا را پیاده‌سازی کنند. کامپوزیت به دلیل مقاومت در برابر رطوبت، نور خورشید و تغییرات دما، گزینه‌ای ایده‌آل برای نمای بیرونی ساختمان‌هاست. علاوه بر این، رنگ‌ها و پوشش‌های مختلف آن امکان تطبیق با سبک‌های مختلف معماری را فراهم می‌کند. مشتری قبل از تصمیم‌گیری می‌تواند با مشاهده نمونه‌های سه‌بعدی و دو بعدی، نتیجه نهایی را بهتر تصور کند. طراحی دقیق و اجرای حرفه‌ای باعث افزایش طول عمر و جلوه بصری پروژه می‌شود.</p>
+    </div>
+    <div class="article">
+      <h2>چلنیوم</h2>
+      <p>چلنیوم یکی از متریال‌های محبوب برای تابلوهای تبلیغاتی و نمای ساختمان است. این متریال قابلیت شکل‌پذیری بالایی دارد و می‌توان حروف و اشکال متنوع را با آن ایجاد کرد. چلنیوم دارای نورپردازی LED داخلی است که جلوه‌ای مدرن و جذاب به پروژه می‌بخشد. استفاده از این متریال باعث می‌شود طرح‌های خلاقانه و چشم‌نواز در محیط شهری شکل گیرد. قبل از اجرای نهایی، طراحی دو بعدی و سه بعدی تابلو به مشتری امکان می‌دهد تا پیش‌نمایش دقیق داشته باشد و تصمیم آگاهانه بگیرد. کیفیت مواد و نصب حرفه‌ای، دوام و جذابیت کار را تضمین می‌کند.</p>
+    </div>
+    <div class="article">
+      <h2>پارامتریک</h2>
+      <p>طراحی پارامتریک یک روش نوین در معماری و ساخت تابلوهای خاص است که بر اساس الگوریتم‌ها و پارامترهای مشخص، فرم‌ها و الگوهای پیچیده ایجاد می‌کند. این سبک طراحی امکان خلق آثار منحصر به فرد و خلاقانه را می‌دهد که با متریال‌های مختلف قابل اجراست. قبل از اجرای پروژه، طراحی سه‌بعدی به مشتری دید واقعی نسبت به محصول نهایی می‌دهد. پارامتریک به طراحان اجازه می‌دهد تا همزمان زیبایی، عملکرد و مقاومت را در نظر بگیرند. این نوع طراحی برای پروژه‌هایی با نیازهای خاص و پیچیده بسیار مناسب است و تجربه کاربری و تأثیر بصری بالایی ایجاد می‌کند.</p>
     </div>
   </div>
 
@@ -152,6 +149,9 @@
   </div>
 
   <footer data-aos="fade-up">
+    آدرس: تبریز  
+    شماره تماس: 09148127104  
+    ایمیل: signsculptstudio@gmail.com  
     © SignSculpt Studio
   </footer>
 </div>
@@ -159,47 +159,41 @@
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  // GLightbox
-  const lightbox = GLightbox({ touchNavigation:true, loop:true });
+const lightbox = GLightbox({ touchNavigation:true, loop:true });
+AOS.init({ duration:1000, once:true });
 
-  // AOS
-  AOS.init({ duration:1000, once:true });
+const tabs = document.querySelectorAll('.tab-btn');
+const items = document.querySelectorAll('.grid-item');
 
-  // Filter نمونه‌کارها
-  const tabs = document.querySelectorAll('.tab-btn');
-  const items = document.querySelectorAll('.grid-item');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      const category = tab.getAttribute('data-category');
-      items.forEach(item => {
-        if(category === 'all' || item.getAttribute('data-category') === category){
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // سوییچ زبان
-  const langButtons = document.querySelectorAll('.lang-switch button');
-  langButtons.forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      langButtons.forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-      if(btn.dataset.lang==='en'){
-        document.querySelector('.hero h1').textContent='Design & Build with Support';
-        document.querySelector('.hero span').textContent='Professional Studio';
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const category = tab.getAttribute('data-category');
+    items.forEach(item => {
+      if(category === 'all' || item.getAttribute('data-category') === category){
+        item.style.display = 'block';
       } else {
-        document.querySelector('.hero h1').textContent='از طراحی تا اجرا | پشتیبان شما';
-        document.querySelector('.hero span').textContent='Design & Build with Support';
+        item.style.display = 'none';
       }
     });
   });
+});
+
+const langButtons = document.querySelectorAll('.lang-switch button');
+langButtons.forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    langButtons.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    if(btn.dataset.lang==='en'){
+      document.querySelector('.hero h1').textContent='Design & Build with Support';
+      document.querySelector('.hero span').textContent='Professional Studio';
+    } else {
+      document.querySelector('.hero h1').textContent='از طراحی تا اجرا | پشتیبان شما';
+      document.querySelector('.hero span').textContent='Design & Build with Support';
+    }
+  });
+});
 </script>
 
 </body>
