@@ -5,13 +5,8 @@
 <title>SignSculpt Studio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- فونت فارسی -->
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- GLightbox -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-
-<!-- AOS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
 
 <style>
@@ -44,8 +39,9 @@ input, textarea { padding:12px; font-size:14px; border:1px solid rgba(0,0,0,0.2)
 button.submit { padding:12px; border:none; background:#c9a24d; color:#fff; font-weight:600; cursor:pointer; border-radius:5px; transition:0.3s; }
 button.submit:hover { background:#b08b3f; }
 
-.socials { display:flex; justify-content:center; gap:25px; margin:40px auto 60px; font-size:24px; }
-.socials a { transition:0.3s; }
+.socials { display:flex; justify-content:center; gap:25px; margin:40px auto 60px; font-size:24px; flex-direction:column; align-items:center; }
+.socials a { display:flex; flex-direction:column; align-items:center; transition:0.3s; font-size:24px; }
+.socials a span { font-size:12px; margin-top:5px; }
 .socials a:hover { color:#c9a24d; }
 
 footer { text-align:center; margin:60px 0 20px; font-size:12px; color:#444; }
@@ -63,20 +59,17 @@ footer { text-align:center; margin:60px 0 20px; font-size:12px; color:#444; }
 </head>
 <body>
 
-<!-- سوییچ زبان -->
 <div class="lang-switch">
   <button class="active" data-lang="fa">فارسی</button>
   <button data-lang="en">EN</button>
 </div>
 
 <div class="container">
-  <!-- Hero / خوش آمدگویی -->
   <section class="hero" data-aos="fade-up">
     <h1>از طراحی تا اجرا | پشتیبان شما</h1>
     <span>Design & Build with Support</span>
   </section>
 
-  <!-- بخش نمونه‌کارها با تب سمت راست -->
   <div class="work-section" data-aos="fade-up">
     <div class="tabs">
       <button class="tab-btn active" data-category="all">همه</button>
@@ -90,6 +83,7 @@ footer { text-align:center; margin:60px 0 20px; font-size:12px; color:#444; }
     </div>
 
     <div class="grid">
+      <!-- عکس نمونه‌کارهای آزمایشی -->
       <div class="grid-item" data-category="composite">
         <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="کامپوزیت نما و تابلو">
           <img src="https://via.placeholder.com/400x300" alt="کامپوزیت">
@@ -114,26 +108,59 @@ footer { text-align:center; margin:60px 0 20px; font-size:12px; color:#444; }
           <span>پارامتریک</span>
         </a>
       </div>
+      <div class="grid-item" data-category="element">
+        <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="المان">
+          <img src="https://via.placeholder.com/400x300" alt="المان">
+          <span>المان</span>
+        </a>
+      </div>
+      <div class="grid-item" data-category="origami">
+        <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="اوریگامی">
+          <img src="https://via.placeholder.com/400x300" alt="اوریگامی">
+          <span>اوریگامی</span>
+        </a>
+      </div>
+      <div class="grid-item" data-category="verona">
+        <a href="https://via.placeholder.com/600x400" class="glightbox" data-title="ورونای">
+          <img src="https://via.placeholder.com/400x300" alt="ورونای">
+          <span>ورونای</span>
+        </a>
+      </div>
     </div>
   </div>
 
-  <!-- بخش مقالات متریال‌ها -->
+  <!-- مقالات متریال‌ها -->
   <div class="article-section" data-aos="fade-up">
     <div class="article">
       <h2>کامپوزیت</h2>
-      <p>کامپوزیت یکی از متریال‌های مدرن و پرکاربرد در طراحی نما و تابلوهای تبلیغاتی است. این متریال با ترکیب چند ماده مختلف، استحکام بالا و وزن سبک را همزمان فراهم می‌کند. استفاده از کامپوزیت به طراحان امکان می‌دهد تا طرح‌های پیچیده و منحنی‌های زیبا را پیاده‌سازی کنند. کامپوزیت به دلیل مقاومت در برابر رطوبت، نور خورشید و تغییرات دما، گزینه‌ای ایده‌آل برای نمای بیرونی ساختمان‌هاست. علاوه بر این، رنگ‌ها و پوشش‌های مختلف آن امکان تطبیق با سبک‌های مختلف معماری را فراهم می‌کند. مشتری قبل از تصمیم‌گیری می‌تواند با مشاهده نمونه‌های سه‌بعدی و دو بعدی، نتیجه نهایی را بهتر تصور کند. طراحی دقیق و اجرای حرفه‌ای باعث افزایش طول عمر و جلوه بصری پروژه می‌شود.</p>
+      <p>کامپوزیت یکی از متریال‌های مدرن و پرکاربرد در طراحی نما و تابلوهای تبلیغاتی است. این متریال با ترکیب چند ماده مختلف، استحکام بالا و وزن سبک را همزمان فراهم می‌کند...</p>
+    </div>
+    <div class="article">
+      <h2>ترمو وود</h2>
+      <p>ترمو وود یا چوب حرارت‌دیده یکی از متریال‌های پایدار و مقاوم در محیط بیرونی است. این متریال علاوه بر دوام بالا، جلوه بصری گرم و طبیعی ایجاد می‌کند...</p>
     </div>
     <div class="article">
       <h2>چلنیوم</h2>
-      <p>چلنیوم یکی از متریال‌های محبوب برای تابلوهای تبلیغاتی و نمای ساختمان است. این متریال قابلیت شکل‌پذیری بالایی دارد و می‌توان حروف و اشکال متنوع را با آن ایجاد کرد. چلنیوم دارای نورپردازی LED داخلی است که جلوه‌ای مدرن و جذاب به پروژه می‌بخشد. استفاده از این متریال باعث می‌شود طرح‌های خلاقانه و چشم‌نواز در محیط شهری شکل گیرد. قبل از اجرای نهایی، طراحی دو بعدی و سه بعدی تابلو به مشتری امکان می‌دهد تا پیش‌نمایش دقیق داشته باشد و تصمیم آگاهانه بگیرد. کیفیت مواد و نصب حرفه‌ای، دوام و جذابیت کار را تضمین می‌کند.</p>
+      <p>چلنیوم یکی از متریال‌های محبوب برای تابلوهای تبلیغاتی و نمای ساختمان است. این متریال قابلیت شکل‌پذیری بالا دارد و می‌توان حروف و اشکال متنوع را با آن ایجاد کرد...</p>
     </div>
     <div class="article">
       <h2>پارامتریک</h2>
-      <p>طراحی پارامتریک یک روش نوین در معماری و ساخت تابلوهای خاص است که بر اساس الگوریتم‌ها و پارامترهای مشخص، فرم‌ها و الگوهای پیچیده ایجاد می‌کند. این سبک طراحی امکان خلق آثار منحصر به فرد و خلاقانه را می‌دهد که با متریال‌های مختلف قابل اجراست. قبل از اجرای پروژه، طراحی سه‌بعدی به مشتری دید واقعی نسبت به محصول نهایی می‌دهد. پارامتریک به طراحان اجازه می‌دهد تا همزمان زیبایی، عملکرد و مقاومت را در نظر بگیرند. این نوع طراحی برای پروژه‌هایی با نیازهای خاص و پیچیده بسیار مناسب است و تجربه کاربری و تأثیر بصری بالایی ایجاد می‌کند.</p>
+      <p>طراحی پارامتریک یک روش نوین در معماری و ساخت تابلوهای خاص است که بر اساس الگوریتم‌ها و پارامترهای مشخص، فرم‌ها و الگوهای پیچیده ایجاد می‌کند...</p>
+    </div>
+    <div class="article">
+      <h2>المان</h2>
+      <p>المان‌ها اجزای طراحی هستند که با ترکیب و چینش درست، زیبایی و کارایی پروژه را افزایش می‌دهند...</p>
+    </div>
+    <div class="article">
+      <h2>اوریگامی</h2>
+      <p>اوریگامی یا طراحی تا شده، برای خلق فرم‌های پیچیده و مدرن در تابلو و نما کاربرد دارد و جلوه‌ای هنری به پروژه می‌بخشد...</p>
+    </div>
+    <div class="article">
+      <h2>ورونای</h2>
+      <p>ورونای یکی از سبک‌های مدرن طراحی است که با ترکیب خطوط و الگوهای هندسی، جلوه‌ای منحصر به فرد و شیک ایجاد می‌کند...</p>
     </div>
   </div>
 
-  <!-- فرم تماس -->
   <form action="https://formspree.io/f/mnqlwzvd" method="POST" data-aos="fade-up">
     <input type="text" name="name" placeholder="نام شما" required>
     <input type="email" name="email" placeholder="ایمیل شما" required>
@@ -141,11 +168,10 @@ footer { text-align:center; margin:60px 0 20px; font-size:12px; color:#444; }
     <button type="submit" class="submit">ارسال پیام</button>
   </form>
 
-  <!-- شبکه‌های اجتماعی پایین -->
   <div class="socials" data-aos="fade-up">
-    <a href="https://www.instagram.com/sign.sculpt" target="_blank" title="Instagram">📸</a>
-    <a href="https://t.me/+989148127104" target="_blank" title="Telegram">💬</a>
-    <a href="https://wa.me/989148127104" target="_blank" title="WhatsApp">📱</a>
+    <a href="https://www.instagram.com/sign.sculpt" target="_blank" title="Instagram">📸<span>Instagram</span></a>
+    <a href="https://t.me/+989148127104" target="_blank" title="Telegram">💬<span>Telegram</span></a>
+    <a href="https://wa.me/989148127104" target="_blank" title="WhatsApp">📱<span>WhatsApp</span></a>
   </div>
 
   <footer data-aos="fade-up">
@@ -171,11 +197,7 @@ tabs.forEach(tab => {
     tab.classList.add('active');
     const category = tab.getAttribute('data-category');
     items.forEach(item => {
-      if(category === 'all' || item.getAttribute('data-category') === category){
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
+      item.style.display = (category==='all'||item.getAttribute('data-category')===category)?'block':'none';
     });
   });
 });
