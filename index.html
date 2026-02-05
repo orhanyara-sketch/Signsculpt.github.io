@@ -1,128 +1,65 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <meta charset="UTF-8">
-  <title>SignSculpt Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="articles">
 
-  <!-- فونت فارسی -->
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- مقاله کامپوزیت -->
+  <div class="article">
+    <img src="images/Com.jpg" alt="نمای کامپوزیت" class="article-img">
+    <h2>کامپوزیت</h2>
+    <p>کامپوزیت نوعی متریال مدرن است که در طراحی نماهای شهری و ساختمان‌های مدرن کاربرد فراوان دارد...</p>
+  </div>
 
-  <!-- GLightbox -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <!-- مقاله چنلیوم -->
+  <div class="article">
+    <img src="images/Ch.jpg" alt="چنلیوم" class="article-img">
+    <h2>چنلیوم</h2>
+    <p>چنلیوم با سطح صاف و متریال سبک، امکان خلق نماهای جذاب و مقاوم را فراهم می‌کند...</p>
+  </div>
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+  <!-- مقاله ورونای -->
+  <div class="article">
+    <img src="images/Vo.jpg" alt="ورونای" class="article-img">
+    <h2>ورونای</h2>
+    <p>ورونای نوعی طراحی هندسی و پارامتریک است که با الگوریتم‌های پیچیده، فرم‌های خلاقانه تولید می‌کند...</p>
+  </div>
 
-  <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="google9ac824c8eec5525f" />
+  <!-- مقاله ترمووود -->
+  <div class="article">
+    <img src="images/Te.jpg" alt="ترمووود" class="article-img">
+    <h2>ترمو وود</h2>
+    <p>ترمووود با مقاومت بالا در برابر رطوبت و حرارت، گزینه‌ای ایده‌آل برای نماهای خارجی است...</p>
+  </div>
 
-  <style>
-    /* استایل‌ها همون‌هایی که قبلاً داشتی */
-  </style>
-</head>
-<meta charset="UTF-8">
-<title>SignSculpt Studio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- مقاله اوریگامی -->
+  <div class="article">
+    <img src="images/Or.jpg" alt="اوریگامی" class="article-img">
+    <h2>اوریگامی</h2>
+    <p>اوریگامی با فرم‌های هندسی و خلاقانه، جلوه‌ای هنری و منحصر به فرد در طراحی نما ایجاد می‌کند...</p>
+  </div>
 
-<!-- فونت فارسی -->
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- مقاله پارامتریک -->
+  <div class="article">
+    <img src="images/Pa.jpg" alt="پارامتریک" class="article-img">
+    <h2>پارامتریک</h2>
+    <p>پارامتریک با الگوریتم‌های پیچیده، امکان طراحی فرم‌های پویا و غیرمتعارف را فراهم می‌آورد...</p>
+  </div>
 
-<!-- GLightbox -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <!-- مقاله المان شهری -->
+  <div class="article">
+    <img src="images/El.jpg" alt="المان شهری" class="article-img">
+    <h2>المان شهری</h2>
+    <p>المان‌های شهری با طراحی مدرن، هویت بصری منحصر به فردی برای فضاهای عمومی ایجاد می‌کنند...</p>
+  </div>
 
-<!-- AOS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
-
-<style>
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body { font-family:'Vazirmatn',sans-serif; background: linear-gradient(160deg,#B4B184,#F5F1E6); color:#111; }
-  a { text-decoration:none; color:inherit; }
-  .container { max-width:1200px; margin:0 auto; padding:50px 20px; }
-  
-  /* Hero / خوش آمدگویی */
-  .hero { text-align:center; margin-bottom:60px; }
-  .hero h1 { font-size:42px; font-weight:600; margin-bottom:15px; }
-  .hero span { font-size:16px; color:#555; letter-spacing:1px; }
-
-  /* لوگو گوشه چپ */
-  .logo { position:fixed; top:10px; right:10px; width:80px; height:auto; }
-
-  /* سوییچ زبان */
-  .lang-switch { position:fixed; top:20px; left:20px; display:flex; gap:10px; }
-  .lang-switch button { border:none; background:#fff; padding:5px 12px; border-radius:5px; cursor:pointer; font-weight:600; transition:0.3s; }
-  .lang-switch button.active { background:#c9a24d; color:#fff; }
-
-  /* نمونه‌کارها */
-  .work-section { display:flex; justify-content:space-between; gap:30px; margin-bottom:50px; flex-wrap:wrap; }
-  .tabs { display:flex; flex-direction:column; gap:10px; }
-  .tabs button { padding:10px 15px; border:none; border-radius:5px; cursor:pointer; background:#fff; font-weight:600; transition:0.3s; text-align:right; }
-  .tabs button.active { background:#c9a24d; color:#fff; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; flex:1; }
-  .grid-item { position:relative; overflow:hidden; border-radius:8px; cursor:pointer; }
-  .grid-item img { width:100%; display:block; border-radius:8px; transition:0.3s; }
-  .grid-item:hover img { transform:scale(1.05); }
-  .grid-item span { position:absolute; bottom:10px; right:10px; background:rgba(0,0,0,0.5); color:#fff; padding:5px 10px; border-radius:5px; font-size:13px; }
-
-  /* فرم تماس */
-  form { max-width:500px; margin:50px auto; display:flex; flex-direction:column; gap:15px; }
-  input, textarea { padding:12px; font-size:14px; border:1px solid rgba(0,0,0,0.2); border-radius:5px; width:100%; }
-  button.submit { padding:12px; border:none; background:#c9a24d; color:#fff; font-weight:600; cursor:pointer; border-radius:5px; transition:0.3s; }
-  button.submit:hover { background:#b08b3f; }
-
-  /* شبکه های اجتماعی پایین */
-  .socials { display:flex; justify-content:center; gap:25px; margin:40px auto 20px; font-size:24px; flex-wrap:wrap; text-align:center; }
-  .socials a { transition:0.3s; display:flex; flex-direction:column; align-items:center; font-size:14px; }
-  .socials a span { margin-top:5px; font-size:14px; }
-  .socials a:hover { color:#c9a24d; }
-
-  /* مقالات */
-  .articles { max-width:1000px; margin:50px auto; display:flex; flex-direction:column; gap:40px; }
-  .article { background:#fff; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:0.3s; }
-  .article h2 { margin-bottom:15px; color:#c9a24d; font-size:22px; }
-  .article p { margin-bottom:10px; line-height:1.7; color:#333; }
-
-  footer { text-align:center; margin:60px 0 20px; font-size:12px; color:#444; }
-
-  @media (max-width:900px){ 
-    .work-section { flex-direction:column; }
-    .tabs { flex-direction:row; flex-wrap:wrap; justify-content:center; }
-  }
-</style>
-</head>
-<body>
-
-<!-- لوگو -->
-<img src="images/IMG_20260204_102126_012.jpg" class="logo" alt="SignSculpt Studio Logo">
-
-<!-- سوییچ زبان -->
-<div class="lang-switch">
-  <button class="active" data-lang="fa">فا</button>
-  <button data-lang="en">EN</button>
 </div>
 
-<div class="container">
-  <!-- Hero / خوش آمدگویی -->
-  <section class="hero" data-aos="fade-up">
-    <h1> طراحی تا اجرا  پشتیبان شما</h1>
-    <span>Design & Build with Support</span>
-  </section>
-
-  <!-- بخش نمونه‌کارها با تب سمت راست -->
-  <div class="work-section" data-aos="fade-up">
-    <div class="tabs">
-      <button class="tab-btn active" data-category="all">همه</button>
-      <button class="tab-btn" data-category="composite">کامپوزیت</button>
-      <button class="tab-btn" data-category="thermo">ترمو وود</button>
-      <button class="tab-btn" data-category="chlnm">چنلیوم</button>
-      <button class="tab-btn" data-category="parametric">پارامتریک</button>
-      <button class="tab-btn" data-category="element">المان</button>
-      <button class="tab-btn" data-category="origami">اوریگامی</button>
-      <button class="tab-btn" data-category="verona">ورونای</button>
-    </div>
-
- <div class="gallery">
+<style>
+.article-img {
+  width: 100%;
+  height: 250px; /* ارتفاع ثابت برای همه تصاویر */
+  object-fit: cover; /* حفظ نسبت بدون کشیدگی */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+</style>
 
 
   <!-- مقالات کامل -->
