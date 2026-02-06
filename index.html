@@ -134,7 +134,13 @@
     }
     
     /* فرم تماس */
-    form { max-width:500px; margin:40px auto; display:flex; flex-direction:column; gap:15px; }
+    form { 
+      max-width:500px; 
+      margin:40px auto; 
+      display:flex; 
+      flex-direction:column; 
+      gap:15px; 
+    }
     input, textarea { 
       padding:14px; 
       font-size:15px; 
@@ -160,7 +166,7 @@
     .socials { 
       display:flex; 
       justify-content:center; 
-      gap:20px; 
+      gap:25px; 
       margin:35px auto 15px; 
       font-size:22px;
       flex-wrap:wrap; 
@@ -172,10 +178,20 @@
       flex-direction:column; 
       align-items:center; 
       font-size:13px;
-      min-width: 70px;
+      min-width: 80px;
     }
-    .socials a span { margin-top:5px; font-size:13px; }
-    .socials a:hover { color:#c9a24d; transform: translateY(-3px); }
+    .socials a span { 
+      margin-top:5px; 
+      font-size:13px;
+      color: #333;
+    }
+    .socials a:hover { 
+      color:#c9a24d; 
+      transform: translateY(-3px); 
+    }
+    .socials a:hover span {
+      color: #c9a24d;
+    }
     
     /* مقالات */
     .articles { 
@@ -196,10 +212,39 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.12);
       transform: translateY(-2px);
     }
-    .article h2 { margin-bottom:15px; color:#c9a24d; font-size:20px; }
-    .article p { margin-bottom:10px; line-height:1.8; color:#333; font-size:15px; }
+    .article h2 { 
+      margin-bottom:15px; 
+      color:#c9a24d; 
+      font-size:20px; 
+    }
+    .article p { 
+      margin-bottom:10px; 
+      line-height:1.8; 
+      color:#333; 
+      font-size:15px; 
+    }
     
-    footer { text-align:center; margin:50px 0 15px; font-size:13px; color:#444; }
+    /* فوتر */
+    footer { 
+      text-align:center; 
+      margin:50px 0 15px; 
+      font-size:14px; 
+      color:#444;
+      line-height: 1.8;
+    }
+    
+    /* شمارنده بازدید */
+    #visitor-counter {
+      text-align:center; 
+      margin-top:20px; 
+      font-weight:600; 
+      color:#555;
+      font-size: 14px;
+      padding: 10px;
+      background: rgba(255,255,255,0.7);
+      border-radius: 8px;
+      display: inline-block;
+    }
     
     /* رسپانسیو - تبلت */
     @media (max-width: 900px){ 
@@ -232,6 +277,14 @@
       
       .hero {
         margin-bottom: 35px;
+      }
+      
+      .socials {
+        gap: 20px;
+      }
+      
+      .socials a {
+        min-width: 70px;
       }
     }
     
@@ -282,8 +335,18 @@
       }
       
       .socials a {
-        min-width: 60px;
+        min-width: 70px;
         font-size: 12px;
+      }
+      
+      footer {
+        font-size: 13px;
+        padding: 0 10px;
+      }
+      
+      #visitor-counter {
+        font-size: 13px;
+        padding: 8px;
       }
     }
     
@@ -324,7 +387,7 @@
   <div class="container">
     <!-- Hero / خوش آمدگویی -->
     <section class="hero" data-aos="fade-up">
-      <h1> طراحی تا اجرا  پشتیبان شما</h1>
+      <h1> از طراحی تا اجرا | پشتیبان شما</h1>
       <span>Design & Build with Support</span>
     </section>
     
@@ -399,7 +462,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- مقالات کامل -->
     <div class="articles" data-aos="fade-up">
       <!-- مقاله کامپوزیت -->
@@ -499,90 +562,100 @@
         <p>به طور کلی، ورونای ابزاری مدرن برای خلق پروژه‌های خلاقانه، مدرن و چشم‌نواز است که ارزش زیبایی و عملکرد را با هم ارائه می‌دهد.</p>
       </div>
     </div>
-    
+
     <!-- فرم تماس -->
     <form action="https://formspree.io/f/mnqlwzvd" method="POST" data-aos="fade-up">
       <input type="text" name="name" placeholder="نام شما" required>
       <input type="email" name="email" placeholder="ایمیل شما" required>
-      <input type="tel" name="phone" placeholder="شماره تماس">
       <textarea name="message" rows="5" placeholder="پیام شما" required></textarea>
       <button type="submit" class="submit">ارسال پیام</button>
     </form>
-    
-    <!-- شبکه های اجتماعی -->
+
+    <!-- شبکه‌های اجتماعی پایین -->
     <div class="socials" data-aos="fade-up">
-      <a href="#"><span>📷</span><span>اینستاگرام</span></a>
-      <a href="#"><span>📧</span><span>ایمیل</span></a>
-      <a href="#"><span>📱</span><span>واتساپ</span></a>
-      <a href="#"><span>📍</span><span>نقشه</span></a>
+      <a href="https://www.instagram.com/sign.sculpt" target="_blank" title="Instagram">📸<span>Instagram</span></a>
+      <a href="https://t.me/+989148127104" target="_blank" title="Telegram">💬<span>Telegram</span></a>
+      <a href="https://wa.me/989148127104" target="_blank" title="WhatsApp">📱<span>WhatsApp</span></a>
     </div>
-    
+
     <footer data-aos="fade-up">
-      © 2024 SignSculpt Studio. تمام حقوق محفوظ است.
+      آدرس: تبریز<br>
+      تلفن: 09148127104<br>
+      ایمیل: signsculptstudio@gmail.com<br>
+      <br>
+      فعالیت ما به‌صورت آنلاین و پروژه‌ای است. <br>
+      برای مشاوره و همکاری، از طریق تلفن، ایمیل یا شبکه‌های اجتماعی با ما در ارتباط باشید.
+      
+      <!-- شمارنده بازدید ساده -->
+      <div id="visitor-counter">
+        تعداد بازدید سایت: <span id="count">0</span>
+      </div>
+      <br>
+      © SignSculpt Studio
     </footer>
   </div>
-  
-  <!-- JavaScript Libraries -->
+
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  
   <script>
     // Initialize AOS
-    AOS.init({
-      duration: 800,
+    AOS.init({ 
+      duration: 1000, 
       once: true,
       offset: 50
     });
-    
+
     // Initialize GLightbox
-    const lightbox = GLightbox({
-      touchNavigation: true,
-      loop: true,
-      autoplayVideos: true
+    const lightbox = GLightbox({ 
+      touchNavigation: true, 
+      loop: true 
     });
-    
+
     // Tab functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const tabButtons = document.querySelectorAll('.tab-btn');
-      const gridItems = document.querySelectorAll('.grid-item');
-      
-      tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          // Remove active class from all buttons
-          tabButtons.forEach(btn => btn.classList.remove('active'));
-          // Add active class to clicked button
-          this.classList.add('active');
-          
-          const category = this.getAttribute('data-category');
-          
-          // Show/hide grid items based on category
-          gridItems.forEach(item => {
-            if (category === 'all' || item.getAttribute('data-category') === category) {
-              item.style.display = 'block';
-            } else {
-              item.style.display = 'none';
-            }
-          });
+    const tabs = document.querySelectorAll('.tab-btn');
+    const items = document.querySelectorAll('.grid-item');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const category = tab.getAttribute('data-category');
+        items.forEach(item => {
+          item.style.display = (category === 'all' || item.getAttribute('data-category') === category) ? 'block' : 'none';
         });
       });
-      
-      // Language switcher
-      const langButtons = document.querySelectorAll('.lang-switch button');
-      langButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
-          langButtons.forEach(b => b.classList.remove('active'));
-          this.classList.add('active');
-          alert('زبان به ' + this.textContent + ' تغییر کرد');
-        });
+    });
+
+    // Language switcher
+    const langButtons = document.querySelectorAll('.lang-switch button');
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        langButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if (btn.dataset.lang === 'en') {
+          document.querySelector('.hero h1').textContent = 'Design & Build with Support';
+          document.querySelector('.hero span').textContent = 'Professional Studio';
+        } else {
+          document.querySelector('.hero h1').textContent = 'از طراحی تا اجرا | پشتیبان شما';
+          document.querySelector('.hero span').textContent = 'Design & Build with Support';
+        }
       });
-      
-      // تصاویر لود نشده را مدیریت کن
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        img.addEventListener('error', function() {
-          this.src = 'https://via.placeholder.com/400x300/cccccc/969696?text=تصویر+در+دسترس+نیست';
-          console.warn('تصویر لود نشد: ' + this.alt);
-        });
+    });
+
+    // Visitor counter
+    let count = localStorage.getItem('siteVisitCount');
+    if (!count) {
+      count = 0;
+    }
+    count = parseInt(count) + 1;
+    localStorage.setItem('siteVisitCount', count);
+    document.getElementById('count').textContent = count;
+
+    // Image error handling
+    document.querySelectorAll('img').forEach(img => {
+      img.addEventListener('error', function() {
+        this.src = 'https://via.placeholder.com/400x300/cccccc/969696?text=تصویر+در+دسترس+نیست';
+        console.warn('تصویر لود نشد: ' + this.alt);
       });
     });
   </script>
