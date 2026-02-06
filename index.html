@@ -5,8 +5,8 @@
     <title>SignSculpt Studio | استودیو طراحی و اجرای تابلو و نما | تبریز</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Meta SEO -->
-    <meta name="description" content="استودیو SignSculpt | طراحی و اجرای حرفه‌ای تابلوهای تبلیغاتی، نماهای مدرن، کامپوزیت، ترمو وود، چنلیوم و المان‌های پارامتریک در تبریز">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="استودیو SignSculpt | طراحی و اجرای حرفه‌ای تابلوهای تبلیغاتی، نماهای مدرن، کامپوزیت، ترمو وود، چنلیوم و المان‌های پارامتریک در تبریز. مشاوره رایگان و اجرای پروژه‌های آنلاین.">
     <meta name="keywords" content="تابلو تبلیغاتی, طراحی نما, کامپوزیت, ترمو وود, چنلیوم, پارامتریک, المان شهری, طراحی تابلو, استودیو طراحی, تبریز">
     <meta name="author" content="SignSculpt Studio">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -18,18 +18,14 @@
     <meta property="og:locale" content="fa_IR">
     <meta property="og:site_name" content="SignSculpt Studio">
     
-    <!-- Canonical -->
-    <link rel="canonical" href="https://signsculptstudio.com">
-    
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -44,14 +40,17 @@
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "تبریز",
-            "addressCountry": "IR"
+            "addressCountry": "IR",
+            "addressRegion": "آذربایجان شرقی"
         },
         "areaServed": "ایران",
         "serviceType": ["طراحی تابلو تبلیغاتی", "طراحی نما", "المان شهری", "کامپوزیت", "ترمو وود"],
-        "openingHours": "Mo-Su 08:00-20:00",
+        "openingHours": "Mo-Su 09:00-21:00",
+        "priceRange": "$$",
         "sameAs": [
             "https://www.instagram.com/sign.sculpt",
-            "https://t.me/+989148127104"
+            "https://t.me/+989148127104",
+            "https://web.rubika.ir/#/im?p=@signsclupt"
         ]
     }
     </script>
@@ -60,7 +59,7 @@
     <meta name="google-site-verification" content="google9ac824c8eec5525f" />
     
     <style>
-        /* Reset */
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -69,85 +68,116 @@
         
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 100px;
         }
         
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background: linear-gradient(160deg, #F8F5F0, #FFFFFF);
+            background: linear-gradient(160deg, #F5F1E6 0%, #E8E4D9 100%);
             color: #2c3e50;
             line-height: 1.7;
             min-height: 100vh;
+            overflow-x: hidden;
         }
         
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        button {
+            font-family: 'Vazirmatn', sans-serif;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+        
+        /* ===== CONTAINER ===== */
         .container {
-            max-width: 1300px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 20px;
-            padding-top: 120px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
         }
         
-        /* Logo */
+        /* ===== LOGO ===== */
         .logo {
             position: fixed;
             top: 20px;
             right: 20px;
             width: 85px;
-            height: auto;
-            z-index: 1000;
+            height: 85px;
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            object-fit: cover;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            z-index: 1001;
+            border: 3px solid white;
             background: white;
-            padding: 5px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
         .logo:hover {
-            transform: scale(1.05);
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.18);
         }
         
-        /* Language Switch */
+        /* ===== LANGUAGE SWITCH ===== */
         .lang-switch {
             position: fixed;
-            top: 20px;
-            left: 20px;
+            top: 25px;
+            left: 25px;
             display: flex;
             gap: 10px;
-            z-index: 1000;
-            background: white;
-            padding: 10px 18px;
-            border-radius: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 10px 16px;
+            border-radius: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            z-index: 1001;
+            border: 2px solid rgba(201,162,77,0.1);
         }
         
         .lang-switch button {
-            border: none;
-            background: transparent;
             padding: 8px 20px;
             border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            font-size: 15px;
-            color: #555;
+            font-weight: 700;
+            font-size: 14px;
+            background: transparent;
+            color: #666;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
         }
         
         .lang-switch button.active {
-            background: #c9a24d;
+            background: linear-gradient(135deg, #c9a24d, #b08b3f);
             color: white;
-            box-shadow: 0 3px 10px rgba(201,162,77,0.3);
+            box-shadow: 0 4px 12px rgba(201,162,77,0.3);
         }
         
-        /* Hero - حرفه‌ای و پربار */
+        .lang-switch button:hover:not(.active) {
+            border-color: #c9a24d;
+            color: #c9a24d;
+        }
+        
+        /* ===== HERO SECTION ===== */
         .hero {
-            margin-top: 40px;
+            margin-top: 50px;
             padding: 70px 40px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248, 245, 240, 0.95));
-            border-radius: 30px;
-            box-shadow: 0 25px 50px rgba(180, 177, 132, 0.12);
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(245, 241, 230, 0.98));
+            border-radius: 28px;
+            box-shadow: 0 25px 50px rgba(180, 177, 132, 0.15);
             position: relative;
             overflow: hidden;
             text-align: center;
-            border: 1px solid rgba(201,162,77,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
         }
         
         .hero::before {
@@ -155,9 +185,9 @@
             position: absolute;
             top: -50%;
             right: -50%;
-            width: 200%;
+            width: 100%;
             height: 200%;
-            background: radial-gradient(circle at 30% 30%, rgba(201,162,77,0.05) 0%, transparent 50%);
+            background: radial-gradient(circle, rgba(201,162,77,0.08) 0%, transparent 70%);
             z-index: 0;
         }
         
@@ -167,24 +197,20 @@
         }
         
         .hero h1 {
-            font-size: 3.2rem;
+            font-size: 3rem;
             color: #2c3e50;
             margin-bottom: 20px;
             font-weight: 800;
-            line-height: 1.2;
-            background: linear-gradient(135deg, #2c3e50, #c9a24d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            line-height: 1.3;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
-        .tagline {
+        .hero .tagline {
             font-size: 1.4rem;
             color: #c9a24d;
             margin-bottom: 35px;
             font-weight: 600;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            letter-spacing: 0.5px;
         }
         
         .hero-features {
@@ -199,60 +225,65 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px 25px;
+            padding: 18px 22px;
             background: white;
             border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-            min-width: 140px;
-            transition: all 0.3s;
-            border: 2px solid transparent;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            min-width: 130px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(201,162,77,0.1);
         }
         
         .feature:hover {
-            transform: translateY(-8px);
-            border-color: #c9a24d;
-            box-shadow: 0 15px 35px rgba(201,162,77,0.15);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            border-color: rgba(201,162,77,0.3);
         }
         
         .feature-icon {
             font-size: 32px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: block;
         }
         
         .feature-text {
-            font-size: 15px;
-            font-weight: 600;
+            font-size: 14px;
+            font-weight: 700;
             color: #333;
         }
         
-        .cta {
+        .hero-cta {
             font-size: 1.2rem;
             color: #555;
             margin-top: 30px;
             padding: 18px 35px;
-            background: rgba(201,162,77,0.08);
+            background: linear-gradient(135deg, rgba(201,162,77,0.1), rgba(201,162,77,0.05));
             border-radius: 15px;
             display: inline-block;
-            font-weight: 500;
             border: 1px solid rgba(201,162,77,0.2);
+            font-weight: 600;
         }
         
-        /* Work Section */
+        .hero-cta strong {
+            color: #c9a24d;
+            font-weight: 800;
+        }
+        
+        /* ===== WORK SECTION ===== */
         .work-section {
             background: white;
             border-radius: 25px;
-            padding: 50px;
-            margin: 80px 0;
+            padding: 50px 40px;
+            margin: 70px 0;
             box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-            border: 1px solid #f0f0f0;
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .section-title {
             text-align: center;
-            color: #c9a24d;
+            color: #2c3e50;
             margin-bottom: 50px;
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             font-weight: 800;
             position: relative;
             padding-bottom: 20px;
@@ -266,7 +297,7 @@
             transform: translateX(50%);
             width: 100px;
             height: 4px;
-            background: linear-gradient(90deg, #c9a24d, #f5f1e6);
+            background: linear-gradient(90deg, #c9a24d, #b08b3f);
             border-radius: 2px;
         }
         
@@ -274,32 +305,54 @@
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            margin-bottom: 50px;
+            margin-bottom: 45px;
             justify-content: center;
         }
         
         .tab-btn {
             padding: 16px 28px;
-            border: 2px solid #eee;
-            background: #f9f9f9;
+            background: #f8f9fa;
             border-radius: 12px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            font-size: 16px;
+            font-weight: 700;
+            font-size: 15px;
             color: #555;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tab-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #c9a24d, #b08b3f);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
         }
         
         .tab-btn.active {
-            background: linear-gradient(135deg, #c9a24d, #e6b450);
             color: white;
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(201,162,77,0.3);
-            border-color: #c9a24d;
+        }
+        
+        .tab-btn.active::before {
+            opacity: 1;
+        }
+        
+        .tab-btn span {
+            position: relative;
+            z-index: 1;
         }
         
         .tab-btn:hover:not(.active) {
             border-color: #c9a24d;
+            color: #c9a24d;
             transform: translateY(-2px);
         }
         
@@ -311,23 +364,24 @@
         
         .grid-item {
             position: relative;
-            border-radius: 15px;
+            border-radius: 18px;
             overflow: hidden;
-            height: 250px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.4s;
+            height: 240px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: #f8f9fa;
         }
         
         .grid-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
         
         .grid-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s;
+            transition: transform 0.8s ease;
         }
         
         .grid-item:hover img {
@@ -342,13 +396,13 @@
             color: white;
             padding: 10px 20px;
             border-radius: 25px;
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 15px;
+            font-weight: 700;
             backdrop-filter: blur(5px);
-            letter-spacing: 0.5px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
         
-        /* Trust Signals */
+        /* ===== TRUST SIGNALS ===== */
         .trust-signals {
             text-align: center;
             margin: 80px 0;
@@ -356,6 +410,7 @@
             background: linear-gradient(135deg, #f8f5f0, #ffffff);
             border-radius: 25px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .trust-grid {
@@ -369,20 +424,20 @@
             text-align: center;
             padding: 35px 25px;
             background: white;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-            transition: all 0.3s;
-            border: 2px solid transparent;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(201,162,77,0.1);
         }
         
         .trust-item:hover {
-            transform: translateY(-8px);
-            border-color: #c9a24d;
-            box-shadow: 0 15px 35px rgba(201,162,77,0.12);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            border-color: rgba(201,162,77,0.3);
         }
         
         .trust-item .icon {
-            font-size: 48px;
+            font-size: 50px;
             color: #c9a24d;
             margin-bottom: 25px;
             display: block;
@@ -390,103 +445,103 @@
         
         .trust-item h4 {
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-size: 1.4rem;
             color: #2c3e50;
         }
         
         .trust-item p {
-            font-size: 16px;
+            font-size: 15px;
             color: #666;
-            line-height: 1.8;
+            line-height: 1.7;
         }
         
-        /* Articles - مقالات کامل */
+        /* ===== ARTICLES SECTION ===== */
         .articles-section {
-            margin: 100px 0;
+            margin: 80px 0;
+        }
+        
+        .articles-section .section-title {
+            margin-bottom: 60px;
         }
         
         .article {
             background: white;
-            padding: 50px;
-            border-radius: 20px;
+            padding: 45px 40px;
+            border-radius: 25px;
             margin-bottom: 40px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.08);
-            border-left: 5px solid #c9a24d;
-            transition: all 0.3s;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
         }
         
         .article:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
         }
         
         .article h3 {
-            color: #2c3e50;
+            color: #c9a24d;
             margin-bottom: 25px;
             font-size: 1.9rem;
             font-weight: 800;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f0f0f0;
+            border-right: 6px solid #c9a24d;
+            padding-right: 20px;
+            line-height: 1.4;
         }
         
-        .article-content {
-            font-size: 17px;
+        .article p {
+            margin-bottom: 18px;
             line-height: 1.9;
             color: #444;
-        }
-        
-        .article-content p {
-            margin-bottom: 20px;
+            font-size: 16.5px;
             text-align: justify;
         }
         
-        .article-highlight {
-            background: rgba(201,162,77,0.08);
-            padding: 25px;
-            border-radius: 15px;
-            margin: 25px 0;
-            border-right: 4px solid #c9a24d;
+        .article ul, .article ol {
+            margin: 20px 0 20px 30px;
+            color: #444;
+            line-height: 1.9;
         }
         
-        .article-list {
-            padding-right: 25px;
-            margin: 20px 0;
+        .article li {
+            margin-bottom: 10px;
+            position: relative;
         }
         
-        .article-list li {
-            margin-bottom: 12px;
-            color: #555;
+        .article strong {
+            color: #2c3e50;
+            font-weight: 700;
         }
         
-        /* Contact Form */
+        /* ===== CONTACT FORM ===== */
         .contact-form {
             max-width: 750px;
             margin: 80px auto;
             background: white;
-            padding: 60px;
+            padding: 60px 50px;
             border-radius: 25px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-            border: 1px solid #f0f0f0;
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .form-title {
             text-align: center;
             color: #2c3e50;
-            margin-bottom: 50px;
-            font-size: 2.2rem;
+            margin-bottom: 45px;
+            font-size: 2rem;
             font-weight: 800;
         }
         
         input, textarea {
             width: 100%;
             padding: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             border: 2px solid #eee;
             border-radius: 15px;
             font-family: 'Vazirmatn', sans-serif;
-            font-size: 17px;
-            transition: all 0.3s;
+            font-size: 16px;
+            transition: all 0.3s ease;
             background: #fafafa;
         }
         
@@ -494,22 +549,34 @@
             outline: none;
             border-color: #c9a24d;
             background: white;
-            box-shadow: 0 0 0 5px rgba(201,162,77,0.1);
+            box-shadow: 0 0 0 4px rgba(201,162,77,0.1);
         }
         
         button.submit {
             width: 100%;
             padding: 20px;
-            background: linear-gradient(135deg, #c9a24d, #e6b450);
+            background: linear-gradient(135deg, #c9a24d, #b08b3f);
             color: white;
-            border: none;
             border-radius: 15px;
-            font-size: 19px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 800;
+            margin-top: 10px;
             box-shadow: 0 8px 25px rgba(201,162,77,0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        button.submit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #b08b3f, #9a7a36);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
         
         button.submit:hover {
@@ -517,7 +584,16 @@
             box-shadow: 0 12px 30px rgba(201,162,77,0.4);
         }
         
-        /* Map */
+        button.submit:hover::before {
+            opacity: 1;
+        }
+        
+        button.submit span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* ===== MAP ===== */
         .map-container {
             margin: 80px 0;
             text-align: center;
@@ -529,14 +605,15 @@
             margin: 0 auto;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
-        /* Socials */
+        /* ===== SOCIALS ===== */
         .socials {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 35px;
             margin: 60px 0;
             flex-wrap: wrap;
         }
@@ -545,72 +622,68 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-decoration: none;
-            color: #2c3e50;
-            padding: 25px 30px;
+            padding: 25px 20px;
             background: white;
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            min-width: 120px;
-            transition: all 0.3s;
-            border: 2px solid transparent;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            min-width: 110px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(201,162,77,0.1);
         }
         
         .socials a:hover {
-            transform: translateY(-8px);
-            border-color: #c9a24d;
-            box-shadow: 0 15px 40px rgba(201,162,77,0.15);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: rgba(201,162,77,0.3);
             color: #c9a24d;
+        }
+        
+        .socials a span {
+            margin-top: 12px;
+            font-size: 15px;
+            font-weight: 700;
         }
         
         .socials a .icon {
             font-size: 32px;
-            margin-bottom: 15px;
         }
         
-        .socials a span {
-            font-size: 16px;
-            font-weight: 600;
-        }
-        
-        /* Footer */
+        /* ===== FOOTER ===== */
         footer {
             text-align: center;
             padding: 60px 40px;
-            background: linear-gradient(135deg, #2c3e50, #34495e);
+            background: rgba(255,255,255,0.95);
             border-radius: 25px;
             margin-top: 80px;
             line-height: 1.9;
-            color: white;
+            border: 1px solid rgba(201,162,77,0.1);
         }
         
         footer strong {
-            color: #c9a24d;
+            color: #2c3e50;
             font-size: 1.5rem;
             display: block;
             margin-bottom: 25px;
+            font-weight: 800;
         }
         
         footer a {
             color: #c9a24d;
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.3s;
+            font-weight: 700;
         }
         
         footer a:hover {
-            color: #e6b450;
             text-decoration: underline;
         }
         
-        /* Chat Widgets */
+        /* ===== CHAT WIDGETS ===== */
         .chat-widgets {
             position: fixed;
             bottom: 30px;
             left: 30px;
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 15px;
             z-index: 1000;
         }
         
@@ -622,49 +695,47 @@
             color: white;
             padding: 18px 28px;
             border-radius: 35px;
-            text-decoration: none;
-            font-weight: 700;
-            box-shadow: 0 8px 30px rgba(37,211,102,0.4);
-            transition: all 0.3s;
-            font-size: 17px;
+            font-weight: 800;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-size: 16px;
             min-height: 70px;
         }
         
         .chat-btn.rubika {
             background: #7B1FA2;
-            box-shadow: 0 8px 30px rgba(123,31,162,0.4);
+            box-shadow: 0 10px 30px rgba(123,31,162,0.4);
         }
         
         .chat-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(37,211,102,0.6);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(37,211,102,0.6);
         }
         
         .chat-btn.rubika:hover {
-            box-shadow: 0 15px 40px rgba(123,31,162,0.6);
+            box-shadow: 0 20px 40px rgba(123,31,162,0.6);
         }
         
         .chat-btn .icon {
-            font-size: 26px;
+            font-size: 24px;
+            flex-shrink: 0;
         }
         
-        /* Back to Top */
+        /* ===== BACK TO TOP ===== */
         #backToTop {
             position: fixed;
-            bottom: 170px;
+            bottom: 160px;
             left: 35px;
-            background: linear-gradient(135deg, #c9a24d, #e6b450);
+            background: linear-gradient(135deg, #c9a24d, #b08b3f);
             color: white;
-            border: none;
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            cursor: pointer;
             font-size: 24px;
-            box-shadow: 0 8px 25px rgba(201,162,77,0.4);
+            box-shadow: 0 10px 30px rgba(201,162,77,0.4);
             display: none;
             z-index: 999;
-            transition: all 0.3s;
+            transition: all 0.4s ease;
             opacity: 0;
         }
         
@@ -673,64 +744,87 @@
         }
         
         #backToTop:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 30px rgba(201,162,77,0.6);
+            background: linear-gradient(135deg, #b08b3f, #9a7a36);
+            transform: scale(1.15);
+            box-shadow: 0 15px 35px rgba(201,162,77,0.6);
         }
         
-        /* Visitor Counter */
+        /* ===== VISITOR COUNTER ===== */
         #visitor-counter {
             text-align: center;
-            margin: 30px auto;
-            font-weight: 700;
-            color: #c9a24d;
+            margin: 35px auto;
+            font-weight: 800;
+            color: #2c3e50;
             font-size: 18px;
             padding: 20px 35px;
-            background: rgba(255,255,255,0.9);
+            background: white;
             border-radius: 50px;
             display: inline-block;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            border: 2px solid rgba(201,162,77,0.3);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 2px solid rgba(201,162,77,0.2);
         }
         
-        /* Responsive - Tablet */
-        @media (max-width: 992px) {
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 20px 0;
+            margin-bottom: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: #c9a24d;
+            font-weight: 600;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb span {
+            margin: 0 8px;
+            color: #999;
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
             .container {
-                padding: 15px;
-                padding-top: 110px;
-            }
-            
-            .hero {
-                padding: 50px 30px;
-                margin-top: 30px;
-            }
-            
-            .hero h1 {
-                     /* Responsive - Tablet */
-        @media (max-width: 992px) {
-            .container {
-                padding: 15px;
-                padding-top: 110px;
-            }
-            
-            .hero {
-                padding: 50px 30px;
-                margin-top: 30px;
+                max-width: 1000px;
             }
             
             .hero h1 {
                 font-size: 2.5rem;
             }
             
-            .work-section {
-                padding: 40px 30px;
-            }
-            
             .grid {
                 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 25px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 25px;
             }
             
-            .contact-form {
+            .hero {
+                padding: 60px 35px;
+                margin-top: 40px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-features {
+                gap: 20px;
+            }
+            
+            .feature {
+                min-width: 120px;
+                padding: 16px 20px;
+            }
+            
+            .work-section, .trust-signals, .contact-form {
                 padding: 45px 35px;
             }
             
@@ -745,53 +839,90 @@
             }
         }
         
-        /* Responsive - Mobile */
         @media (max-width: 768px) {
+            .logo {
+                width: 70px;
+                height: 70px;
+                top: 15px;
+                right: 15px;
+            }
+            
+            .lang-switch {
+                top: 20px;
+                left: 20px;
+                padding: 8px 14px;
+            }
+            
+            .lang-switch button {
+                padding: 6px 16px;
+                font-size: 13px;
+            }
+            
             .hero {
-                padding: 40px 20px;
-                margin-top: 25px;
+                margin-top: 35px;
+                padding: 50px 25px;
             }
             
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.9rem;
+                margin-bottom: 15px;
             }
             
-            .tagline {
+            .hero .tagline {
                 font-size: 1.2rem;
+                margin-bottom: 30px;
             }
             
             .hero-features {
                 gap: 15px;
+                margin: 30px 0;
             }
             
             .feature {
-                padding: 15px;
-                min-width: 120px;
+                min-width: 105px;
+                padding: 14px 16px;
             }
             
             .feature-icon {
                 font-size: 26px;
+                margin-bottom: 8px;
             }
             
             .feature-text {
-                font-size: 13px;
+                font-size: 12px;
+            }
+            
+            .hero-cta {
+                font-size: 1.1rem;
+                padding: 16px 30px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 40px;
             }
             
             .tabs {
                 gap: 10px;
+                margin-bottom: 35px;
             }
             
             .tab-btn {
                 padding: 14px 22px;
-                font-size: 15px;
+                font-size: 14px;
                 flex: 1;
-                min-width: 130px;
+                min-width: 110px;
             }
             
             .grid {
                 grid-template-columns: 1fr;
                 max-width: 450px;
                 margin: 0 auto;
+                gap: 25px;
+            }
+            
+            .grid-item {
+                height: 220px;
             }
             
             .trust-grid {
@@ -799,40 +930,68 @@
                 gap: 25px;
             }
             
-            .trust-signals {
-                padding: 50px 25px;
+            .trust-item {
+                padding: 30px 20px;
+            }
+            
+            .trust-item .icon {
+                font-size: 42px;
+                margin-bottom: 20px;
+            }
+            
+            .trust-item h4 {
+                font-size: 1.3rem;
             }
             
             .article {
                 padding: 35px 25px;
             }
             
+            .article h3 {
+                font-size: 1.6rem;
+            }
+            
+            .contact-form {
+                padding: 40px 30px;
+                margin: 60px auto;
+            }
+            
+            .form-title {
+                font-size: 1.7rem;
+                margin-bottom: 35px;
+            }
+            
+            input, textarea {
+                padding: 18px;
+            }
+            
+            button.submit {
+                padding: 18px;
+            }
+            
             .socials {
-                gap: 25px;
+                gap: 20px;
             }
             
             .socials a {
-                min-width: 100px;
-                padding: 20px;
+                min-width: 95px;
+                padding: 20px 15px;
             }
             
-            .lang-switch {
-                top: 15px;
-                left: 15px;
-                padding: 8px 15px;
+            .socials a .icon {
+                font-size: 28px;
             }
             
-            .logo {
-                top: 15px;
-                right: 15px;
-                width: 70px;
+            .socials a span {
+                font-size: 14px;
             }
             
             footer {
-                padding: 50px 25px;
+                padding: 50px 30px;
+                margin-top: 60px;
             }
             
-            /* Chat Mobile - 60px height */
+            /* === CHAT WIDGETS MOBILE === */
             .chat-widgets {
                 flex-direction: row;
                 bottom: 20px;
@@ -845,87 +1004,189 @@
             .chat-btn {
                 flex: 1;
                 justify-content: center;
-                padding: 12px 8px;
-                font-size: 14px;
-                min-height: 60px; /* 60px ارتفاع */
+                padding: 12px 10px;
+                font-size: 13px;
+                min-height: 60px;
+                gap: 8px;
                 min-width: 0;
             }
             
             .chat-btn .icon {
-                font-size: 20px;
+                font-size: 18px;
                 margin-bottom: 4px;
             }
             
             .chat-btn span {
-                font-size: 12px;
+                font-size: 11px;
                 line-height: 1.2;
             }
             
             #backToTop {
-                bottom: 100px;
+                bottom: 90px;
                 left: 50%;
                 transform: translateX(-50%);
                 margin-left: 0;
                 width: 55px;
                 height: 55px;
-            }
-        }
-        
-        /* Small Mobile */
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 1.7rem;
-            }
-            
-            .tagline {
-                font-size: 1.1rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .tab-btn {
-                padding: 12px 18px;
-                font-size: 14px;
-                min-width: 115px;
-            }
-            
-            .contact-form {
-                padding: 35px 25px;
-            }
-            
-            input, textarea {
-                padding: 18px;
-            }
-            
-            .socials a {
-                min-width: 85px;
-                padding: 18px 15px;
-            }
-            
-            .socials a .icon {
-                font-size: 26px;
-            }
-            
-            .chat-btn .icon {
-                display: none; /* مخفی کردن آیکون در موبایل کوچک */
-            }
-            
-            .chat-btn span {
-                font-size: 11px;
+                font-size: 22px;
             }
             
             #visitor-counter {
                 font-size: 16px;
                 padding: 18px 30px;
             }
+            
+            .breadcrumb {
+                font-size: 13px;
+                padding: 15px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1rem;
+            }
+            
+            .hero-features {
+                gap: 10px;
+            }
+            
+            .feature {
+                min-width: 90px;
+                padding: 12px 10px;
+            }
+            
+            .feature-icon {
+                font-size: 22px;
+            }
+            
+            .feature-text {
+                font-size: 11px;
+            }
+            
+            .hero-cta {
+                font-size: 1rem;
+                padding: 14px 25px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .tab-btn {
+                padding: 12px 18px;
+                font-size: 13px;
+                min-width: 100px;
+            }
+            
+            .grid-item {
+                height: 200px;
+            }
+            
+            .trust-item {
+                padding: 25px 20px;
+            }
+            
+            .article {
+                padding: 30px 20px;
+            }
+            
+            .article h3 {
+                font-size: 1.4rem;
+            }
+            
+            .article p {
+                font-size: 15px;
+            }
+            
+            .contact-form {
+                padding: 35px 25px;
+            }
+            
+            .form-title {
+                font-size: 1.5rem;
+            }
+            
+            .socials {
+                gap: 15px;
+            }
+            
+            .socials a {
+                min-width: 85px;
+                padding: 18px 12px;
+            }
+            
+            .socials a .icon {
+                font-size: 24px;
+            }
+            
+            .socials a span {
+                font-size: 13px;
+            }
+            
+            .chat-btn .icon {
+                display: none;
+            }
+            
+            .chat-btn span {
+                font-size: 12px;
+            }
+            
+            #visitor-counter {
+                font-size: 15px;
+                padding: 15px 25px;
+            }
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* ===== IMAGE ERROR HANDLING ===== */
+        img.error {
+            background: linear-gradient(135deg, #f5f1e6, #e8e4d9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <!-- لوگو -->
-    <img src="images/IMG_20260204_102126_012.jpg" class="logo" alt="SignSculpt Studio Logo" loading="lazy">
+    <img src="images/IMG_20260204_102126_012.jpg" class="logo" alt="لوگو SignSculpt Studio" loading="lazy">
     
     <!-- سوئیچ زبان -->
     <div class="lang-switch">
@@ -935,120 +1196,143 @@
     
     <!-- چت ویجت‌ها -->
     <div class="chat-widgets">
-        <a href="https://wa.me/989148127104" target="_blank" class="chat-btn">
+        <a href="https://wa.me/989148127104" target="_blank" class="chat-btn" title="چت در واتساپ">
             <span class="icon">💬</span>
             <span>واتساپ</span>
         </a>
-        <a href="https://web.rubika.ir/#/im?p=@signsclupt" target="_blank" class="chat-btn rubika">
+        <a href="https://web.rubika.ir/#/im?p=@signsclupt" target="_blank" class="chat-btn rubika" title="چت در روبیکا">
             <span class="icon">🟣</span>
             <span>روبیکا</span>
         </a>
     </div>
     
     <!-- دکمه بازگشت به بالا -->
-    <button id="backToTop" title="بازگشت به بالا">↑</button>
+    <button id="backToTop" title="بازگشت به بالا" aria-label="بازگشت به بالای صفحه">↑</button>
+    
+    <!-- ناوبری -->
+    <div class="breadcrumb container">
+        <a href="/">خانه</a>
+        <span>›</span>
+        <span>استودیو طراحی و اجرای نما</span>
+    </div>
     
     <!-- محتوای اصلی -->
     <div class="container">
-        <!-- هدر حرفه‌ای -->
-        <section class="hero">
+        <!-- هدر -->
+        <section class="hero fade-in">
             <div class="hero-content">
                 <h1 id="main-headline">SignSculpt Studio | برترین استودیو طراحی نما در ایران</h1>
                 <p class="tagline">ترکیبی بی‌نظیر از <strong>خلاقیت، دقت و کیفیت</strong> در هر پروژه</p>
                 
                 <div class="hero-features">
-                    <div class="feature">
+                    <div class="feature floating" style="animation-delay: 0.1s;">
                         <span class="feature-icon">🎯</span>
                         <span class="feature-text">مشاوره رایگان</span>
                     </div>
-                    <div class="feature">
+                    <div class="feature floating" style="animation-delay: 0.2s;">
                         <span class="feature-icon">⚡</span>
                         <span class="feature-text">اجرای سریع</span>
                     </div>
-                    <div class="feature">
+                    <div class="feature floating" style="animation-delay: 0.3s;">
                         <span class="feature-icon">🏆</span>
                         <span class="feature-text">تضمین کیفیت</span>
                     </div>
-                    <div class="feature">
+                    <div class="feature floating" style="animation-delay: 0.4s;">
                         <span class="feature-icon">📞</span>
                         <span class="feature-text">پشتیبانی 24/7</span>
                     </div>
                 </div>
                 
-                <p class="cta">از <strong>طراحی مفهومی</strong> تا <strong>اجرای نهایی</strong> | همراه شما در هر مرحله</p>
+                <p class="hero-cta">از <strong>طراحی مفهومی</strong> تا <strong>اجرای نهایی</strong> | همراه شما در هر مرحله</p>
             </div>
         </section>
         
         <!-- نمونه‌کارها -->
-        <div class="work-section">
-            <h2 class="section-title">نمونه‌کارهای ما</h2>
+        <div class="work-section fade-in">
+            <h2 class="section-title">گالری نمونه‌کارها</h2>
             
             <div class="tabs">
-                <button class="tab-btn active" data-category="all">همه کارها</button>
-                <button class="tab-btn" data-category="composite">کامپوزیت</button>
-                <button class="tab-btn" data-category="thermo">ترمو وود</button>
-                <button class="tab-btn" data-category="chlnm">چنلیوم</button>
-                <button class="tab-btn" data-category="parametric">پارامتریک</button>
-                <button class="tab-btn" data-category="element">المان</button>
-                <button class="tab-btn" data-category="origami">اوریگامی</button>
-                <button class="tab-btn" data-category="verona">ورونای</button>
+                <button class="tab-btn active" data-category="all">
+                    <span>همه کارها</span>
+                </button>
+                <button class="tab-btn" data-category="composite">
+                    <span>کامپوزیت</span>
+                </button>
+                <button class="tab-btn" data-category="thermo">
+                    <span>ترمو وود</span>
+                </button>
+                <button class="tab-btn" data-category="chlnm">
+                    <span>چنلیوم</span>
+                </button>
+                <button class="tab-btn" data-category="parametric">
+                    <span>پارامتریک</span>
+                </button>
+                <button class="tab-btn" data-category="element">
+                    <span>المان</span>
+                </button>
+                <button class="tab-btn" data-category="origami">
+                    <span>اوریگامی</span>
+                </button>
+                <button class="tab-btn" data-category="verona">
+                    <span>ورونای</span>
+                </button>
             </div>
             
             <div class="grid">
                 <div class="grid-item" data-category="composite">
-                    <img src="images/Com.jpg" alt="نمونه کار کامپوزیت - SignSculpt Studio" loading="lazy">
+                    <img src="images/Com.jpg" alt="نمونه کار کامپوزیت - طراحی نما مدرن" loading="lazy">
                     <span>کامپوزیت</span>
                 </div>
                 <div class="grid-item" data-category="thermo">
-                    <img src="images/Te.jpg" alt="نمونه کار ترمو وود - SignSculpt Studio" loading="lazy">
+                    <img src="images/Te.jpg" alt="نمونه کار ترمو وود - نمای چوبی طبیعی" loading="lazy">
                     <span>ترمو وود</span>
                 </div>
                 <div class="grid-item" data-category="chlnm">
-                    <img src="images/Ch.jpg" alt="نمونه کار چنلیوم - SignSculpt Studio" loading="lazy">
+                    <img src="images/Ch.jpg" alt="نمونه کار چنلیوم - تابلو تبلیغاتی شفاف" loading="lazy">
                     <span>چنلیوم</span>
                 </div>
                 <div class="grid-item" data-category="parametric">
-                    <img src="images/Pa.jpg" alt="نمونه کار پارامتریک - SignSculpt Studio" loading="lazy">
+                    <img src="images/Pa.jpg" alt="نمونه کار پارامتریک - طراحی الگوریتمی" loading="lazy">
                     <span>پارامتریک</span>
                 </div>
                 <div class="grid-item" data-category="element">
-                    <img src="images/El.jpg" alt="نمونه کار المان - SignSculpt Studio" loading="lazy">
+                    <img src="images/El.jpg" alt="نمونه کار المان - عنصر شهری طراحی‌شده" loading="lazy">
                     <span>المان</span>
                 </div>
                 <div class="grid-item" data-category="origami">
-                    <img src="images/Or.jpg" alt="نمونه کار اوریگامی - SignSculpt Studio" loading="lazy">
+                    <img src="images/Or.jpg" alt="نمونه کار اوریگامی - سازه تا شونده" loading="lazy">
                     <span>اوریگامی</span>
                 </div>
                 <div class="grid-item" data-category="verona">
-                    <img src="images/Vo.jpg" alt="نمونه کار ورونای - SignSculpt Studio" loading="lazy">
+                    <img src="images/Vo.jpg" alt="نمونه کار ورونای - طراحی الگوریتمی پیشرفته" loading="lazy">
                     <span>ورونای</span>
                 </div>
             </div>
         </div>
         
         <!-- نشانه‌های اعتماد -->
-        <div class="trust-signals">
+        <div class="trust-signals fade-in">
             <h2 class="section-title">چرا SignSculpt Studio؟</h2>
             <div class="trust-grid">
                 <div class="trust-item">
                     <span class="icon">✅</span>
                     <h4>۵+ سال تجربه</h4>
-                    <p>تجربه غنی در طراحی و اجرای پروژه‌های مختلف با بیش از ۱۰۰ پروژه موفق</p>
+                    <p>تجربه غنی در طراحی و اجرای صدها پروژه موفق در سراسر ایران</p>
                 </div>
                 <div class="trust-item">
                     <span class="icon">📊</span>
-                    <h4>کیفیت تضمینی</h4>
-                    <p>استفاده از بهترین مواد اولیه و تکنولوژی روز دنیا با گارانتی کیفیت</p>
+                    <h4>۱۰۰+ پروژه موفق</h4>
+                    <p>پروژه‌های متنوع از تابلوهای تجاری تا نماهای مدرن ساختمان‌ها</p>
                 </div>
                 <div class="trust-item">
                     <span class="icon">🏆</span>
-                    <h4>تیم حرفه‌ای</h4>
-                    <p>متخصصان مجرب در زمینه طراحی، مهندسی و اجرای پروژه‌های نما و تابلو</p>
+                    <h4>تضمین کیفیت</h4>
+                    <p>استفاده از بهترین مواد اولیه و تکنولوژی روز دنیا با گارانتی معتبر</p>
                 </div>
                 <div class="trust-item">
                     <span class="icon">🕒</span>
-                    <h4>پشتیبانی دائمی</h4>
-                    <p>همراهی و پشتیبانی حتی پس از اتمام پروژه برای رضایت کامل شما</p>
+                    <h4>پشتیبانی ۲۴/۷</h4>
+                    <p>همیشه برای پاسخگویی به سوالات و پیگیری پروژه‌ها آماده‌ایم</p>
                 </div>
             </div>
         </div>
@@ -1058,119 +1342,663 @@
             <h2 class="section-title">مقالات تخصصی</h2>
             
             <!-- مقاله کامپوزیت -->
-            <div class="article" id="article-composite">
-                <h3>کامپوزیت: نوآوری در طراحی نما و تابلوهای تبلیغاتی</h3>
-                <div class="article-content">
-                    <p>کامپوزیت‌ها از ترکیب دو یا چند ماده با ویژگی‌های مکمل ساخته می‌شوند تا عملکردی برتر از اجزای جداگانه ارائه دهند. در صنعت طراحی نما و تابلو، کامپوزیت‌های آلومینیومی به دلیل سبکی، استحکام و انعطاف‌پذیری فوق‌العاده، به انتخابی ایده‌آل تبدیل شده‌اند.</p>
+            <article class="article fade-in" itemscope itemtype="https://schema.org/Article">
+                <meta itemprop="datePublished" content="2024-01-20">
+                <meta itemprop="author" content="SignSculpt Studio">
+                <h3 itemprop="headline">کامپوزیت: نوآوری در طراحی نما و تابلوهای تبلیغاتی</h3>
+                <div itemprop="articleBody">
+                    <p><strong>کامپوزیت‌ها</strong> از ترکیب دو یا چند ماده با ویژگی‌های مکمل ساخته می‌شوند تا عملکردی برتر از اجزای جداگانه ارائه دهند. در صنعت طراحی نما و تابلو، کامپوزیت‌های آلومینیومی به دلیل سبکی، استحکام و انعطاف‌پذیری فوق‌العاده، به انتخابی ایده‌آل تبدیل شده‌اند.</p>
                     
-                    <div class="article-highlight">
-                        <strong>✅ مزایای کلیدی کامپوزیت:</strong>
-                        <ul class="article-list">
-                            <li><strong>وزن سبک:</strong> کاهش بار مرده سازه تا ۴۰٪</li>
-                            <li><strong>مقاومت بالا:</strong> در برابر خوردگی، UV و شرایط جوی</li>
-                            <li><strong>تنوع بی‌نظیر:</strong> طیف رنگی نامحدود با فینیش‌های متنوع</li>
-                            <li><strong>انعطاف‌پذیری:</strong> قابلیت شکل‌دهی و اجرای منحنی‌های پیچیده</li>
-                            <li><strong>اقتصادی:</strong> نصب سریع و هزینه نگهداری ناچیز</li>
-                            <li><strong>طول عمر:</strong> ۱۵-۲۵ سال با گارانتی کیفیت</li>
-                        </ul>
-                    </div>
+                    <p><strong>✅ مزایای کلیدی کامپوزیت:</strong></p>
+                    <ul>
+                        <li><strong>وزن سبک</strong> - کاهش بار سازه تا ۴۰٪ نسبت به متریال‌های سنتی</li>
+                        <li><strong>مقاومت بالا</strong> - در برابر خوردگی، UV و شرایط جوی سخت</li>
+                        <li><strong>تنوع رنگی نامحدود</strong> - با فینیش‌های متنوع (متالیک، مات، براق)</li>
+                        <li><strong>قابلیت شکل‌پذیری</strong> - اجرای منحنی‌ها و فرم‌های پیچیده</li>
+                        <li><strong>نصب سریع</strong> - سیستم نصب ریل‌ای با کاهش ۶۰٪ زمان اجرا</li>
+                        <li><strong>طول عمر بالا</strong> - ۱۵ تا ۲۵ سال با گارانتی رنگ و استحکام</li>
+                    </ul>
                     
-                    <p><strong>🔥 کاربردهای ویژه:</strong> کامپوزیت در نماهای مدرن ساختمان‌های اداری و تجاری، تابلوهای تبلیغاتی سه‌بعدی، دکوراسیون داخلی و المان‌های شهری کاربرد دارد. کامپوزیت‌های نسل جدید با پوشش نانو، خاصیت خودتمیزشوندگی داشته و در برابر آلودگی شهری مقاوم‌تر هستند.</p>
+                    <p><strong>🔥 کاربردهای ویژه کامپوزیت:</strong></p>
+                    <ul>
+                        <li><strong>نماهای مدرن</strong> ساختمان‌های اداری و تجاری</li>
+                        <li><strong>تابلوهای تبلیغاتی</strong> سه‌بعدی و حروف برجسته</li>
+                        <li><strong>دکوراسیون داخلی</strong> و پارتیشن‌های طراحی‌شده</li>
+                        <li><strong>المان‌های شهری</strong> و مبلمان محیطی</li>
+                    </ul>
+                    
+                    <p><strong>💡 نکته فنی:</strong> کامپوزیت‌های نسل جدید با پوشش نانو، خاصیت خودتمیزشوندگی داشته و در برابر آلودگی شهری مقاوم‌تر هستند. ضخامت استاندارد ورق‌های کامپوزیت بین ۳ تا ۶ میلی‌متر است که بسته به کاربری انتخاب می‌شود.</p>
+                    
+                    <p><strong>📊 مقایسه اقتصادی:</strong> اگرچه هزینه اولیه کامپوزیت ممکن است بالاتر باشد، اما با توجه به کاهش هزینه‌های نگهداری، نصب سریع‌تر و عمر طولانی، در بلندمدت مقرون‌به‌صرفه‌ترین انتخاب است.</p>
                 </div>
-            </div>
+            </article>
             
             <!-- مقاله ترمو وود -->
-            <div class="article" id="article-thermowood">
-                <h3>ترمو وود: زیبایی طبیعی با دوام فوق‌العاده</h3>
-                <div class="article-content">
-                    <p>ترمو وود فرآیندی انقلابی در صنعت چوب است که با حرارت‌دهی کنترل‌شده (۱۸۰-۲۱۵°C) در محیط خلأ، دوام چوب را ۱۰ برابر افزایش می‌دهد. این فرآیند رطوبت چوب را به زیر ۶٪ کاهش داده و آن را در برابر پوسیدگی، حشرات و تغییرات آب‌وهوا مقاوم می‌کند.</p>
+            <article class="article fade-in" itemscope itemtype="https://schema.org/Article">
+                <meta itemprop="datePublished" content="2024-01-20">
+                <meta itemprop="author" content="SignSculpt Studio">
+                <h3 itemprop="headline">ترمو وود: زیبایی طبیعی با دوام فوق‌العاده</h3>
+                <div itemprop="articleBody">
+                    <p><strong>ترمو وود</strong> فرآیندی انقلابی در صنعت چوب است که با حرارت‌دهی کنترل‌شده (۱۸۰-۲۱۵°C) در محیط خلأ، دوام چوب را ۱۰ برابر افزایش می‌دهد. این فرآیند رطوبت چوب را به زیر ۶٪ کاهش داده و آن را در برابر پوسیدگی، حشرات و تغییرات آب‌وهوا مقاوم می‌کند.</p>
                     
-                    <div class="article-highlight">
-                        <strong>✨ ویژگی‌های منحصربه‌فرد ترمو وود:</strong>
-                        <ul class="article-list">
-                            <li><strong>طبیعی و سالم:</strong> بدون مواد شیمیایی مضر و دوستدار محیط زیست</li>
-                            <li><strong>مقاومت بالا:</strong> در برابر رطوبت، کپک، قارچ و موریانه</li>
-                            <li><strong>پایداری ابعادی:</strong> عدم تاب برداشتن و تغییر شکل</li>
-                            <li><strong>رنگ‌پذیری عالی:</strong> با رنگ‌های مخصوص چوب و روغن‌های طبیعی</li>
-                            <li><strong>عایق طبیعی:</strong> حرارتی و صوتی با کارایی بالا</li>
-                        </ul>
-                    </div>
+                    <p><strong>✨ ویژگی‌های منحصربه‌فرد ترمو وود:</strong></p>
+                    <ul>
+                        <li><strong>کاملاً طبیعی</strong> - بدون مواد شیمیایی مضر و سازگار با محیط زیست</li>
+                        <li><strong>مقاومت بالا</strong> - در برابر رطوبت، کپک، قارچ و موریانه</li>
+                        <li><strong>پایداری ابعادی</strong> - عدم تاب برداشتن، ترک‌خوردگی و تغییر شکل</li>
+                        <li><strong>رنگ‌پذیری عالی</strong> - قابلیت رنگ‌آمیزی با انواع رنگ‌های مخصوص چوب</li>
+                        <li><strong>عایق طبیعی</strong> - عایق حرارتی و صوتی با کارایی بالا</li>
+                        <li><strong>تعمیرپذیری</strong> - امکان سنباده‌زنی و رنگ‌کاری مجدد</li>
+                    </ul>
                     
-                    <p><strong>🏆 درجه‌بندی:</strong> ترمو وود در دو کلاس تولید می‌شود: Thermo-S برای محیط‌های بسیار مرطوب و Thermo-D برای محیط‌های معمولی. <strong>🎯 پروژه‌های ایده‌آل:</strong> نماهای چوبی ویلاها و رستوران‌ها، کفپوش تراس و استخر، آلاچیق، پرگولا و مبلمان شهری، سقف‌های کاذب و دیوارپوش‌های لوکس.</p>
+                    <p><strong>🏆 درجه‌بندی ترمو وود:</strong></p>
+                    <ul>
+                        <li><strong>کلاس Thermo-S</strong> - برای محیط‌های بسیار مرطوب (استخر، ساحل)</li>
+                        <li><strong>کلاس Thermo-D</strong> - برای محیط‌های معمولی (نما، فضای داخلی)</li>
+                    </ul>
                     
-                    <p><strong>📊 مقایسه:</strong> ترمو وود در مقابل چوب معمولی ۸ برابر در برابر رطوبت و ۵ برابر در برابر حشرات مقاوم‌تر است.</p>
+                    <p><strong>🎯 پروژه‌های ایده‌آل برای ترمو وود:</strong></p>
+                    <ul>
+                        <li><strong>نماهای چوبی</strong> ویلاها، رستوران‌ها و هتل‌ها</li>
+                        <li><strong>کفپوش</strong> تراس، استخر، بالکن و فضای باز</li>
+                        <li><strong>سازه‌های فضای باز</strong> آلاچیق، پرگولا، نیمکت</li>
+                        <li><strong>دکوراسیون داخلی</strong> سقف‌های کاذب، دیوارپوش‌های لوکس</li>
+                        <li><strong>مبلمان شهری</strong> و المان‌های پارکی</li>
+                    </ul>
+                    
+                    <p><strong>📊 مقایسه فنی:</strong> ترمو وود در مقایسه با چوب معمولی:
+                    <br>• ۸ برابر مقاوم‌تر در برابر رطوبت
+                    <br>• ۵ برابر مقاوم‌تر در برابر حشرات چوب‌خوار
+                    <br>• ۳ برابر مقاوم‌تر در برابر تغییرات دمایی
+                    <br>• ۱۰۰٪ بدون مواد شیمیایی نگهدارنده</p>
+                    
+                    <p><strong>💎 نکته اجرایی:</strong> برای نصب ترمو وود باید از پیچ و میخ ضدزنگ استفاده شود و بین تخته‌ها فاصله ۵-۱۰ میلی‌متری برای انبساط و انقباظ در نظر گرفته شود. نگهداری سالانه با روغن مخصوص چوب، طول عمر آن را تا ۳۰ سال افزایش می‌دهد.</p>
                 </div>
-            </div>
+            </article>
             
             <!-- مقاله چنلیوم -->
-            <div class="article" id="article-chenlium">
-                <h3>چنلیوم: انقلاب در تابلوهای تبلیغاتی شهری</h3>
-                <div class="article-content">
-                    <p>چنلیوم (آکریلیک کست) متریالی پیشرفته است که با ترکیب پلیمرهای خالص تولید می‌شود. سطح شیشه‌ای، شفافیت ۹۲٪ (مشابه شیشه) و مقاومت فوق‌العاده، آن را به برترین انتخاب تابلوهای مدرن تبدیل کرده است.</p>
+            <article class="article fade-in" itemscope itemtype="https://schema.org/Article">
+                <meta itemprop="datePublished" content="2024-01-20">
+                <meta itemprop="author" content="SignSculpt Studio">
+                <h3 itemprop="headline">چنلیوم: انقلاب در تابلوهای تبلیغاتی شهری</h3>
+                <div itemprop="articleBody">
+                    <p><strong>چنلیوم (آکریلیک کست)</strong> متریالی پیشرفته است که با ترکیب پلیمرهای خالص تولید می‌شود. سطح شیشه‌ای، شفافیت ۹۲٪ (مشابه شیشه) و مقاومت فوق‌العاده، آن را به برترین انتخاب تابلوهای مدرن تبدیل کرده است.</p>
                     
-                    <div class="article-highlight">
-                        <strong>⚡ مزایای رقابتی چنلیوم:</strong>
-                        <ul class="article-list">
-                            <li><strong>شفافیت بی‌نظیر:</strong> نورگذری عالی برای نورپردازی</li>
-                            <li><strong>وزن سبک:</strong> یک‌سوم شیشه هم‌اندازه</li>
-                            <li><strong>مقاومت ضربه‌ای:</strong> ۱۰ برابر شیشه معمولی</li>
-                            <li><strong>پایداری رنگ:</strong> عدم زردشدگی در طول زمان</li>
-                            <li><strong>دقت بالا:</strong> قابل برش لیزر با دقت ۰.۱ میلی‌متر</li>
-                        </ul>
-                    </div>
+                    <p><strong>⚡ مزایای رقابتی چنلیوم:</strong></p>
+                    <ul>
+                        <li><strong>شفافیت بی‌نظیر</strong> - نورگذری عالی برای تابلوهای نورانی</li>
+                        <li><strong>وزن سبک</strong> - یک‌سوم وزن شیشه با همان ابعاد</li>
+                        <li><strong>مقاومت ضربه‌ای</strong> - ۱۰ برابر مقاوم‌تر از شیشه معمولی</li>
+                        <li><strong>ثبات رنگ</strong> - عدم زردشدگی در طول زمان حتی در معرض نور مستقیم</li>
+                        <li><strong>دقت ساخت</strong> - قابل برش لیزر با دقت ۰.۱ میلی‌متر</li>
+                        <li><strong>انعطاف‌پذیری</strong> - قابلیت فرم‌دهی حرارتی و ساخت حجم‌های سه‌بعدی</li>
+                    </ul>
                     
-                    <p><strong>🌈 قابلیت‌های ویژه:</strong> چاپ سابلیمیشن با وضوح ۱۴۴۰ dpi، حکاکی لیزری سه‌بعدی، روکش‌های ضدخش و آنتی‌یووی، تولید در ضخامت‌های ۳ تا ۵۰ میلی‌متر.</p>
+                    <p><strong>🌈 قابلیت‌های ویژه چنلیوم:</strong></p>
+                    <ul>
+                        <li><strong>چاپ سابلیمیشن</strong> با وضوح ۱۴۴۰ dpi برای تصاویر با کیفیت</li>
+                        <li><strong>حکاکی لیزری</strong> سه‌بعدی با عمق تا ۱۵ میلی‌متر</li>
+                        <li><strong>روکش‌های تخصصی</strong> ضدخش، آنتی‌یووی و مات‌کننده</li>
+                        <li><strong>طیف ضخامت</strong> تولید در ضخامت‌های ۳ تا ۵۰ میلی‌متر</li>
+                        <li><strong>رنگ‌بندی</strong> بیش از ۱۰۰ رنگ استاندارد و سفارشی</li>
+                    </ul>
                     
-                    <p><strong>🏢 کاربردهای تجاری:</strong> تابلوهای فروشگاهی و برندینگ، ویترین‌های موزه و گالری، پارتیشن‌های اداری دکوراتیو، المان‌های نورپردازی شهری.</p>
+                    <p><strong>🏢 کاربردهای تجاری چنلیوم:</strong></p>
+                    <ul>
+                        <li><strong>تابلوهای فروشگاهی</strong> و سیستم‌های برندینگ</li>
+                        <li><strong>ویترین‌های موزه</strong>، گالری و فروشگاه‌های لوکس</li>
+                        <li><strong>پارتیشن‌های اداری</strong> دکوراتیو و جداکننده فضا</li>
+                        <li><strong>المان‌های نورپردازی</strong> شهری و دکوراتیو</li>
+                        <li><strong>علائم راهنمایی</strong> و تابلوهای اطلاع‌رسانی</li>
+                        <li><strong>صنعت پزشکی</strong> و تجهیزات آزمایشگاهی</li>
+                    </ul>
                     
-                    <p><strong>💎 نکته اقتصادی:</strong> چنلیوم با عمر مفید ۱۵+ سال و هزینه نگهداری صفر، سرمایه‌گذاری بلندمدت مقرون‌به‌صرفه‌ای است.</p>
+                    <p><strong>💎 نکته اقتصادی:</strong> چنلیوم با عمر مفید ۱۵+ سال و هزینه نگهداری نزدیک به صفر، سرمایه‌گذاری بلندمدت مقرون‌به‌صرفه‌ای است. عدم نیاز به تعویض دوره‌ای و مقاومت در برابر خراش، هزینه کل مالکیت را به شدت کاهش می‌دهد.</p>
+                    
+                    <p><strong>🔧 فرآیند تولید:</strong> چنلیوم از طریق فرآیند کست (ریخته‌گری) تولید می‌شود که باعث ایجاد سطح کاملاً صاف و یکدست می‌شود. این روش تولید، حباب‌های هوا را حذف کرده و شفافیت نهایی را تضمین می‌کند.</p>
                 </div>
-            </div>
+            </article>
             
             <!-- مقاله پارامتریک -->
-            <div class="article" id="article-parametric">
-                <h3>طراحی پارامتریک: هنر دیجیتال در معماری مدرن</h3>
-                <div class="article-content">
-                    <p>طراحی پارامتریک روشی پیشرفته است که با تعریف پارامترها و الگوریتم‌های ریاضی، فرم‌های پیچیده و بهینه‌شده ایجاد می‌کند. این متدولوژی تحولی در ساخت نماهای غیرمتعارف ایجاد کرده است.</p>
+            <article class="article fade-in" itemscope itemtype="https://schema.org/Article">
+                <meta itemprop="datePublished" content="2024-01-20">
+                <meta itemprop="author" content="SignSculpt Studio">
+                <h3 itemprop="headline">طراحی پارامتریک: هنر دیجیتال در معماری مدرن</h3>
+                <div itemprop="articleBody">
+                    <p><strong>طراحی پارامتریک</strong> روشی پیشرفته است که با تعریف پارامترها و الگوریتم‌های ریاضی، فرم‌های پیچیده و بهینه‌شده ایجاد می‌کند. این متدولوژی تحولی در ساخت نماهای غیرمتعارف و سازه‌های پیچیده ایجاد کرده است.</p>
                     
-                    <div class="article-highlight">
-                        <strong>🧠 هسته طراحی پارامتریک:</strong>
-                        <ol class="article-list">
-                            <li>تعریف پارامترهای ورودی (محدودیت‌ها، اهداف)</li>
-                            <li>پیاده‌سازی الگوریتم تولید فرم</li>
-                            <li>بهینه‌سازی ساختاری و عملکردی</li>
-                            <li>خروجی نهایی اجرایی و مستندات فنی</li>
-                        </ol>
-                    </div>
+                    <p><strong>🧠 هسته طراحی پارامتریک:</strong></p>
+                    <ol>
+                        <li><strong>پارامترهای ورودی</strong> - محدودیت‌ها، اهداف طراحی، شرایط محیطی</li>
+                        <li><strong>الگوریتم تولید فرم</strong> - تبدیل پارامترها به هندسه</li>
+                        <li><strong>بهینه‌سازی ساختاری</strong> - تحلیل بارها، تنش‌ها و عملکرد</li>
+                        <li><strong>خروجی نهایی</strong> - فایل‌های اجرایی و نقشه‌های ساخت</li>
+                    </ol>
                     
-                    <p><strong>🛠️ نرم‌افزارهای تخصصی:</strong> Rhinoceros 3D + Grasshopper، Autodesk Dynamo، CATIA Generative Design، Param-O (توسعه داخلی).</p>
+                    <p><strong>🛠️ نرم‌افزارهای تخصصی طراحی پارامتریک:</strong></p>
+                    <ul>
+                        <li><strong>Rhinoceros 3D + Grasshopper</strong> - استاندارد صنعت برای طراحی پارامتریک</li>
+                        <li><strong>Autodesk Dynamo</strong> - یکپارچه با Revit برای BIM</li>
+                        <li><strong>CATIA Generative Design</strong> - برای طراحی‌های پیچیده صنعتی</li>
+                        <li><strong>Param-O</strong> - توسعه داخلی برای پروژه‌های خاص</li>
+                    </ul>
                     
-                    <p><strong>🎨 قابلیت‌های خارق‌العاده:</strong> تولید هزاران طرح در دقیقه، شبیه‌سازی رفتار سازه در شرایط واقعی، بهینه‌سازی مصرف مواد (کاهش تا ۴۰٪)، یکپارچه‌سازی با BIM.</p>
+                    <p><strong>🎨 قابلیت‌های خارق‌العاده طراحی پارامتریک:</strong></p>
+                    <ul>
+                        <li><strong>تولید انبوه طرح</strong> - تولید هزاران طرح در دقیقه و انتخاب بهینه</li>
+                        <li><strong>شبیه‌سازی واقعی</strong> - بررسی رفتار سازه در شرایط مختلف</li>
+                        <li><strong>بهینه‌سازی مواد</strong> - کاهش ۳۰-۴۰٪ مصرف مواد بدون کاهش استحکام</li>
+                        <li><strong>یکپارچه‌سازی کامل</strong> - ارتباط مستقیم با سیستم‌های ساخت دیجیتال</li>
+                        <li><strong>انطباق محیطی</strong> - طراحی بر اساس نور، باد و شرایط اقلیمی</li>
+                    </ul>
                     
-                    <p><strong>🏛️ پروژه‌های شاخص:</strong> نماهای مورب و مشبک ساختمان‌های بلندمرتبه، سقف‌های پارامتریک سالن‌های همایش، المان‌های شهری ریاضی‌محور، دکوراسیون داخلی الگوریتمی.</p>
+                    <p><strong>🏛️ پروژه‌های شاخص پارامتریک:</strong></p>
+                    <ul>
+                        <li><strong>نماهای مورب و مشبک</strong> ساختمان‌های بلندمرتبه</li>
+                        <li><strong>سقف‌های پارامتریک</strong> سالن‌های همایش و فرودگاه‌ها</li>
+                        <li><strong>المان‌های شهری</strong> ریاضی‌محور و فرم‌های ارگانیک</li>
+                        <li><strong>دکوراسیون داخلی</strong> الگوریتمی و سفارشی‌سازی شده</li>
+                        <li><strong>سازه‌های سبک</strong> پل‌های عابرپیاده و سازه‌های موقت</li>
+                    </ul>
                     
-                    <p><strong>📈 آمار جالب:</strong> طراحی پارامتریک زمان طراحی را ۶۰٪ کاهش و بهره‌وری مواد را ۳۵٪ افزایش می‌دهد.</p>
+                    <p><strong>📈 آمار و ارقام:</strong> طراحی پارامتریک:
+                    <br>• زمان طراحی را ۶۰٪ کاهش می‌دهد
+                    <br>• بهره‌وری مواد را ۳۵٪ افزایش می‌دهد
+                    <br>• خطاهای اجرایی را ۸۰٪ کم می‌کند
+                    <br>• امکان طراحی فرم‌هایی را می‌دهد که با روش‌های سنتی غیرممکن است</p>
+                    
+                    <p><strong>🚀 آینده طراحی پارامتریک:</strong> با پیشرفت هوش مصنوعی و یادگیری ماشین، طراحی پارامتریک به سمت سیستم‌های خودآموز حرکت می‌کند که می‌توانند از پروژه‌های قبلی یاد گرفته و طرح‌های بهینه‌تری ارائه دهند.</p>
                 </div>
-            </div>
+            </article>
             
             <!-- مقاله المان -->
-            <div class="article" id="article-element">
-                <h3>المان‌های شهری: هویت‌بخشی به فضاهای عمومی</h3>
-                <div class="article-content">
-                    <p>المان‌های شهری قطعات طراحی‌شده‌ای هستند که علاوه بر کاربرد، هویت و خاطره جمعی ایجاد می‌کنند. این عناصر پلی بین معماری، هنر و جامعه هستند.</p>
+            <article class="article fade-in" itemscope itemtype="https://schema.org/Article">
+                <meta itemprop="datePublished" content="2024-01-20">
+                <meta itemprop="author" content="SignSculpt Studio">
+                <h3 itemprop="headline">المان‌های شهری: هویت‌بخشی به فضاهای عمومی</h3>
+                <div itemprop="articleBody">
+                    <p><strong>المان‌های شهری</strong> قطعات طراحی‌شده‌ای هستند که علاوه بر کارکرد عملی، هویت بصری و خاطره جمعی ایجاد می‌کنند. این عناصر پلی بین معماری، هنر و جامعه هستند که کیفیت زندگی شهری را ارتقا می‌دهند.</p>
                     
-                    <div class="article-highlight">
-                        <strong>🗺️ دسته‌بندی المان‌های شهری:</strong>
-                        <ul class="article-list">
-                            <li><strong>عملکردی:</strong> نیمکت، آبخوری، روشنایی، سطل زباله</li>
-                            <li><strong>هنری:</strong> مجسمه، دیوارنگاره، اینستالیشن</li>
-                            <li><strong>اطلاع‌رسانی:</strong> تابلوی راهنما، نقشه شهری</li>
-                            <li><strong>تعاملی:</strong> وسایل بازی، فضای اجتماع، المان‌های دیجیتال</li>
-                        </ul>
-                    </div>
+                    <p><strong>🗺️ دسته‌بندی المان‌های شهری:</strong></p>
+                    <ol>
+                        <li><strong>عملکردی</strong> - نیمکت، آبخوری، سطل زباله، روشنایی، سایبان</li>
+                        <li><strong>هنری</strong> - مجسمه، دیوارنگاره، اینستالیشن، زمین‌نگاره</li>
+                        <li><strong>اطلاع‌رسانی</strong> - تابلو راهنما، نقشه، ساعت، تابلو اعلانات</li>
+                        <li><strong>تعاملی</strong> - وسایل بازی، فضاهای اجتماع، امکانات دیجیتال</li>
+                        <li><strong>طبیعی</strong> - باغچه‌های شهری، دیوار سبز، آبنما</li>
+                    </ol>
                     
-                    <p><strong>🏗️ فرآیند طراحی المان:</strong> مطالعه زمینه (Context Study)، طراحی مفهومی (Concept Design)، مهندسی سازه و مواد، ساخت نمونه و تست میدانی، نصب و مانیتورینگ.</p>
+                    <p><strong>🏗️ فرآیند طراحی المان شهری:</strong></p>
+                    <ol>
+                        <li><strong>مطالعه زمینه</strong> - بررسی تاریخ، فرهنگ و نیازهای محلی</li>
+                        <li><strong>طراحی مفهومی</strong> - ایده‌پردازی و ایجاد مفهوم اصلی</li>
+                        <li><strong>مهندسی سازه</strong> - محاسبات سازه‌ای و انتخاب مواد</li>
+                        <li><strong>ساخت نمونه</strong> - ماکت و تست میدانی</li>
+                        <li><strong>تولید نهایی</strong> - ساخت در ابعاد واقعی</li>
+                        <li><strong>نصب و مانیتورینگ</strong> - اجرا و نظارت بر عملکرد</li>
+                    </ol>
                     
-                    <p><strong>🌿 رویکردهای نوین:</strong> طراحی مشارکتی با جامعه محلی، استفاده از مواد بازیافتی و پایدار، یکپارچه‌سازی با نورپردازی هوشمند، قابلیت تعامل دیجیتال (AR/QR).</p>
+                    <p><strong>🌿 رویکردهای نوین در طراحی المان:</strong></p>
+                    <ul>
+                        <li><strong>طراحی مشارکتی</strong> - مشارکت جامعه محلی در فرآیند طراحی</li>
+                        <li><strong>پایداری محیطی</strong> - استفاده از مواد بازیافتی و انرژی‌های تجدیدپذیر</li>
+                        <li><strong>هوشمندسازی</strong> - یکپارچه‌سازی با نورپردازی هوشمند و سنسورها</li>
+                        <li><strong>تعامل دیجیتال</strong> - QR Code، واقعیت افزوده، نمایشگرهای لمسی</li>
+                        <li><strong>چندعملکردی</strong> - ترکیب چند کارکرد در یک المان</li>
+                    </ul>
                     
-                    <p><strong>📍 پروژه‌های موفق:</strong> المان‌های ورودی شهرک‌های صنعتی، میادین اصلی شهر با هویت بصری، فضای داخلی دفاتر شرکت‌های 
+                    <p><strong>📍 نمونه پروژه‌های موفق المان شهری:</strong></p>
+                    <ul>
+                        <li><strong>المان‌های ورودی</strong> شهرک‌های صنعتی و پارک‌های علم و فناوری</li>
+                        <li><strong>طراحی میادین اصلی</strong> شهر با هویت بصری منحصربه‌فرد</li>
+                        <li><strong>فضای داخلی دفاتر</strong> شرکت‌های دانش‌بنیان و استارت‌آپ‌ها</li>
+                        <li><strong>پارک‌های موضوعی</strong> و فضاهای بازی کودکان با المان‌های آموزشی</li>
+                        <li><strong>محوطه دانشگاه‌ها</strong> و مراکز آموزشی با المان‌های تعاملی</li>
+                    </ul>
+                    
+                    <p><strong>📊 تأثیر اجتماعی المان‌های خوب طراحی‌شده:</strong></p>
+                    <ul>
+                        <li><strong>افزایش ۴۰٪</strong> مشارکت اجتماعی در فضاهای عمومی</li>
+                        <li><strong>کاهش ۷۰٪</strong> وندالیسم و تخریب اموال عمومی</li>
+                        <li><strong>افزایش ۵۰٪</strong> مدت زمان حضور مردم در فضاهای شهری</li>
+                        <li><strong>تقویت هویت محلی</strong> و حس تعلق به مکان</li>
+                        <li><strong>جذب گردشگر</strong> و افزایش فعالیت‌های اقتصادی محلی</li>
+                    </ul>
+                    
+                    <p><strong>💡 نکته طراحی:</strong> المان موفق شهری باید سه ویژگی اصلی داشته باشد: <strong>کاربردی</strong> (نیاز واقعی را برطرف کند)، <strong>زیبا</strong> (از نظر بصری جذاب باشد) و <strong>معنادار</strong> (ارتباطی با زمینه مکانی و فرهنگی داشته باشد).</p>
+                </div>
+            </article>
+            
+            <!-- مقاله اوریگامی -->
+            <article class="article fade-in" itemscope itemtype="https://schema.org/Article">
+                <meta itemprop="datePublished" content="2024-01-20">
+                <meta itemprop="author" content="SignSculpt Studio">
+                <h3 itemprop="headline">اوریگامی معماری: تلفیق هنر شرقی با فناوری روز</h3>
+                <div itemprop="articleBody">
+                    <p><strong>اوریگامی معماری</strong> با الهام از هنر تاکردن کاغذ ژاپنی، اصول هندسه تا شونده را در ساخت سازه‌های پیچیده به کار می‌گیرد. این روش امکان ایجاد سازه‌های بزرگ از قطعات کوچک و مسطح را فراهم می‌کند.</p>
+                    
+                    <p><strong>📐 اصول هندسی اوریگامی:</strong></p>
+                    <ul>
+                        <li><strong>مفصل‌های تا شونده</strong> - نقاط چرخش برای تغییر شکل سازه</li>
+                        <li><strong>الگوهای تکرارشونده</strong> - تسلاسیون برای ایجاد سطوح پیوسته</li>
+                        <li><strong>تبدیل سطوح صاف</strong> - تبدیل صفحات تخت به حجم‌های سه‌بعدی</li>
+                        <li><strong>قابلیت جمع‌شدن</strong> - سیستم‌های Deployable برای فضاهای موقت</li>
+                        <li><strong>سازگاری شکل</strong> - توانایی تغییر شکل بر اساس نیاز</li>
+                    </ul>
+                    
+                    <p><strong>⚙️ فناوری‌های ساخت اوریگامی:</strong></p>
+                    <ul>
+                        <li><strong>برش CNC</strong> - حکاکی الگوهای تا با دقت میکرونی</li>
+                        <li><strong>مفصل‌های هوشمند</strong> - مفصل‌هایی با حافظه شکلی و کنترل دیجیتال</li>
+                        <li><strong>مواد انعطاف‌پذیر</strong> - کامپوزیت‌های خم‌شونده و آلیاژهای حافظه‌دار</li>
+                        <li><strong>سیستم‌های هیدرولیک</strong> - باز و بست خودکار با فشار هوا یا روغن</li>
+                        <li><strong>ساخت افزودنی</strong> - پرینت سه‌بعدی قطعات پیچیده</li>
+                    </ul>
+                    
+                    <p><strong>🌟 مزایای انقلابی اوریگامی معماری:</strong></p>
+                    <ul>
+                        <li><strong>کاهش حجم</strong> - کاهش ۸۰٪ حجم در حالت حمل و نقل</li>
+                        <li><strong>سرعت نصب</strong> - سرعت ۱۰ برابری نسبت به سازه‌های سنتی</li>
+                        <li><strong>انعطاف‌پذیری</strong> - امکان ارتقا، تغییر و توسعه پذیری</li>
+                        <li><strong>صرفه‌جویی</strong> - کاهش هزینه‌های ساخت، حمل و نصب</li>
+                        <li><strong>پایداری</strong> - امکان استفاده مجدد و بازیافت آسان</li>
+                        <li><strong>یکپارچگی</strong> - ترکیب با سیستم‌های خورشیدی و هوشمند</li>
+                    </ul>
+                    
+                    <p><strong>🏗️ کاربردهای مهندسی اوریگامی:</strong></p>
+                    <ul>
+                        <li><strong>سقف‌های جمع‌شونده</strong> استادیوم‌ها و سالن‌های چندمنظوره</li>
+                        <li><strong>غرفه‌های نمایشگاهی</strong> سریع‌الاجرا و قابل حمل</li>
+                        <li><strong>پنل‌های نما</strong> با قابلیت تنظیم سایه و تهویه</li>
+                        <li><strong>سازه‌های امدادی</strong> پناهگاه‌های اضطراری در مناطق بحرانی</li>
+                        <li><strong>ساختمان‌های موقت</strong> مدارس، کلینیک‌ها و اقامتگاه‌ها</li>
+                        <li><strong>سازه‌های فضایی</strong> برای اکتشافات ماه و مریخ</li>
+                    </ul>
+                    
+                    <p><strong>🎯 پروژه نمادین:</strong> غرفه ژاپن در اکسپو 2020 دبی با ۸۰۰۰ قطعه اوریگامی آلومینیومی که در ۳ هفته نصب شد. این سازه ۲۵۰۰ متر مربعی می‌تواند در ۱۰ روز جمع‌آوری شده و در محل دیگری نصب شود.</p>
+                    
+                    <p><strong>🔬 تحقیقات پیشرفته:</strong> محققان در حال کار بر روی اوریگامی‌های <strong>نانومقیاس</strong> برای کاربردهای پزشکی، <strong>رباتیک نرم</strong> با قابلیت تغییر شکل و <strong>پنل‌های خورشیدی</strong> جمع‌شونده برای ماهواره‌ها هستند.</p>
+                    
+                    <p><strong>💎 آینده اوریگامی:</strong> با ترکیب هوش مصنوعی و بیومیمیکری، نسل بعدی سازه‌های اوریگامی قادر خواهند بود مانند موجودات زنده به محیط واکنش نشان داده و خود را با شرایط تطبیق دهند.</p>
+                </div>
+            </article>
+            
+            <!-- مقاله ورونای -->
+            <article class="article fade-in" itemscope itemtype="https://schema.org/Article">
+                <meta itemprop="datePublished" content="2024-01-20">
+                <meta itemprop="author" content="SignSculpt Studio">
+                <h3 itemprop="headline">ورونای: الگوریتم‌های طبیعت در طراحی مدرن</h3>
+                <div itemprop="articleBody">
+                    <p><strong>ورونای</strong> روشی الگوریتمی است که با شبیه‌سازی الگوهای طبیعی (ترک‌های خشک‌شدگی، پوست حیوانات، حباب‌های صابون)، فرم‌های ارگانیک و بهینه تولید می‌کند. این روش در مرز بین ریاضیات، علوم کامپیوتر و طراحی قرار دارد.</p>
+                    
+                    <p><strong>🌌 مبانی علمی ورونای:</strong></p>
+                    <ul>
+                        <li><strong>تقسیم‌بندی فضای n بعدی</strong> به سلول‌های هم‌فاصله از نقاط کنترل</li>
+                        <li><strong>الگوریتم Fortune</strong> برای محاسبه نمودار ورونای در O(n log n)</li>
+                        <li><strong>سه‌بعدی‌سازی</strong> با تتراهدرال‌های دلونی برای حجم‌های پیچیده</li>
+                        <li><strong>بهینه‌سازی چندهدفه</strong> با الگوریتم‌های ژنتیک و ازدحام ذرات</li>
+                        <li><strong>شبیه‌سازی فیزیکی</strong> رفتار مواد و نیروها در فرم نهایی</li>
+                    </ul>
+                    
+                    <p><strong>🖥️ Pipeline طراحی ورونای:</strong></p>
+                    <ol>
+                        <li><strong>تعریف نقاط کنترل</strong> - موقعیت نقاط کلیدی در فضا</li>
+                        <li><strong>تولید نمودار ورونای/دلونی</strong> - ایجاد شبکه سلولی</li>
+                        <li><strong>استخراج شبکه سازه‌ای</strong> - تبدیل به ساختار قابل اجرا</li>
+                        <li><strong>بهینه‌سازی مواد</strong> - تحلیل تنش و توزیع مواد</li>
+                        <li><strong>طراحی اتصالات</strong> - طراحی مفصل‌ها و اتصالات</li>
+                        <li><strong>خروجی فایل‌های ساخت</strong> - تولید فایل‌های دیجیتال</li>
+                    </ol>
+                    
+                    <p><strong>🌈 قابلیت‌های منحصربه‌فرد ورونای:</strong></p>
+                    <ul>
+                        <li><strong>تولید فرم‌های منحصربه‌فرد</strong> - غیرتکراری و الهام‌گرفته از طبیعت</li>
+                        <li><strong>توزیع بهینه بار</strong> - انتقال طبیعی نیروها در سازه</li>
+                        <li><strong>کنترل سطح پیچیدگی</strong> - امکان طراحی از ساده تا فوق پیچیده</li>
+                        <li><strong>یکپارچه‌سازی سیستمی</strong> - ترکیب با HVAC، لوله‌کشی و سیم‌کشی</li>
+                        <li><strong>تطبیق‌پذیری</strong> - تغییر فرم بر اساس پارامترهای محیطی</li>
+                        <li><strong>مقیاس‌پذیری</strong> - کاربرد در مقیاس‌های مختلف از جواهر تا ساختمان</li>
+                    </ul>
+                    
+                    <p><strong>🏢 کاربردهای پیشرفته ورونای:</strong></p>
+                    <ul>
+                        <li><strong>نماهای دوپوسته</strong> با تهویه طبیعی و کنترل نور</li>
+                        <li><strong>سازه‌های سبک</strong> پل‌های عابرپیاده و سازه‌های فضایی</li>
+                        <li><strong>سقف‌های آزادفرم</strong> سالن‌های کنسرت و موزه‌ها</li>
+                        <li><strong>المان‌های دکوراتیو</strong> با الگوهای فرکتال و ارگانیک</li>
+                        <li><strong>طراحی داخلی</strong> سقف‌های آکوستیک و دیوارهای مشبک</li>
+                        <li><strong>محصولات صنعتی</strong> صندلی، میز و مبلمان ارگانیک</li>
+                    </ul>
+                    
+                    <p><strong>📈 بهره‌وری و کارایی:</strong> ورونای در مقایسه با روش‌های سنتی:
+                    <br>• ۴۵٪ صرفه‌جویی در مصرف مواد
+                    <br>• ۳۰۰٪ افزایش نسبت استحکام به وزن
+                    <br>• ۶۰٪ کاهش وزن سازه‌های فضایی
+                    <br>• ۳۵٪ بهبود عملکرد حرارتی نماها
+                    <br>• ۵۰٪ کاهش زمان طراحی فرم‌های پیچیده</p>
+                    
+                    <p><strong>🚀 پروژه‌های آینده‌نگرانه:</strong> محققان در حال توسعه سیستم‌های ورونای <strong>زنده</strong> هستند که بتوانند در طول زمان رشد کرده و تغییر شکل دهند. این سیستم‌ها برای شهرهای آینده و سکونتگاه‌های فضایی در نظر گرفته شده‌اند.</p>
+                    
+                    <p><strong>💡 فلسفه طراحی:</strong> ورونای به ما یادآوری می‌کند که بهترین طرح‌ها اغلب در طبیعت وجود دارند. با مطالعه الگوهای طبیعی و تبدیل آنها به الگوریتم‌های دیجیتال، می‌توانیم سازه‌هایی خلق کنیم که هم زیبا باشند، هم بهینه و هم پایدار.</p>
+                </div>
+            </article>
+        </div>
+        
+        <!-- فرم تماس -->
+        <div class="contact-form fade-in">
+            <h2 class="form-title">درخواست مشاوره رایگان</h2>
+            <form action="https://formspree.io/f/mnqlwzvd" method="POST" id="contactForm">
+                <input type="text" name="name" placeholder="نام و نام خانوادگی *" required aria-label="نام">
+                <input type="email" name="email" placeholder="آدرس ایمیل *" required aria-label="ایمیل">
+                <input type="tel" name="phone" placeholder="شماره تماس (اختیاری)" aria-label="تلفن">
+                <select name="service" style="width:100%; padding:20px; margin-bottom:25px; border:2px solid #eee; border-radius:15px; font-family:'Vazirmatn'; font-size:16px; background:#fafafa;">
+                    <option value="">انتخاب نوع خدمات مورد نظر</option>
+                    <option value="composite">کامپوزیت</option>
+                    <option value="thermo">ترمو وود</option>
+                    <option value="chlnm">چنلیوم</option>
+                    <option value="parametric">پارامتریک</option>
+                    <option value="element">المان شهری</option>
+                    <option value="other">سایر</option>
+                </select>
+                <textarea name="message" rows="6" placeholder="توضیحات پروژه یا سوال خود را بنویسید *" required aria-label="پیام"></textarea>
+                <button type="submit" class="submit">
+                    <span>ارسال درخواست مشاوره</span>
+                </button>
+            </form>
+        </div>
+        
+        <!-- نقشه -->
+        <div class="map-container fade-in">
+            <h2 class="section-title">موقعیت ما در تبریز</h2>
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.132854666024!2d46.295249315259!3d38.068766979198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDA0JzA3LjYiTiA0NsKwMTcnNDkuMCJF!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s" 
+                    width="100%" 
+                    height="420" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="موقعیت SignSculpt Studio در تبریز"
+                    aria-label="نقشه موقعیت استودیو در تبریز">
+                </iframe>
+            </div>
+        </div>
+        
+        <!-- شبکه‌های اجتماعی -->
+        <div class="socials fade-in">
+            <a href="https://www.instagram.com/sign.sculpt" target="_blank" title="صفحه اینستاگرام" aria-label="اینستاگرام">
+                <span class="icon">📸</span>
+                <span>اینستاگرام</span>
+            </a>
+            <a href="https://t.me/+989148127104" target="_blank" title="کانال تلگرام" aria-label="تلگرام">
+                <span class="icon">💬</span>
+                <span>تلگرام</span>
+            </a>
+            <a href="https://wa.me/989148127104" target="_blank" title="واتساپ" aria-label="واتساپ">
+                <span class="icon">📱</span>
+                <span>واتساپ</span>
+            </a>
+            <a href="mailto:signsculptstudio@gmail.com" title="ارسال ایمیل" aria-label="ایمیل">
+                <span class="icon">📧</span>
+                <span>ایمیل</span>
+            </a>
+        </div>
+        
+        <!-- فوتر -->
+        <footer class="fade-in">
+            <strong>SignSculpt Studio</strong>
+            <br>
+            <span itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="addressLocality">تبریز</span>، <span itemprop="addressCountry">ایران</span>
+            </span>
+            <br>
+            📞 تلفن: <a href="tel:+989148127104" itemprop="telephone">۰۹۱۴۸۱۲۷۱۰۴</a>
+            <br>
+            ✉️ ایمیل: <a href="mailto:signsculptstudio@gmail.com" itemprop="email">signsculptstudio@gmail.com</a>
+            <br><br>
+            <p>فعالیت ما به‌صورت <strong>آنلاین و پروژه‌ای</strong> در سراسر ایران است.</p>
+            <p>برای <strong>مشاوره رایگان</strong>، <strong>برآورد هزینه</strong> و <strong>همکاری</strong>، از طریق تلفن، ایمیل یا شبکه‌های اجتماعی با ما در ارتباط باشید.</p>
+            <br>
+            
+            <!-- شمارنده بازدید -->
+            <div id="visitor-counter">
+                👁️ تعداد بازدید: <span id="count">۰</span>
+            </div>
+            <br>
+            <p style="font-size: 14px; color: #777; margin-top: 20px;">
+                © ۱۴۰۲-۱۴۰۳ SignSculpt Studio - تمام حقوق مادی و معنوی محفوظ است.
+            </p>
+        </footer>
+    </div>
+    
+    <!-- اسکریپت‌ها -->
+    <script>
+        // وقتی صفحه کاملاً لود شد
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 SignSculpt Studio - فایل نهایی لود شد');
+            
+            // ===== فیلترینگ تب‌ها =====
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const gridItems = document.querySelectorAll('.grid-item');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // حذف کلاس active از همه
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.style.transform = 'translateY(0)';
+                    });
+                    
+                    // اضافه کردن active به دکمه کلیک شده
+                    this.classList.add('active');
+                    this.style.transform = 'translateY(-3px)';
+                    
+                    // فیلتر کردن آیتم‌ها
+                    const category = this.getAttribute('data-category');
+                    
+                    gridItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0) scale(1)';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px) scale(0.95)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 400);
+                        }
+                    });
+                });
+            });
+            
+            // ===== تغییر زبان =====
+            const langButtons = document.querySelectorAll('.lang-switch button');
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    langButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    if (this.dataset.lang === 'en') {
+                        document.getElementById('main-headline').textContent = 'SignSculpt Studio | Premier Facade Design Studio in Iran';
+                        document.querySelector('.tagline').textContent = 'A perfect blend of creativity, precision and quality in every project';
+                        document.querySelector('.hero-cta').innerHTML = 'From <strong>conceptual design</strong> to <strong>final execution</strong> | With you at every step';
+                    } else {
+                        document.getElementById('main-headline').textContent = 'SignSculpt Studio | برترین استودیو طراحی نما در ایران';
+                        document.querySelector('.tagline').textContent = 'ترکیبی بی‌نظیر از <strong>خلاقیت، دقت و کیفیت</strong> در هر پروژه';
+                        document.querySelector('.hero-cta').innerHTML = 'از <strong>طراحی مفهومی</strong> تا <strong>اجرای نهایی</strong> | همراه شما در هر مرحله';
+                    }
+                });
+            });
+            
+            // ===== شمارنده بازدید =====
+            let count = localStorage.getItem('siteVisitCount');
+            if (!count || count === 'NaN') count = 0;
+            count = parseInt(count) + 1;
+            localStorage.setItem('siteVisitCount', count);
+            document.getElementById('count').textContent = count.toLocaleString('fa-IR');
+            
+            // ===== دکمه بازگشت به بالا =====
+            const backToTop = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 500) {
+                    backToTop.style.display = 'block';
+                    setTimeout(() => {
+                        backToTop.classList.add('show');
+                    }, 10);
+                } else {
+                    backToTop.classList.remove('show');
+                    setTimeout(() => {
+                        if (!backToTop.classList.contains('show')) {
+                            backToTop.style.display = 'none';
+                        }
+                    }, 300);
+                }
+            });
+            
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // ===== مدیریت خطای تصاویر =====
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('error', function() {
+                    console.warn('تصویر لود نشد:', this.src);
+                    this.classList.add('error');
+                    this.style.backgroundColor = '#f5f1e6';
+                    this.style.padding = '30px';
+                    this.style.display = 'flex';
+                    this.style.alignItems = 'center';
+                    this.style.justifyContent = 'center';
+                    this.style.color = '#999';
+                    this.style.fontSize = '16px';
+                    this.style.textAlign = 'center';
+                    this.innerHTML = 'SignSculpt Studio<br><small>تصویر در دسترس نیست</small>';
+                    this.alt = 'تصویر در دسترس نیست - SignSculpt Studio';
+                });
+            });
+            
+            // ===== فرم تماس =====
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('.submit');
+                    const originalText = submitBtn.querySelector('span').textContent;
+                    submitBtn.querySelector('span').textContent = 'در حال ارسال...';
+                    submitBtn.disabled = true;
+                    
+                    // شبیه‌سازی ارسال
+                    setTimeout(() => {
+                        alert('✅ درخواست مشاوره شما با موفقیت ثبت شد!\nکارشناسان ما طی ۲۴ ساعت کاری با شما تماس خواهند گرفت.');
+                        this.reset();
+                        submitBtn.querySelector('span').textContent = originalText;
+                        submitBtn.disabled = false;
+                        
+                        // ثبت در localStorage
+                        const formData = {
+                            timestamp: new Date().toISOString(),
+                            action: 'contact_form_submitted'
+                        };
+                        localStorage.setItem('lastContactSubmit', JSON.stringify(formData));
+                    }, 1500);
+                });
+            }
+            
+            // ===== انیمیشن اسکرول =====
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // مشاهده تمام بخش‌ها برای انیمیشن
+            document.querySelectorAll('.work-section, .trust-signals, .article, .contact-form, .map-container, .socials, footer').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // ===== تست HTTPS =====
+            if (window.location.protocol === 'https:') {
+                console.log('🔒 سایت روی HTTPS است - امنیت فعال');
+            } else if (window.location.hostname !== 'localhost') {
+                console.warn('⚠️ توصیه می‌شود سایت را به HTTPS منتقل کنید');
+            }
+            
+            // ===== پیش‌بارگذاری تصاویر مهم =====
+            const criticalImages = ['images/Com.jpg', 'images/Te.jpg', 'images/Ch.jpg'];
+            criticalImages.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+            
+            // ===== عملکرد چاپ =====
+            window.addEventListener('beforeprint', () => {
+                document.body.classList.add('printing');
+            });
+            
+            window.addEventListener('afterprint', () => {
+                document.body.classList.remove('printing');
+            });
+            
+            // ===== گزارش عملکرد =====
+            window.addEventListener('load', function() {
+                const perfData = performance.timing;
+                const loadTime = perfData.loadEventEnd - perfData.navigationStart;
+                console.log(`⚡ زمان بارگذاری کامل: ${loadTime}ms`);
+                
+                if (loadTime < 2000) {
+                    console.log('✅ عملکرد عالی');
+                } else if (loadTime < 4000) {
+                    console.log('⚠️ عملکرد خوب، امکان بهینه‌سازی وجود دارد');
+                } else {
+                    console.log('🔧 نیاز به بهینه‌سازی سرعت');
+                }
+            });
+            
+            // ===== انیمیشن‌های اولیه =====
+            setTimeout(() => {
+                document.querySelector('.hero').style.opacity = '1';
+                document.querySelector('.hero').style.transform = 'translateY(0)';
+            }, 300);
+        });
+        
+        // ===== مدیریت وضعیت آفلاین =====
+        window.addEventListener('online', () => {
+            console.log('✅ اتصال اینترنت برقرار شد');
+        });
+        
+        window.addEventListener('offline', () => {
+            console.warn('⚠️ اتصال اینترنت قطع شد');
+        });
+        
+        // ===== کلیدهای میانبر =====
+        document.addEventListener('keydown', (e) => {
+            // Ctrl + B برای بازگشت به بالا
+            if (e.ctrlKey && e.key === 'b') {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            
+            // Ctrl + F برای رفتن به فرم
+            if (e.ctrlKey && e.key === 'f') {
+                e.preventDefault();
+                document.querySelector('.contact-form')?.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+</body>
+</html>
