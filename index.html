@@ -1,235 +1,851 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>SignSculpt Studio | طراحی و اجرای نما و تابلو</title>
-    <meta name="description" content="طراحی و اجرای نماهای مدرن، کامپوزیت، چنلیوم، ترمووود، پارامتریک و المان شهری در تبریز">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="google9ac824c8eec5525f" />
-
-    <style>
-        body {
-            margin: 0;
-            font-family: sans-serif;
-            background: #f5f5f5;
-            color: #222;
-            line-height: 1.9;
-        }
-
-        header {
-            background: #111;
-            color: #fff;
-            padding: 30px 15px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 26px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px 15px;
-        }
-
-        /* گالری بالا */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin: 30px 0;
-        }
-
-        .gallery .item {
-            width: 200px;
-            text-align: center;
-        }
-
-        .gallery img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            display: block;
-        }
-
-        .gallery span {
-            display: block;
-            margin-top: 8px;
-            font-size: 14px;
-        }
-
-        /* مقاله */
-        article {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-
-        article h2 {
-            margin-top: 0;
-            font-size: 22px;
-        }
-
-        .article-img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        footer {
-            background: #111;
-            color: #fff;
-            text-align: center;
-            padding: 25px 15px;
-            margin-top: 40px;
-            font-size: 14px;
-        }
-
-        @media (max-width: 600px) {
-            .gallery .item {
-                width: 45%;
-            }
-
-            .gallery img {
-                width: 100%;
-                height: 160px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>SignSculpt Studio | استودیو طراحی و اجرای تابلو و نما | تبریز</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- توضیحات متا برای سئو -->
+  <meta name="description" content="استودیو SignSculpt | طراحی و اجرای حرفه‌ای تابلوهای تبلیغاتی، نماهای مدرن، کامپوزیت، ترمو وود، چنلیوم و المان‌های پارامتریک در تبریز. مشاوره رایگان و اجرای پروژه‌های آنلاین.">
+  <meta name="keywords" content="تابلو تبلیغاتی, طراحی نما, کامپوزیت, ترمو وود, چنلیوم, پارامتریک, المان شهری, طراحی تابلو, استودیو طراحی, تبریز">
+  <meta name="author" content="SignSculpt Studio">
+  
+  <!-- Open Graph برای شبکه‌های اجتماعی -->
+  <meta property="og:title" content="SignSculpt Studio | استودیو طراحی و اجرای تابلو و نما">
+  <meta property="og:description" content="طراحی و اجرای حرفه‌ای تابلوهای تبلیغاتی، نماهای مدرن و المان‌های شهری در تبریز">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:site_name" content="SignSculpt Studio">
+  <meta property="og:url" content="https://signsculptstudio.com">
+  <meta property="og:image" content="https://signsculptstudio.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SignSculpt Studio - طراحی و اجرای تابلو">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SignSculpt Studio">
+  <meta name="twitter:description" content="طراحی و اجرای تابلوهای تبلیغاتی و نماهای مدرن">
+  <meta name="twitter:image" content="https://signsculptstudio.com/images/twitter-card.jpg">
+  
+  <!-- تگ‌های کنونیکال و زبان -->
+  <link rel="canonical" href="https://signsculptstudio.com">
+  <link rel="alternate" hreflang="fa" href="https://signsculptstudio.com">
+  <link rel="alternate" hreflang="x-default" href="https://signsculptstudio.com">
+  
+  <!-- Preconnect برای منابع خارجی -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <!-- فونت فارسی -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "SignSculpt Studio",
+    "description": "استودیو طراحی و اجرای تابلوهای تبلیغاتی، نماهای مدرن و المان‌های شهری",
+    "url": "https://signsculptstudio.com",
+    "telephone": "+989148127104",
+    "email": "signsculptstudio@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "تبریز",
+      "addressCountry": "IR"
+    },
+    "areaServed": "تبریز و سراسر ایران",
+    "serviceType": "طراحی و اجرای تابلو تبلیغاتی، طراحی نما، المان شهری",
+    "openingHours": "Mo-Su",
+    "sameAs": [
+      "https://www.instagram.com/sign.sculpt",
+      "https://t.me/+989148127104"
+    ]
+  }
+  </script>
+  
+  <!-- GLightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+  
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="google9ac824c8eec5525f" />
+  
+  <style>
+    /* Reset & Base */
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior: smooth; }
+    body { 
+      font-family:'Vazirmatn', sans-serif; 
+      background: linear-gradient(160deg,#B4B184,#F5F1E6); 
+      color:#111;
+      line-height: 1.6;
+    }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; height:auto; }
+    
+    /* Container */
+    .container { 
+      max-width:1200px; 
+      margin:0 auto; 
+      padding:30px 15px; 
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Hero / خوش آمدگویی */
+    .hero { 
+      text-align:center; 
+      margin-bottom:50px; 
+      padding-top: 20px;
+    }
+    .hero h1 { 
+      font-size:clamp(28px, 5vw, 44px); 
+      font-weight:600; 
+      margin-bottom:15px;
+      color: #333;
+      line-height: 1.3;
+    }
+    .hero span { 
+      font-size:clamp(14px, 2vw, 18px); 
+      color:#666; 
+      letter-spacing:1px;
+      display: block;
+      margin-top: 10px;
+    }
+    
+    /* لوگو گوشه چپ */
+    .logo { 
+      position:fixed; 
+      top:15px; 
+      right:15px; 
+      width:clamp(60px, 8vw, 90px); 
+      height:auto;
+      z-index:1000;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    
+    /* سوییچ زبان */
+    .lang-switch { 
+      position:fixed; 
+      top:20px; 
+      left:20px; 
+      display:flex; 
+      gap:8px; 
+      z-index:1000;
+      background: rgba(255,255,255,0.9);
+      padding: 8px 12px;
+      border-radius: 25px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    .lang-switch button { 
+      border:none; 
+      background:#fff; 
+      padding:6px 16px; 
+      border-radius:20px; 
+      cursor:pointer; 
+      font-weight:600; 
+      transition:all 0.3s;
+      font-size:14px;
+      border: 2px solid transparent;
+    }
+    .lang-switch button.active { 
+      background:#c9a24d; 
+      color:#fff;
+      border-color: #c9a24d;
+    }
+    .lang-switch button:hover:not(.active) {
+      border-color: #c9a24d;
+    }
+    
+    /* نمونه‌کارها */
+    .work-section { 
+      display:flex; 
+      justify-content:space-between; 
+      gap:30px; 
+      margin-bottom:60px; 
+      flex-wrap:wrap; 
+    }
+    
+    .tabs { 
+      display:flex; 
+      flex-direction:column; 
+      gap:10px; 
+      flex:0 0 200px;
+    }
+    .tabs button { 
+      padding:12px 18px; 
+      border:none; 
+      border-radius:8px; 
+      cursor:pointer; 
+      background:#fff; 
+      font-weight:600; 
+      transition:all 0.3s; 
+      text-align:right;
+      font-size:15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      border: 2px solid transparent;
+    }
+    .tabs button.active { 
+      background:#c9a24d; 
+      color:#fff;
+      transform: translateX(-5px);
+    }
+    .tabs button:hover:not(.active) {
+      border-color: #c9a24d;
+      transform: translateX(-3px);
+    }
+    
+    /* سیستم گرید با تصاویر هم‌اندازه */
+    .grid { 
+      display:grid; 
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:25px; 
+      flex:1;
+    }
+    
+    /* آیتم‌های گرید */
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      background: #fff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      aspect-ratio: 4/3;
+      transition: all 0.4s ease;
+    }
+    
+    .grid-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.5s ease;
+    }
+    
+    .grid-item:hover img {
+      transform: scale(1.08);
+    }
+    
+    .grid-item span {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      backdrop-filter: blur(5px);
+      letter-spacing: 0.5px;
+    }
+    
+    /* فرم تماس */
+    form { 
+      max-width:550px; 
+      margin:50px auto; 
+      display:flex; 
+      flex-direction:column; 
+      gap:20px; 
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+    input, textarea { 
+      padding:15px; 
+      font-size:16px; 
+      border:2px solid #eee; 
+      border-radius:10px; 
+      width:100%;
+      font-family: 'Vazirmatn', sans-serif;
+      transition: all 0.3s;
+      background: #f9f9f9;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #c9a24d;
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(201,162,77,0.1);
+    }
+    button.submit { 
+      padding:16px; 
+      border:none; 
+      background:#c9a24d; 
+      color:#fff; 
+      font-weight:600; 
+      cursor:pointer; 
+      border-radius:10px; 
+      transition:all 0.3s;
+      font-size:17px;
+      margin-top: 10px;
+      box-shadow: 0 4px 12px rgba(201,162,77,0.3);
+    }
+    button.submit:hover { 
+      background:#b08b3f; 
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(201,162,77,0.4);
+    }
+    
+    /* نشانه‌های اعتماد */
+    .trust-signals { 
+      text-align:center; 
+      margin:60px 0; 
+      padding:40px; 
+      background:linear-gradient(135deg, #f8f5f0, #ffffff); 
+      border-radius:20px; 
+      box-shadow:0 8px 25px rgba(0,0,0,0.07);
+    }
+    .trust-signals h3 { 
+      color:#c9a24d; 
+      margin-bottom:30px; 
+      font-size:26px;
+      font-weight: 700;
+    }
+    .trust-grid {
+      display:grid; 
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:30px; 
+      margin-top:30px;
+    }
+    .trust-item {
+      text-align:center; 
+      padding:25px 15px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+    }
+    .trust-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .trust-item .icon {
+      font-size:42px; 
+      color:#c9a24d; 
+      margin-bottom:15px;
+      display: block;
+    }
+    .trust-item h4 { 
+      font-weight:700; 
+      margin-bottom:8px;
+      font-size: 18px;
+      color: #333;
+    }
+    .trust-item p { 
+      font-size:14px; 
+      color:#666;
+      line-height: 1.5;
+    }
+    
+    /* شبکه های اجتماعی */
+    .socials { 
+      display:flex; 
+      justify-content:center; 
+      gap:30px; 
+      margin:40px auto 20px; 
+      font-size:24px;
+      flex-wrap:wrap; 
+      text-align:center;
+    }
+    .socials a { 
+      transition:all 0.3s; 
+      display:flex; 
+      flex-direction:column; 
+      align-items:center; 
+      font-size:14px;
+      min-width: 85px;
+      padding: 15px 10px;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .socials a span { 
+      margin-top:8px; 
+      font-size:14px;
+      color: #333;
+      font-weight: 600;
+    }
+    .socials a:hover { 
+      color:#c9a24d; 
+      transform: translateY(-5px); 
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .socials a:hover span {
+      color: #c9a24d;
+    }
+    
+    /* مقالات */
+    .articles { 
+      max-width:1100px; 
+      margin:50px auto; 
+      display:flex; 
+      flex-direction:column; 
+      gap:40px; 
+    }
+    .article { 
+      background:#fff; 
+      padding:35px; 
+      border-radius:15px; 
+      box-shadow:0 5px 20px rgba(0,0,0,0.08); 
+      transition:all 0.4s;
+    }
+    .article:hover {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      transform: translateY(-5px);
+    }
+    .article h2 { 
+      margin-bottom:20px; 
+      color:#c9a24d; 
+      font-size:26px;
+      font-weight: 700;
+      border-right: 5px solid #c9a24d;
+      padding-right: 15px;
+    }
+    .article p { 
+      margin-bottom:15px; 
+      line-height:1.8; 
+      color:#333; 
+      font-size:16px;
+      text-align: justify;
+    }
+    
+    /* نقشه */
+    .map-container {
+      margin:60px 0; 
+      text-align:center;
+    }
+    .map-container h3 {
+      color:#c9a24d; 
+      margin-bottom:25px; 
+      font-size:26px;
+      font-weight: 700;
+    }
+    .map-wrapper {
+      width:100%; 
+      max-width:900px; 
+      margin:0 auto; 
+      border-radius:15px; 
+      overflow:hidden; 
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    }
+    
+    /* فوتر */
+    footer { 
+      text-align:center; 
+      margin:60px 0 25px; 
+      font-size:15px; 
+      color:#444;
+      line-height: 1.9;
+      padding: 30px;
+      background: rgba(255,255,255,0.7);
+      border-radius: 15px;
+    }
+    footer a {
+      color: #c9a24d;
+      font-weight: 600;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* شمارنده بازدید */
+    #visitor-counter {
+      text-align:center; 
+      margin:25px auto; 
+      font-weight:700; 
+      color:#555;
+      font-size: 16px;
+      padding: 15px 25px;
+      background: rgba(255,255,255,0.8);
+      border-radius: 50px;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    
+    /* چت ویجت */
+    #chat-widgets {
+      position:fixed; 
+      bottom:25px; 
+      left:25px; 
+      z-index:1000; 
+      display:flex; 
+      flex-direction:column; 
+      gap:12px;
+    }
+    .chat-btn {
+      display:flex; 
+      align-items:center; 
+      gap:10px; 
+      background:#25D366; 
+      color:white; 
+      padding:14px 22px; 
+      border-radius:30px; 
+      box-shadow:0 5px 18px rgba(37,211,102,0.4); 
+      text-decoration:none; 
+      transition:all 0.3s;
+      font-family: 'Vazirmatn', sans-serif;
+      font-weight: 600;
+    }
+    .chat-btn.rubika {
+      background:#7B1FA2;
+      box-shadow:0 5px 18px rgba(123,31,162,0.4);
+    }
+    .chat-btn:hover {
+      transform:translateY(-4px); 
+      box-shadow:0 8px 25px rgba(37,211,102,0.6);
+    }
+    .chat-btn.rubika:hover {
+      box-shadow:0 8px 25px rgba(123,31,162,0.6);
+    }
+    .chat-btn .icon {
+      font-size:22px;
+    }
+    
+    /* دکمه بازگشت به بالا */
+    #backToTop {
+      display:none; 
+      position:fixed; 
+      bottom:140px; 
+      left:30px; 
+      background:#c9a24d; 
+      color:white; 
+      border:none; 
+      padding:14px 17px; 
+      border-radius:50%; 
+      cursor:pointer; 
+      z-index:999; 
+      font-size:20px; 
+      box-shadow:0 5px 15px rgba(201,162,77,0.4); 
+      transition:all 0.3s;
+      opacity: 0;
+    }
+    #backToTop:hover {
+      background:#b08b3f; 
+      transform:scale(1.1); 
+      box-shadow:0 8px 20px rgba(201,162,77,0.6);
+    }
+    #backToTop.show {
+      opacity: 1;
+    }
+    
+    /* رسپانسیو - تبلت */
+    @media (max-width: 992px){ 
+      .work-section { 
+        flex-direction:column;
+        gap: 25px;
+      }
+      
+      .tabs { 
+        flex-direction:row; 
+        flex-wrap:wrap; 
+        justify-content:center;
+        flex: 0 0 auto;
+        gap: 8px;
+        width: 100%;
+      }
+      
+      .tabs button {
+        padding: 10px 16px;
+        font-size: 14px;
+        flex: 1;
+        min-width: 120px;
+      }
+      
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      
+      .container {
+        padding: 25px 15px;
+      }
+      
+      .hero {
+        margin-bottom: 40px;
+      }
+      
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .socials {
+        gap: 20px;
+      }
+      
+      .socials a {
+        min-width: 80px;
+      }
+      
+      .chat-btn {
+        padding: 12px 18px;
+        font-size: 14px;
+      }
+      
+      #backToTop {
+        bottom: 120px;
+        left: 20px;
+      }
+    }
+    
+    /* رسپانسیو - موبایل */
+    @media (max-width: 768px){ 
+      .grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+      }
+      
+      .grid-item {
+        aspect-ratio: 16/9;
+      }
+      
+      .tabs {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        justify-content: flex-start;
+        scrollbar-width: thin;
+      }
+      
+      .tabs button {
+        white-space: nowrap;
+        min-width: 110px;
+      }
+      
+      .lang-switch {
+        top: 15px;
+        left: 15px;
+        padding: 6px 10px;
+      }
+      
+      .logo {
+        top: 12px;
+        right: 12px;
+        width: 60px;
+      }
+      
+      .articles {
+        margin: 40px auto;
+        gap: 30px;
+      }
+      
+      .article {
+        padding: 25px 20px;
+      }
+      
+      .article h2 {
+        font-size: 22px;
+      }
+      
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .trust-signals {
+        padding: 30px 20px;
+      }
+      
+      .socials {
+        gap: 15px;
+      }
+      
+      .socials a {
+        min-width: 70px;
+        font-size: 12px;
+        padding: 12px 8px;
+      }
+      
+      footer {
+        font-size: 14px;
+        padding: 25px 15px;
+        margin: 40px 0 20px;
+      }
+      
+      form {
+        padding: 25px 20px;
+        margin: 40px auto;
+      }
+      
+      #visitor-counter {
+        font-size: 15px;
+        padding: 12px 20px;
+      }
+      
+      #chat-widgets {
+        bottom: 20px;
+        left: 20px;
+        gap: 10px;
+      }
+      
+      .chat-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
+      
+      #backToTop {
+        bottom: 110px;
+        left: 15px;
+        padding: 12px 15px;
+        font-size: 18px;
+      }
+      
+      .map-wrapper iframe {
+        height: 300px;
+      }
+    }
+    
+    /* موبایل کوچک */
+    @media (max-width: 480px){ 
+      .hero h1 {
+        font-size: 24px;
+      }
+      
+      .hero span {
+        font-size: 14px;
+      }
+      
+      .container {
+        padding: 20px 12px;
+      }
+      
+      .article {
+        padding: 20px 15px;
+      }
+      
+      .article p {
+        font-size: 15px;
+      }
+      
+      .trust-item {
+        padding: 20px 12px;
+      }
+      
+      .socials {
+        justify-content: space-around;
+        width: 100%;
+      }
+      
+      .socials a {
+        min-width: 65px;
+        padding: 10px 6px;
+      }
+      
+      #chat-widgets {
+        flex-direction: row;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        justify-content: center;
+      }
+      
+      .chat-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 10px;
+      }
+      
+      .chat-btn .icon {
+        display: none;
+      }
+      
+      #backToTop {
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+      }
+      
+      footer br {
+        display: block;
+        content: "";
+        margin: 5px 0;
+      }
+    }
+    
+    /* پشتیبانی از مرورگرهای قدیمی */
+    @supports not (aspect-ratio: 4/3) {
+      .grid-item::before {
+        float: left;
+        padding-top: 75%;
+        content: "";
+      }
+      
+      .grid-item::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+      
+      .grid-item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    
+    /* انیمیشن‌های اضافی */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      animation: fadeInUp 0.6s ease-out;
+    }
+  </style>
 </head>
-
 <body>
-
-<header>
-    <h1>SignSculpt Studio</h1>
-    <p>طراحی و اجرای نما، تابلو و المان‌های شهری</p>
-</header>
-
-<div class="container">
-
-    <!-- گالری بالا -->
-    <div class="gallery">
-        <div class="item">
-            <img src="images/Com.jpg" alt="نمای کامپوزیت">
-            <span>کامپوزیت</span>
-        </div>
-        <div class="item">
-            <img src="images/Ch.jpg" alt="چنلیوم">
-            <span>چنلیوم</span>
-        </div>
-        <div class="item">
-            <img src="images/Vo.jpg" alt="ورونای">
-            <span>ورونای</span>
-        </div>
-        <div class="item">
-            <img src="images/Te.jpg" alt="ترمووود">
-            <span>ترمووود</span>
-        </div>
-        <div class="item">
-            <img src="images/Or.jpg" alt="اوریگامی">
-            <span>اوریگامی</span>
-        </div>
-        <div class="item">
-            <img src="images/Pa.jpg" alt="پارامتریک">
-            <span>پارامتریک</span>
-        </div>
-        <div class="item">
-            <img src="images/El.jpg" alt="المان شهری">
-            <span>المان شهری</span>
-        </div>
-    </div>
-
-    <!-- مقاله 1 -->
-    <article>
-        <img class="article-img" src="images/Com.jpg" alt="نمای کامپوزیت">
-        <h2>نمای کامپوزیت</h2>
-        <p>
-            نمای کامپوزیت یکی از پرکاربردترین نماهای مدرن در ساختمان‌های تجاری و اداری است.
-            وزن سبک، تنوع رنگ بالا، سرعت اجرای مناسب و مقاومت در برابر شرایط جوی،
-            این نوع نما را به انتخابی اقتصادی و حرفه‌ای تبدیل کرده است.
-        </p>
-    </article>
-
-    <!-- مقاله 2 -->
-    <article>
-        <img class="article-img" src="images/Ch.jpg" alt="تابلو چنلیوم">
-        <h2>تابلو چنلیوم</h2>
-        <p>
-            تابلوهای چنلیوم با نورپردازی جذاب و دوام بالا،
-            یکی از مؤثرترین ابزارهای تبلیغاتی برای کسب‌وکارها هستند.
-            استفاده از متریال باکیفیت باعث ماندگاری و جلوه حرفه‌ای این تابلوها می‌شود.
-        </p>
-    </article>
-
-    <!-- مقاله 3 -->
-    <article>
-        <img class="article-img" src="images/Vo.jpg" alt="نمای ورونای">
-        <h2>نمای ورونای</h2>
-        <p>
-            نمای ورونای ترکیبی از زیبایی کلاسیک و اجرای مدرن است.
-            این نما برای پروژه‌هایی که به دنبال جلوه‌ای خاص و متمایز هستند،
-            گزینه‌ای لوکس و متفاوت محسوب می‌شود.
-        </p>
-    </article>
-
-    <!-- مقاله 4 -->
-    <article>
-        <img class="article-img" src="images/Te.jpg" alt="نمای ترمووود">
-        <h2>نمای ترمووود</h2>
-        <p>
-            ترمووود با ظاهر طبیعی و مقاومت بالا در برابر رطوبت،
-            انتخابی محبوب برای نماهای گرم و مدرن است.
-            این متریال حس طبیعت را به فضای شهری وارد می‌کند.
-        </p>
-    </article>
-
-    <!-- مقاله 5 -->
-    <article>
-        <img class="article-img" src="images/Or.jpg" alt="نمای اوریگامی">
-        <h2>نمای اوریگامی</h2>
-        <p>
-            نمای اوریگامی با خطوط شکسته و فرم‌های هندسی،
-            جلوه‌ای خاص و هنری به ساختمان می‌بخشد.
-            این سبک مناسب پروژه‌های شاخص و خاص‌پسند است.
-        </p>
-    </article>
-
-    <!-- مقاله 6 -->
-    <article>
-        <img class="article-img" src="images/Pa.jpg" alt="نمای پارامتریک">
-        <h2>نمای پارامتریک</h2>
-        <p>
-            نمای پارامتریک حاصل تلفیق طراحی دیجیتال و معماری مدرن است.
-            این نوع نما امکان خلق فرم‌های پیچیده و منحصر‌به‌فرد را فراهم می‌کند.
-        </p>
-    </article>
-
-    <!-- مقاله 7 -->
-    <article>
-        <img class="article-img" src="images/El.jpg" alt="المان شهری">
-        <h2>المان شهری</h2>
-        <p>
-            المان‌های شهری نقش مهمی در هویت بصری شهر دارند.
-            طراحی اصولی این المان‌ها باعث افزایش زیبایی و ماندگاری فضاهای عمومی می‌شود.
-        </p>
-    </article>
-
-</div>
-
-<footer>
-    SignSculpt Studio – تبریز<br>
-    تماس: 09148127104<br>
-    signsculptstudio@gmail.com
-</footer>
-
-</body>
-</html>
+  <!-- لوگو -->
+  <img src="images/IMG_20260204_102126_012.jpg" class="logo" alt="SignSculpt Studio Logo" loading="lazy">
+  
+  <!-- سوییچ زبان -->
+  <div class="lang-switch">
+    <button class="active" data-lang="fa">فارسی</button>
+    <button data-lang="en">English</button>
+  </div>
+  
+  <!-- چت ویجت‌ها -->
+  <div id="chat-widgets">
+    <a href="https://wa.me/989148127104" target="_blank" class="chat-btn">
+      <span class="icon">💬</span>
+      <span>واتساپ</span>
+    </a>
+    
+    <a href="https://rubika.ir/signsclupt" target="_blank" class="chat-btn rubika">
+      <span class="icon">🟣</span>
+      <span>روبیکا</span>
+    </a>
+  
