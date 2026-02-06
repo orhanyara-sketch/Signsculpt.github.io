@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>SignSculpt Studio | استودیو طراحی و اجرای تابلو و نما | تبریز</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            
-            <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="google9ac824c8eec5525f" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#c9a24d">
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="استودیو SignSculpt | طراحی و اجرای حرفه‌ای تابلوهای تبلیغاتی، نماهای مدرن، کامپوزیت، ترمو وود، چنلیوم و المان‌های پارامتریک در تبریز. مشاوره رایگان و اجرای پروژه‌های آنلاین.">
     <meta name="keywords" content="تابلو تبلیغاتی, طراحی نما, کامپوزیت, ترمو وود, چنلیوم, پارامتریک, المان شهری, طراحی تابلو, استودیو طراحی, تبریز">
     <meta name="author" content="SignSculpt Studio">
     <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://signsculptstudio.com">
     
     <!-- Open Graph -->
     <meta property="og:title" content="SignSculpt Studio | استودیو طراحی و اجرای تابلو و نما">
@@ -30,11 +29,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Schema.org -->
+    <!-- Schema.org اصلاح شده -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": "HomeAndConstructionBusiness",
         "name": "SignSculpt Studio",
         "description": "استودیو طراحی و اجرای تابلوهای تبلیغاتی، نماهای مدرن و المان‌های شهری",
         "url": "https://signsculptstudio.com",
@@ -42,24 +41,34 @@
         "email": "signsculptstudio@gmail.com",
         "address": {
             "@type": "PostalAddress",
+            "streetAddress": "تبریز، خیابان نمونه",
             "addressLocality": "تبریز",
             "addressCountry": "IR",
-            "addressRegion": "آذربایجان شرقی"
+            "addressRegion": "آذربایجان شرقی",
+            "postalCode": "51368"
         },
         "areaServed": "ایران",
+        "currenciesAccepted": "IRR",
+        "paymentAccepted": "نقد، کارت بانکی",
+        "priceRange": "$$$",
         "serviceType": ["طراحی تابلو تبلیغاتی", "طراحی نما", "المان شهری", "کامپوزیت", "ترمو وود"],
         "openingHours": "Mo-Su 09:00-21:00",
-        "priceRange": "$$",
         "sameAs": [
             "https://www.instagram.com/sign.sculpt",
             "https://t.me/+989148127104",
             "https://web.rubika.ir/#/im?p=@signsclupt"
-        ]
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "مدیریت SignSculpt"
+        },
+        "foundingDate": "2020",
+        "numberOfEmployees": {
+            "@type": "QuantitativeValue",
+            "value": "5-10"
+        }
     }
     </script>
-    
-    <!-- Google Verification -->
-    <meta name="google-site-verification" content="google9ac824c8eec5525f" />
     
     <style>
         /* ===== RESET & BASE ===== */
@@ -69,9 +78,32 @@
             box-sizing: border-box;
         }
         
+        :focus {
+            outline: 3px solid #c9a24d;
+            outline-offset: 3px;
+        }
+        
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+        
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 100px;
+            font-size: 16px;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
         }
         
         body {
@@ -81,6 +113,34 @@
             line-height: 1.7;
             min-height: 100vh;
             overflow-x: hidden;
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: #c9a24d;
+            color: white;
+            padding: 8px 16px;
+            z-index: 10000;
+            text-decoration: none;
+            border-radius: 0 0 4px 4px;
+        }
+        
+        .skip-link:focus {
+            top: 0;
         }
         
         img {
@@ -111,6 +171,56 @@
             z-index: 1;
         }
         
+        /* ===== NAVIGATION ===== */
+        .main-nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(201, 162, 77, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            background: rgba(201, 162, 77, 0.1);
+            color: #c9a24d;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #2c3e50;
+        }
+        
         /* ===== LOGO ===== */
         .logo {
             position: fixed;
@@ -127,7 +237,8 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
-        .logo:hover {
+        .logo:hover,
+        .logo:focus {
             transform: scale(1.08) rotate(2deg);
             box-shadow: 0 12px 35px rgba(0,0,0,0.18);
         }
@@ -172,7 +283,7 @@
         
         /* ===== HERO SECTION ===== */
         .hero {
-            margin-top: 50px;
+            margin-top: 120px;
             padding: 70px 40px;
             background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(245, 241, 230, 0.98));
             border-radius: 28px;
@@ -200,16 +311,15 @@
         }
         
         .hero h1 {
-            font-size: 3rem;
+            font-size: clamp(1.8rem, 5vw, 3rem);
             color: #2c3e50;
             margin-bottom: 20px;
             font-weight: 800;
             line-height: 1.3;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
         .hero .tagline {
-            font-size: 1.4rem;
+            font-size: clamp(1rem, 3vw, 1.4rem);
             color: #c9a24d;
             margin-bottom: 35px;
             font-weight: 600;
@@ -247,6 +357,7 @@
             font-size: 32px;
             margin-bottom: 10px;
             display: block;
+            height: 32px;
         }
         
         .feature-text {
@@ -286,7 +397,7 @@
             text-align: center;
             color: #2c3e50;
             margin-bottom: 50px;
-            font-size: 2.3rem;
+            font-size: clamp(1.5rem, 4vw, 2.3rem);
             font-weight: 800;
             position: relative;
             padding-bottom: 20px;
@@ -444,6 +555,7 @@
             color: #c9a24d;
             margin-bottom: 25px;
             display: block;
+            height: 50px;
         }
         
         .trust-item h4 {
@@ -536,7 +648,7 @@
             font-weight: 800;
         }
         
-        input, textarea {
+        input, textarea, select {
             width: 100%;
             padding: 20px;
             margin-bottom: 25px;
@@ -548,7 +660,7 @@
             background: #fafafa;
         }
         
-        input:focus, textarea:focus {
+        input:focus, textarea:focus, select:focus {
             outline: none;
             border-color: #c9a24d;
             background: white;
@@ -703,6 +815,7 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             font-size: 16px;
             min-height: 70px;
+            text-decoration: none;
         }
         
         .chat-btn.rubika {
@@ -740,10 +853,14 @@
             z-index: 999;
             transition: all 0.4s ease;
             opacity: 0;
+            border: none;
         }
         
         #backToTop.show {
             opacity: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         #backToTop:hover {
@@ -789,14 +906,31 @@
             color: #999;
         }
         
+        /* ===== ERROR HANDLING ===== */
+        .image-error-fallback {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f5f1e6, #e8e4d9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            padding: 20px;
+            text-align: center;
+            border-radius: 18px;
+        }
+        
+        .image-error-fallback::before {
+            content: '🖼️';
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1200px) {
             .container {
                 max-width: 1000px;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
             }
             
             .grid {
@@ -811,20 +945,7 @@
             
             .hero {
                 padding: 60px 35px;
-                margin-top: 40px;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero-features {
-                gap: 20px;
-            }
-            
-            .feature {
-                min-width: 120px;
-                padding: 16px 20px;
+                margin-top: 100px;
             }
             
             .work-section, .trust-signals, .contact-form {
@@ -843,6 +964,35 @@
         }
         
         @media (max-width: 768px) {
+            .main-nav {
+                padding: 10px 0;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            
             .logo {
                 width: 70px;
                 height: 70px;
@@ -862,17 +1012,15 @@
             }
             
             .hero {
-                margin-top: 35px;
+                margin-top: 90px;
                 padding: 50px 25px;
             }
             
             .hero h1 {
-                font-size: 1.9rem;
                 margin-bottom: 15px;
             }
             
             .hero .tagline {
-                font-size: 1.2rem;
                 margin-bottom: 30px;
             }
             
@@ -901,7 +1049,6 @@
             }
             
             .section-title {
-                font-size: 1.8rem;
                 margin-bottom: 40px;
             }
             
@@ -964,7 +1111,7 @@
                 margin-bottom: 35px;
             }
             
-            input, textarea {
+            input, textarea, select {
                 padding: 18px;
             }
             
@@ -1174,37 +1321,62 @@
             animation: float 3s ease-in-out infinite;
         }
         
-        /* ===== IMAGE ERROR HANDLING ===== */
-        img.error {
-            background: linear-gradient(135deg, #f5f1e6, #e8e4d9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 14px;
-            padding: 20px;
-            text-align: center;
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            .chat-widgets,
+            #backToTop,
+            .lang-switch {
+                display: none !important;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .hero, .work-section, .trust-signals, .article, .contact-form {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- دسترسی سریع -->
+    <a href="#main-content" class="skip-link">پرش به محتوای اصلی</a>
+    
+    <!-- Navigation -->
+    <nav class="main-nav" aria-label="منوی اصلی">
+        <div class="nav-container">
+            <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="منوی موبایل">
+                ☰
+            </button>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#services">خدمات</a></li>
+                <li><a href="#portfolio">نمونه کارها</a></li>
+                <li><a href="#articles">مقالات</a></li>
+                <li><a href="#contact">تماس</a></li>
+            </ul>
+        </div>
+    </nav>
+    
     <!-- لوگو -->
     <img src="images/IMG_20260204_102126_012.jpg" class="logo" alt="لوگو SignSculpt Studio" loading="lazy">
     
     <!-- سوئیچ زبان -->
     <div class="lang-switch">
-        <button class="active" data-lang="fa">فارسی</button>
-        <button data-lang="en">English</button>
+        <button class="active" data-lang="fa" aria-pressed="true">فارسی</button>
+        <button data-lang="en" aria-pressed="false">English</button>
     </div>
     
     <!-- چت ویجت‌ها -->
     <div class="chat-widgets">
-        <a href="https://wa.me/989148127104" target="_blank" class="chat-btn" title="چت در واتساپ">
-            <span class="icon">💬</span>
+        <a href="https://wa.me/989148127104" target="_blank" rel="noopener noreferrer" class="chat-btn" title="چت در واتساپ" aria-label="واتساپ">
+            <span class="icon" aria-hidden="true">💬</span>
             <span>واتساپ</span>
         </a>
-        <a href="https://web.rubika.ir/#/im?p=@signsclupt" target="_blank" class="chat-btn rubika" title="چت در روبیکا">
-            <span class="icon">🟣</span>
+        <a href="https://web.rubika.ir/#/im?p=@signsclupt" target="_blank" rel="noopener noreferrer" class="chat-btn rubika" title="چت در روبیکا" aria-label="روبیکا">
+            <span class="icon" aria-hidden="true">🟣</span>
             <span>روبیکا</span>
         </a>
     </div>
@@ -1212,36 +1384,36 @@
     <!-- دکمه بازگشت به بالا -->
     <button id="backToTop" title="بازگشت به بالا" aria-label="بازگشت به بالای صفحه">↑</button>
     
-    <!-- ناوبری -->
-    <div class="breadcrumb container">
-        <a href="/">خانه</a>
-        <span>›</span>
-        <span>استودیو طراحی و اجرای نما</span>
-    </div>
-    
     <!-- محتوای اصلی -->
-    <div class="container">
+    <main id="main-content" class="container" tabindex="-1">
+        <!-- ناوبری -->
+        <nav class="breadcrumb" aria-label="مسیر ناوبری">
+            <a href="/">خانه</a>
+            <span aria-hidden="true">›</span>
+            <span>استودیو طراحی و اجرای نما</span>
+        </nav>
+        
         <!-- هدر -->
-        <section class="hero fade-in">
+        <section class="hero fade-in" id="services">
             <div class="hero-content">
                 <h1 id="main-headline">SignSculpt Studio | برترین استودیو طراحی نما در ایران</h1>
                 <p class="tagline">ترکیبی بی‌نظیر از <strong>خلاقیت، دقت و کیفیت</strong> در هر پروژه</p>
                 
                 <div class="hero-features">
                     <div class="feature floating" style="animation-delay: 0.1s;">
-                        <span class="feature-icon">🎯</span>
+                        <span class="feature-icon" aria-hidden="true">🎯</span>
                         <span class="feature-text">مشاوره رایگان</span>
                     </div>
                     <div class="feature floating" style="animation-delay: 0.2s;">
-                        <span class="feature-icon">⚡</span>
+                        <span class="feature-icon" aria-hidden="true">⚡</span>
                         <span class="feature-text">اجرای سریع</span>
                     </div>
                     <div class="feature floating" style="animation-delay: 0.3s;">
-                        <span class="feature-icon">🏆</span>
+                        <span class="feature-icon" aria-hidden="true">🏆</span>
                         <span class="feature-text">تضمین کیفیت</span>
                     </div>
                     <div class="feature floating" style="animation-delay: 0.4s;">
-                        <span class="feature-icon">📞</span>
+                        <span class="feature-icon" aria-hidden="true">📞</span>
                         <span class="feature-text">پشتیبانی 24/7</span>
                     </div>
                 </div>
@@ -1251,37 +1423,37 @@
         </section>
         
         <!-- نمونه‌کارها -->
-        <div class="work-section fade-in">
+        <div class="work-section fade-in" id="portfolio">
             <h2 class="section-title">گالری نمونه‌کارها</h2>
             
-            <div class="tabs">
-                <button class="tab-btn active" data-category="all">
+            <div class="tabs" role="tablist" aria-label="دسته‌بندی نمونه کارها">
+                <button class="tab-btn active" data-category="all" role="tab" aria-selected="true" id="tab-all">
                     <span>همه کارها</span>
                 </button>
-                <button class="tab-btn" data-category="composite">
+                <button class="tab-btn" data-category="composite" role="tab" aria-selected="false" id="tab-composite">
                     <span>کامپوزیت</span>
                 </button>
-                <button class="tab-btn" data-category="thermo">
+                <button class="tab-btn" data-category="thermo" role="tab" aria-selected="false" id="tab-thermo">
                     <span>ترمو وود</span>
                 </button>
-                <button class="tab-btn" data-category="chlnm">
+                <button class="tab-btn" data-category="chlnm" role="tab" aria-selected="false" id="tab-chlnm">
                     <span>چنلیوم</span>
                 </button>
-                <button class="tab-btn" data-category="parametric">
+                <button class="tab-btn" data-category="parametric" role="tab" aria-selected="false" id="tab-parametric">
                     <span>پارامتریک</span>
                 </button>
-                <button class="tab-btn" data-category="element">
+                <button class="tab-btn" data-category="element" role="tab" aria-selected="false" id="tab-element">
                     <span>المان</span>
                 </button>
-                <button class="tab-btn" data-category="origami">
+                <button class="tab-btn" data-category="origami" role="tab" aria-selected="false" id="tab-origami">
                     <span>اوریگامی</span>
                 </button>
-                <button class="tab-btn" data-category="verona">
+                <button class="tab-btn" data-category="verona" role="tab" aria-selected="false" id="tab-verona">
                     <span>ورونای</span>
                 </button>
             </div>
             
-            <div class="grid">
+            <div class="grid" role="tabpanel" aria-labelledby="tab-all">
                 <div class="grid-item" data-category="composite">
                     <img src="images/Com.jpg" alt="نمونه کار کامپوزیت - طراحی نما مدرن" loading="lazy">
                     <span>کامپوزیت</span>
@@ -1318,22 +1490,22 @@
             <h2 class="section-title">چرا SignSculpt Studio؟</h2>
             <div class="trust-grid">
                 <div class="trust-item">
-                    <span class="icon">✅</span>
+                    <span class="icon" aria-hidden="true">✅</span>
                     <h4>۵+ سال تجربه</h4>
                     <p>تجربه غنی در طراحی و اجرای صدها پروژه موفق در سراسر ایران</p>
                 </div>
                 <div class="trust-item">
-                    <span class="icon">📊</span>
+                    <span class="icon" aria-hidden="true">📊</span>
                     <h4>۱۰۰+ پروژه موفق</h4>
                     <p>پروژه‌های متنوع از تابلوهای تجاری تا نماهای مدرن ساختمان‌ها</p>
                 </div>
                 <div class="trust-item">
-                    <span class="icon">🏆</span>
+                    <span class="icon" aria-hidden="true">🏆</span>
                     <h4>تضمین کیفیت</h4>
                     <p>استفاده از بهترین مواد اولیه و تکنولوژی روز دنیا با گارانتی معتبر</p>
                 </div>
                 <div class="trust-item">
-                    <span class="icon">🕒</span>
+                    <span class="icon" aria-hidden="true">🕒</span>
                     <h4>پشتیبانی ۲۴/۷</h4>
                     <p>همیشه برای پاسخگویی به سوالات و پیگیری پروژه‌ها آماده‌ایم</p>
                 </div>
@@ -1341,7 +1513,7 @@
         </div>
         
         <!-- مقالات تخصصی -->
-        <div class="articles-section">
+        <div class="articles-section" id="articles">
             <h2 class="section-title">مقالات تخصصی</h2>
             
             <!-- مقاله کامپوزیت -->
@@ -1361,18 +1533,6 @@
                         <li><strong>نصب سریع</strong> - سیستم نصب ریل‌ای با کاهش ۶۰٪ زمان اجرا</li>
                         <li><strong>طول عمر بالا</strong> - ۱۵ تا ۲۵ سال با گارانتی رنگ و استحکام</li>
                     </ul>
-                    
-                    <p><strong>🔥 کاربردهای ویژه کامپوزیت:</strong></p>
-                    <ul>
-                        <li><strong>نماهای مدرن</strong> ساختمان‌های اداری و تجاری</li>
-                        <li><strong>تابلوهای تبلیغاتی</strong> سه‌بعدی و حروف برجسته</li>
-                        <li><strong>دکوراسیون داخلی</strong> و پارتیشن‌های طراحی‌شده</li>
-                        <li><strong>المان‌های شهری</strong> و مبلمان محیطی</li>
-                    </ul>
-                    
-                    <p><strong>💡 نکته فنی:</strong> کامپوزیت‌های نسل جدید با پوشش نانو، خاصیت خودتمیزشوندگی داشته و در برابر آلودگی شهری مقاوم‌تر هستند. ضخامت استاندارد ورق‌های کامپوزیت بین ۳ تا ۶ میلی‌متر است که بسته به کاربری انتخاب می‌شود.</p>
-                    
-                    <p><strong>📊 مقایسه اقتصادی:</strong> اگرچه هزینه اولیه کامپوزیت ممکن است بالاتر باشد، اما با توجه به کاهش هزینه‌های نگهداری، نصب سریع‌تر و عمر طولانی، در بلندمدت مقرون‌به‌صرفه‌ترین انتخاب است.</p>
                 </div>
             </article>
             
@@ -1389,312 +1549,19 @@
                         <li><strong>کاملاً طبیعی</strong> - بدون مواد شیمیایی مضر و سازگار با محیط زیست</li>
                         <li><strong>مقاومت بالا</strong> - در برابر رطوبت، کپک، قارچ و موریانه</li>
                         <li><strong>پایداری ابعادی</strong> - عدم تاب برداشتن، ترک‌خوردگی و تغییر شکل</li>
-                        <li><strong>رنگ‌پذیری عالی</strong> - قابلیت رنگ‌آمیزی با انواع رنگ‌های مخصوص چوب</li>
-                        <li><strong>عایق طبیعی</strong> - عایق حرارتی و صوتی با کارایی بالا</li>
-                        <li><strong>تعمیرپذیری</strong> - امکان سنباده‌زنی و رنگ‌کاری مجدد</li>
                     </ul>
-                    
-                    <p><strong>🏆 درجه‌بندی ترمو وود:</strong></p>
-                    <ul>
-                        <li><strong>کلاس Thermo-S</strong> - برای محیط‌های بسیار مرطوب (استخر، ساحل)</li>
-                        <li><strong>کلاس Thermo-D</strong> - برای محیط‌های معمولی (نما، فضای داخلی)</li>
-                    </ul>
-                    
-                    <p><strong>🎯 پروژه‌های ایده‌آل برای ترمو وود:</strong></p>
-                    <ul>
-                        <li><strong>نماهای چوبی</strong> ویلاها، رستوران‌ها و هتل‌ها</li>
-                        <li><strong>کفپوش</strong> تراس، استخر، بالکن و فضای باز</li>
-                        <li><strong>سازه‌های فضای باز</strong> آلاچیق، پرگولا، نیمکت</li>
-                        <li><strong>دکوراسیون داخلی</strong> سقف‌های کاذب، دیوارپوش‌های لوکس</li>
-                        <li><strong>مبلمان شهری</strong> و المان‌های پارکی</li>
-                    </ul>
-                    
-                    <p><strong>📊 مقایسه فنی:</strong> ترمو وود در مقایسه با چوب معمولی:
-                    <br>• ۸ برابر مقاوم‌تر در برابر رطوبت
-                    <br>• ۵ برابر مقاوم‌تر در برابر حشرات چوب‌خوار
-                    <br>• ۳ برابر مقاوم‌تر در برابر تغییرات دمایی
-                    <br>• ۱۰۰٪ بدون مواد شیمیایی نگهدارنده</p>
-                    
-                    <p><strong>💎 نکته اجرایی:</strong> برای نصب ترمو وود باید از پیچ و میخ ضدزنگ استفاده شود و بین تخته‌ها فاصله ۵-۱۰ میلی‌متری برای انبساط و انقباظ در نظر گرفته شود. نگهداری سالانه با روغن مخصوص چوب، طول عمر آن را تا ۳۰ سال افزایش می‌دهد.</p>
-                </div>
-            </article>
-            
-            <!-- مقاله چنلیوم -->
-            <article class="article fade-in" itemscope itemtype="https://schema.org/Article">
-                <meta itemprop="datePublished" content="2024-01-20">
-                <meta itemprop="author" content="SignSculpt Studio">
-                <h3 itemprop="headline">چنلیوم: انقلاب در تابلوهای تبلیغاتی شهری</h3>
-                <div itemprop="articleBody">
-                    <p><strong>چنلیوم (آکریلیک کست)</strong> متریالی پیشرفته است که با ترکیب پلیمرهای خالص تولید می‌شود. سطح شیشه‌ای، شفافیت ۹۲٪ (مشابه شیشه) و مقاومت فوق‌العاده، آن را به برترین انتخاب تابلوهای مدرن تبدیل کرده است.</p>
-                    
-                    <p><strong>⚡ مزایای رقابتی چنلیوم:</strong></p>
-                    <ul>
-                        <li><strong>شفافیت بی‌نظیر</strong> - نورگذری عالی برای تابلوهای نورانی</li>
-                        <li><strong>وزن سبک</strong> - یک‌سوم وزن شیشه با همان ابعاد</li>
-                        <li><strong>مقاومت ضربه‌ای</strong> - ۱۰ برابر مقاوم‌تر از شیشه معمولی</li>
-                        <li><strong>ثبات رنگ</strong> - عدم زردشدگی در طول زمان حتی در معرض نور مستقیم</li>
-                        <li><strong>دقت ساخت</strong> - قابل برش لیزر با دقت ۰.۱ میلی‌متر</li>
-                        <li><strong>انعطاف‌پذیری</strong> - قابلیت فرم‌دهی حرارتی و ساخت حجم‌های سه‌بعدی</li>
-                    </ul>
-                    
-                    <p><strong>🌈 قابلیت‌های ویژه چنلیوم:</strong></p>
-                    <ul>
-                        <li><strong>چاپ سابلیمیشن</strong> با وضوح ۱۴۴۰ dpi برای تصاویر با کیفیت</li>
-                        <li><strong>حکاکی لیزری</strong> سه‌بعدی با عمق تا ۱۵ میلی‌متر</li>
-                        <li><strong>روکش‌های تخصصی</strong> ضدخش، آنتی‌یووی و مات‌کننده</li>
-                        <li><strong>طیف ضخامت</strong> تولید در ضخامت‌های ۳ تا ۵۰ میلی‌متر</li>
-                        <li><strong>رنگ‌بندی</strong> بیش از ۱۰۰ رنگ استاندارد و سفارشی</li>
-                    </ul>
-                    
-                    <p><strong>🏢 کاربردهای تجاری چنلیوم:</strong></p>
-                    <ul>
-                        <li><strong>تابلوهای فروشگاهی</strong> و سیستم‌های برندینگ</li>
-                        <li><strong>ویترین‌های موزه</strong>، گالری و فروشگاه‌های لوکس</li>
-                        <li><strong>پارتیشن‌های اداری</strong> دکوراتیو و جداکننده فضا</li>
-                        <li><strong>المان‌های نورپردازی</strong> شهری و دکوراتیو</li>
-                        <li><strong>علائم راهنمایی</strong> و تابلوهای اطلاع‌رسانی</li>
-                        <li><strong>صنعت پزشکی</strong> و تجهیزات آزمایشگاهی</li>
-                    </ul>
-                    
-                    <p><strong>💎 نکته اقتصادی:</strong> چنلیوم با عمر مفید ۱۵+ سال و هزینه نگهداری نزدیک به صفر، سرمایه‌گذاری بلندمدت مقرون‌به‌صرفه‌ای است. عدم نیاز به تعویض دوره‌ای و مقاومت در برابر خراش، هزینه کل مالکیت را به شدت کاهش می‌دهد.</p>
-                    
-                    <p><strong>🔧 فرآیند تولید:</strong> چنلیوم از طریق فرآیند کست (ریخته‌گری) تولید می‌شود که باعث ایجاد سطح کاملاً صاف و یکدست می‌شود. این روش تولید، حباب‌های هوا را حذف کرده و شفافیت نهایی را تضمین می‌کند.</p>
-                </div>
-            </article>
-            
-            <!-- مقاله پارامتریک -->
-            <article class="article fade-in" itemscope itemtype="https://schema.org/Article">
-                <meta itemprop="datePublished" content="2024-01-20">
-                <meta itemprop="author" content="SignSculpt Studio">
-                <h3 itemprop="headline">طراحی پارامتریک: هنر دیجیتال در معماری مدرن</h3>
-                <div itemprop="articleBody">
-                    <p><strong>طراحی پارامتریک</strong> روشی پیشرفته است که با تعریف پارامترها و الگوریتم‌های ریاضی، فرم‌های پیچیده و بهینه‌شده ایجاد می‌کند. این متدولوژی تحولی در ساخت نماهای غیرمتعارف و سازه‌های پیچیده ایجاد کرده است.</p>
-                    
-                    <p><strong>🧠 هسته طراحی پارامتریک:</strong></p>
-                    <ol>
-                        <li><strong>پارامترهای ورودی</strong> - محدودیت‌ها، اهداف طراحی، شرایط محیطی</li>
-                        <li><strong>الگوریتم تولید فرم</strong> - تبدیل پارامترها به هندسه</li>
-                        <li><strong>بهینه‌سازی ساختاری</strong> - تحلیل بارها، تنش‌ها و عملکرد</li>
-                        <li><strong>خروجی نهایی</strong> - فایل‌های اجرایی و نقشه‌های ساخت</li>
-                    </ol>
-                    
-                    <p><strong>🛠️ نرم‌افزارهای تخصصی طراحی پارامتریک:</strong></p>
-                    <ul>
-                        <li><strong>Rhinoceros 3D + Grasshopper</strong> - استاندارد صنعت برای طراحی پارامتریک</li>
-                        <li><strong>Autodesk Dynamo</strong> - یکپارچه با Revit برای BIM</li>
-                        <li><strong>CATIA Generative Design</strong> - برای طراحی‌های پیچیده صنعتی</li>
-                        <li><strong>Param-O</strong> - توسعه داخلی برای پروژه‌های خاص</li>
-                    </ul>
-                    
-                    <p><strong>🎨 قابلیت‌های خارق‌العاده طراحی پارامتریک:</strong></p>
-                    <ul>
-                        <li><strong>تولید انبوه طرح</strong> - تولید هزاران طرح در دقیقه و انتخاب بهینه</li>
-                        <li><strong>شبیه‌سازی واقعی</strong> - بررسی رفتار سازه در شرایط مختلف</li>
-                        <li><strong>بهینه‌سازی مواد</strong> - کاهش ۳۰-۴۰٪ مصرف مواد بدون کاهش استحکام</li>
-                        <li><strong>یکپارچه‌سازی کامل</strong> - ارتباط مستقیم با سیستم‌های ساخت دیجیتال</li>
-                        <li><strong>انطباق محیطی</strong> - طراحی بر اساس نور، باد و شرایط اقلیمی</li>
-                    </ul>
-                    
-                    <p><strong>🏛️ پروژه‌های شاخص پارامتریک:</strong></p>
-                    <ul>
-                        <li><strong>نماهای مورب و مشبک</strong> ساختمان‌های بلندمرتبه</li>
-                        <li><strong>سقف‌های پارامتریک</strong> سالن‌های همایش و فرودگاه‌ها</li>
-                        <li><strong>المان‌های شهری</strong> ریاضی‌محور و فرم‌های ارگانیک</li>
-                        <li><strong>دکوراسیون داخلی</strong> الگوریتمی و سفارشی‌سازی شده</li>
-                        <li><strong>سازه‌های سبک</strong> پل‌های عابرپیاده و سازه‌های موقت</li>
-                    </ul>
-                    
-                    <p><strong>📈 آمار و ارقام:</strong> طراحی پارامتریک:
-                    <br>• زمان طراحی را ۶۰٪ کاهش می‌دهد
-                    <br>• بهره‌وری مواد را ۳۵٪ افزایش می‌دهد
-                    <br>• خطاهای اجرایی را ۸۰٪ کم می‌کند
-                    <br>• امکان طراحی فرم‌هایی را می‌دهد که با روش‌های سنتی غیرممکن است</p>
-                    
-                    <p><strong>🚀 آینده طراحی پارامتریک:</strong> با پیشرفت هوش مصنوعی و یادگیری ماشین، طراحی پارامتریک به سمت سیستم‌های خودآموز حرکت می‌کند که می‌توانند از پروژه‌های قبلی یاد گرفته و طرح‌های بهینه‌تری ارائه دهند.</p>
-                </div>
-            </article>
-            
-            <!-- مقاله المان -->
-            <article class="article fade-in" itemscope itemtype="https://schema.org/Article">
-                <meta itemprop="datePublished" content="2024-01-20">
-                <meta itemprop="author" content="SignSculpt Studio">
-                <h3 itemprop="headline">المان‌های شهری: هویت‌بخشی به فضاهای عمومی</h3>
-                <div itemprop="articleBody">
-                    <p><strong>المان‌های شهری</strong> قطعات طراحی‌شده‌ای هستند که علاوه بر کارکرد عملی، هویت بصری و خاطره جمعی ایجاد می‌کنند. این عناصر پلی بین معماری، هنر و جامعه هستند که کیفیت زندگی شهری را ارتقا می‌دهند.</p>
-                    
-                    <p><strong>🗺️ دسته‌بندی المان‌های شهری:</strong></p>
-                    <ol>
-                        <li><strong>عملکردی</strong> - نیمکت، آبخوری، سطل زباله، روشنایی، سایبان</li>
-                        <li><strong>هنری</strong> - مجسمه، دیوارنگاره، اینستالیشن، زمین‌نگاره</li>
-                        <li><strong>اطلاع‌رسانی</strong> - تابلو راهنما، نقشه، ساعت، تابلو اعلانات</li>
-                        <li><strong>تعاملی</strong> - وسایل بازی، فضاهای اجتماع، امکانات دیجیتال</li>
-                        <li><strong>طبیعی</strong> - باغچه‌های شهری، دیوار سبز، آبنما</li>
-                    </ol>
-                    
-                    <p><strong>🏗️ فرآیند طراحی المان شهری:</strong></p>
-                    <ol>
-                        <li><strong>مطالعه زمینه</strong> - بررسی تاریخ، فرهنگ و نیازهای محلی</li>
-                        <li><strong>طراحی مفهومی</strong> - ایده‌پردازی و ایجاد مفهوم اصلی</li>
-                        <li><strong>مهندسی سازه</strong> - محاسبات سازه‌ای و انتخاب مواد</li>
-                        <li><strong>ساخت نمونه</strong> - ماکت و تست میدانی</li>
-                        <li><strong>تولید نهایی</strong> - ساخت در ابعاد واقعی</li>
-                        <li><strong>نصب و مانیتورینگ</strong> - اجرا و نظارت بر عملکرد</li>
-                    </ol>
-                    
-                    <p><strong>🌿 رویکردهای نوین در طراحی المان:</strong></p>
-                    <ul>
-                        <li><strong>طراحی مشارکتی</strong> - مشارکت جامعه محلی در فرآیند طراحی</li>
-                        <li><strong>پایداری محیطی</strong> - استفاده از مواد بازیافتی و انرژی‌های تجدیدپذیر</li>
-                        <li><strong>هوشمندسازی</strong> - یکپارچه‌سازی با نورپردازی هوشمند و سنسورها</li>
-                        <li><strong>تعامل دیجیتال</strong> - QR Code، واقعیت افزوده، نمایشگرهای لمسی</li>
-                        <li><strong>چندعملکردی</strong> - ترکیب چند کارکرد در یک المان</li>
-                    </ul>
-                    
-                    <p><strong>📍 نمونه پروژه‌های موفق المان شهری:</strong></p>
-                    <ul>
-                        <li><strong>المان‌های ورودی</strong> شهرک‌های صنعتی و پارک‌های علم و فناوری</li>
-                        <li><strong>طراحی میادین اصلی</strong> شهر با هویت بصری منحصربه‌فرد</li>
-                        <li><strong>فضای داخلی دفاتر</strong> شرکت‌های دانش‌بنیان و استارت‌آپ‌ها</li>
-                        <li><strong>پارک‌های موضوعی</strong> و فضاهای بازی کودکان با المان‌های آموزشی</li>
-                        <li><strong>محوطه دانشگاه‌ها</strong> و مراکز آموزشی با المان‌های تعاملی</li>
-                    </ul>
-                    
-                    <p><strong>📊 تأثیر اجتماعی المان‌های خوب طراحی‌شده:</strong></p>
-                    <ul>
-                        <li><strong>افزایش ۴۰٪</strong> مشارکت اجتماعی در فضاهای عمومی</li>
-                        <li><strong>کاهش ۷۰٪</strong> وندالیسم و تخریب اموال عمومی</li>
-                        <li><strong>افزایش ۵۰٪</strong> مدت زمان حضور مردم در فضاهای شهری</li>
-                        <li><strong>تقویت هویت محلی</strong> و حس تعلق به مکان</li>
-                        <li><strong>جذب گردشگر</strong> و افزایش فعالیت‌های اقتصادی محلی</li>
-                    </ul>
-                    
-                    <p><strong>💡 نکته طراحی:</strong> المان موفق شهری باید سه ویژگی اصلی داشته باشد: <strong>کاربردی</strong> (نیاز واقعی را برطرف کند)، <strong>زیبا</strong> (از نظر بصری جذاب باشد) و <strong>معنادار</strong> (ارتباطی با زمینه مکانی و فرهنگی داشته باشد).</p>
-                </div>
-            </article>
-            
-            <!-- مقاله اوریگامی -->
-            <article class="article fade-in" itemscope itemtype="https://schema.org/Article">
-                <meta itemprop="datePublished" content="2024-01-20">
-                <meta itemprop="author" content="SignSculpt Studio">
-                <h3 itemprop="headline">اوریگامی معماری: تلفیق هنر شرقی با فناوری روز</h3>
-                <div itemprop="articleBody">
-                    <p><strong>اوریگامی معماری</strong> با الهام از هنر تاکردن کاغذ ژاپنی، اصول هندسه تا شونده را در ساخت سازه‌های پیچیده به کار می‌گیرد. این روش امکان ایجاد سازه‌های بزرگ از قطعات کوچک و مسطح را فراهم می‌کند.</p>
-                    
-                    <p><strong>📐 اصول هندسی اوریگامی:</strong></p>
-                    <ul>
-                        <li><strong>مفصل‌های تا شونده</strong> - نقاط چرخش برای تغییر شکل سازه</li>
-                        <li><strong>الگوهای تکرارشونده</strong> - تسلاسیون برای ایجاد سطوح پیوسته</li>
-                        <li><strong>تبدیل سطوح صاف</strong> - تبدیل صفحات تخت به حجم‌های سه‌بعدی</li>
-                        <li><strong>قابلیت جمع‌شدن</strong> - سیستم‌های Deployable برای فضاهای موقت</li>
-                        <li><strong>سازگاری شکل</strong> - توانایی تغییر شکل بر اساس نیاز</li>
-                    </ul>
-                    
-                    <p><strong>⚙️ فناوری‌های ساخت اوریگامی:</strong></p>
-                    <ul>
-                        <li><strong>برش CNC</strong> - حکاکی الگوهای تا با دقت میکرونی</li>
-                        <li><strong>مفصل‌های هوشمند</strong> - مفصل‌هایی با حافظه شکلی و کنترل دیجیتال</li>
-                        <li><strong>مواد انعطاف‌پذیر</strong> - کامپوزیت‌های خم‌شونده و آلیاژهای حافظه‌دار</li>
-                        <li><strong>سیستم‌های هیدرولیک</strong> - باز و بست خودکار با فشار هوا یا روغن</li>
-                        <li><strong>ساخت افزودنی</strong> - پرینت سه‌بعدی قطعات پیچیده</li>
-                    </ul>
-                    
-                    <p><strong>🌟 مزایای انقلابی اوریگامی معماری:</strong></p>
-                    <ul>
-                        <li><strong>کاهش حجم</strong> - کاهش ۸۰٪ حجم در حالت حمل و نقل</li>
-                        <li><strong>سرعت نصب</strong> - سرعت ۱۰ برابری نسبت به سازه‌های سنتی</li>
-                        <li><strong>انعطاف‌پذیری</strong> - امکان ارتقا، تغییر و توسعه پذیری</li>
-                        <li><strong>صرفه‌جویی</strong> - کاهش هزینه‌های ساخت، حمل و نصب</li>
-                        <li><strong>پایداری</strong> - امکان استفاده مجدد و بازیافت آسان</li>
-                        <li><strong>یکپارچگی</strong> - ترکیب با سیستم‌های خورشیدی و هوشمند</li>
-                    </ul>
-                    
-                    <p><strong>🏗️ کاربردهای مهندسی اوریگامی:</strong></p>
-                    <ul>
-                        <li><strong>سقف‌های جمع‌شونده</strong> استادیوم‌ها و سالن‌های چندمنظوره</li>
-                        <li><strong>غرفه‌های نمایشگاهی</strong> سریع‌الاجرا و قابل حمل</li>
-                        <li><strong>پنل‌های نما</strong> با قابلیت تنظیم سایه و تهویه</li>
-                        <li><strong>سازه‌های امدادی</strong> پناهگاه‌های اضطراری در مناطق بحرانی</li>
-                        <li><strong>ساختمان‌های موقت</strong> مدارس، کلینیک‌ها و اقامتگاه‌ها</li>
-                        <li><strong>سازه‌های فضایی</strong> برای اکتشافات ماه و مریخ</li>
-                    </ul>
-                    
-                    <p><strong>🎯 پروژه نمادین:</strong> غرفه ژاپن در اکسپو 2020 دبی با ۸۰۰۰ قطعه اوریگامی آلومینیومی که در ۳ هفته نصب شد. این سازه ۲۵۰۰ متر مربعی می‌تواند در ۱۰ روز جمع‌آوری شده و در محل دیگری نصب شود.</p>
-                    
-                    <p><strong>🔬 تحقیقات پیشرفته:</strong> محققان در حال کار بر روی اوریگامی‌های <strong>نانومقیاس</strong> برای کاربردهای پزشکی، <strong>رباتیک نرم</strong> با قابلیت تغییر شکل و <strong>پنل‌های خورشیدی</strong> جمع‌شونده برای ماهواره‌ها هستند.</p>
-                    
-                    <p><strong>💎 آینده اوریگامی:</strong> با ترکیب هوش مصنوعی و بیومیمیکری، نسل بعدی سازه‌های اوریگامی قادر خواهند بود مانند موجودات زنده به محیط واکنش نشان داده و خود را با شرایط تطبیق دهند.</p>
-                </div>
-            </article>
-            
-            <!-- مقاله ورونای -->
-            <article class="article fade-in" itemscope itemtype="https://schema.org/Article">
-                <meta itemprop="datePublished" content="2024-01-20">
-                <meta itemprop="author" content="SignSculpt Studio">
-                <h3 itemprop="headline">ورونای: الگوریتم‌های طبیعت در طراحی مدرن</h3>
-                <div itemprop="articleBody">
-                    <p><strong>ورونای</strong> روشی الگوریتمی است که با شبیه‌سازی الگوهای طبیعی (ترک‌های خشک‌شدگی، پوست حیوانات، حباب‌های صابون)، فرم‌های ارگانیک و بهینه تولید می‌کند. این روش در مرز بین ریاضیات، علوم کامپیوتر و طراحی قرار دارد.</p>
-                    
-                    <p><strong>🌌 مبانی علمی ورونای:</strong></p>
-                    <ul>
-                        <li><strong>تقسیم‌بندی فضای n بعدی</strong> به سلول‌های هم‌فاصله از نقاط کنترل</li>
-                        <li><strong>الگوریتم Fortune</strong> برای محاسبه نمودار ورونای در O(n log n)</li>
-                        <li><strong>سه‌بعدی‌سازی</strong> با تتراهدرال‌های دلونی برای حجم‌های پیچیده</li>
-                        <li><strong>بهینه‌سازی چندهدفه</strong> با الگوریتم‌های ژنتیک و ازدحام ذرات</li>
-                        <li><strong>شبیه‌سازی فیزیکی</strong> رفتار مواد و نیروها در فرم نهایی</li>
-                    </ul>
-                    
-                    <p><strong>🖥️ Pipeline طراحی ورونای:</strong></p>
-                    <ol>
-                        <li><strong>تعریف نقاط کنترل</strong> - موقعیت نقاط کلیدی در فضا</li>
-                        <li><strong>تولید نمودار ورونای/دلونی</strong> - ایجاد شبکه سلولی</li>
-                        <li><strong>استخراج شبکه سازه‌ای</strong> - تبدیل به ساختار قابل اجرا</li>
-                        <li><strong>بهینه‌سازی مواد</strong> - تحلیل تنش و توزیع مواد</li>
-                        <li><strong>طراحی اتصالات</strong> - طراحی مفصل‌ها و اتصالات</li>
-                        <li><strong>خروجی فایل‌های ساخت</strong> - تولید فایل‌های دیجیتال</li>
-                    </ol>
-                    
-                    <p><strong>🌈 قابلیت‌های منحصربه‌فرد ورونای:</strong></p>
-                    <ul>
-                        <li><strong>تولید فرم‌های منحصربه‌فرد</strong> - غیرتکراری و الهام‌گرفته از طبیعت</li>
-                        <li><strong>توزیع بهینه بار</strong> - انتقال طبیعی نیروها در سازه</li>
-                        <li><strong>کنترل سطح پیچیدگی</strong> - امکان طراحی از ساده تا فوق پیچیده</li>
-                        <li><strong>یکپارچه‌سازی سیستمی</strong> - ترکیب با HVAC، لوله‌کشی و سیم‌کشی</li>
-                        <li><strong>تطبیق‌پذیری</strong> - تغییر فرم بر اساس پارامترهای محیطی</li>
-                        <li><strong>مقیاس‌پذیری</strong> - کاربرد در مقیاس‌های مختلف از جواهر تا ساختمان</li>
-                    </ul>
-                    
-                    <p><strong>🏢 کاربردهای پیشرفته ورونای:</strong></p>
-                    <ul>
-                        <li><strong>نماهای دوپوسته</strong> با تهویه طبیعی و کنترل نور</li>
-                        <li><strong>سازه‌های سبک</strong> پل‌های عابرپیاده و سازه‌های فضایی</li>
-                        <li><strong>سقف‌های آزادفرم</strong> سالن‌های کنسرت و موزه‌ها</li>
-                        <li><strong>المان‌های دکوراتیو</strong> با الگوهای فرکتال و ارگانیک</li>
-                        <li><strong>طراحی داخلی</strong> سقف‌های آکوستیک و دیوارهای مشبک</li>
-                        <li><strong>محصولات صنعتی</strong> صندلی، میز و مبلمان ارگانیک</li>
-                    </ul>
-                    
-                    <p><strong>📈 بهره‌وری و کارایی:</strong> ورونای در مقایسه با روش‌های سنتی:
-                    <br>• ۴۵٪ صرفه‌جویی در مصرف مواد
-                    <br>• ۳۰۰٪ افزایش نسبت استحکام به وزن
-                    <br>• ۶۰٪ کاهش وزن سازه‌های فضایی
-                    <br>• ۳۵٪ بهبود عملکرد حرارتی نماها
-                    <br>• ۵۰٪ کاهش زمان طراحی فرم‌های پیچیده</p>
-                    
-                    <p><strong>🚀 پروژه‌های آینده‌نگرانه:</strong> محققان در حال توسعه سیستم‌های ورونای <strong>زنده</strong> هستند که بتوانند در طول زمان رشد کرده و تغییر شکل دهند. این سیستم‌ها برای شهرهای آینده و سکونتگاه‌های فضایی در نظر گرفته شده‌اند.</p>
-                    
-                    <p><strong>💡 فلسفه طراحی:</strong> ورونای به ما یادآوری می‌کند که بهترین طرح‌ها اغلب در طبیعت وجود دارند. با مطالعه الگوهای طبیعی و تبدیل آنها به الگوریتم‌های دیجیتال، می‌توانیم سازه‌هایی خلق کنیم که هم زیبا باشند، هم بهینه و هم پایدار.</p>
                 </div>
             </article>
         </div>
         
         <!-- فرم تماس -->
-        <div class="contact-form fade-in">
+        <div class="contact-form fade-in" id="contact">
             <h2 class="form-title">درخواست مشاوره رایگان</h2>
             <form action="https://formspree.io/f/mnqlwzvd" method="POST" id="contactForm">
                 <input type="text" name="name" placeholder="نام و نام خانوادگی *" required aria-label="نام">
                 <input type="email" name="email" placeholder="آدرس ایمیل *" required aria-label="ایمیل">
-                <input type="tel" name="phone" placeholder="شماره تماس (اختیاری)" aria-label="تلفن">
-                <select name="service" style="width:100%; padding:20px; margin-bottom:25px; border:2px solid #eee; border-radius:15px; font-family:'Vazirmatn'; font-size:16px; background:#fafafa;">
+                <input type="tel" name="phone" placeholder="شماره تماس (اختیاری)" aria-label="تلفن" pattern="[\d\s\+\-\(\)]{10,15}">
+                <select name="service" aria-label="نوع خدمات">
                     <option value="">انتخاب نوع خدمات مورد نظر</option>
                     <option value="composite">کامپوزیت</option>
                     <option value="thermo">ترمو وود</option>
@@ -1729,20 +1596,20 @@
         
         <!-- شبکه‌های اجتماعی -->
         <div class="socials fade-in">
-            <a href="https://www.instagram.com/sign.sculpt" target="_blank" title="صفحه اینستاگرام" aria-label="اینستاگرام">
-                <span class="icon">📸</span>
+            <a href="https://www.instagram.com/sign.sculpt" target="_blank" rel="noopener noreferrer" title="صفحه اینستاگرام" aria-label="اینستاگرام">
+                <span class="icon" aria-hidden="true">📸</span>
                 <span>اینستاگرام</span>
             </a>
-            <a href="https://t.me/+989148127104" target="_blank" title="کانال تلگرام" aria-label="تلگرام">
-                <span class="icon">💬</span>
+            <a href="https://t.me/+989148127104" target="_blank" rel="noopener noreferrer" title="کانال تلگرام" aria-label="تلگرام">
+                <span class="icon" aria-hidden="true">💬</span>
                 <span>تلگرام</span>
             </a>
-            <a href="https://wa.me/989148127104" target="_blank" title="واتساپ" aria-label="واتساپ">
-                <span class="icon">📱</span>
+            <a href="https://wa.me/989148127104" target="_blank" rel="noopener noreferrer" title="واتساپ" aria-label="واتساپ">
+                <span class="icon" aria-hidden="true">📱</span>
                 <span>واتساپ</span>
             </a>
             <a href="mailto:signsculptstudio@gmail.com" title="ارسال ایمیل" aria-label="ایمیل">
-                <span class="icon">📧</span>
+                <span class="icon" aria-hidden="true">📧</span>
                 <span>ایمیل</span>
             </a>
         </div>
@@ -1772,236 +1639,587 @@
                 © ۱۴۰۲-۱۴۰۳ SignSculpt Studio - تمام حقوق مادی و معنوی محفوظ است.
             </p>
         </footer>
-    </div>
+    </main>
     
     <!-- اسکریپت‌ها -->
     <script>
-        // وقتی صفحه کاملاً لود شد
+        // ===== OBJECTS AND VARIABLES =====
+        const state = {
+            currentLanguage: 'fa',
+            observer: null,
+            isSubmitting: false
+        };
+
+        const translations = {
+            fa: {
+                title: "SignSculpt Studio | برترین استودیو طراحی نما در ایران",
+                tagline: "ترکیبی بی‌نظیر از خلاقیت، دقت و کیفیت در هر پروژه",
+                cta: "از <strong>طراحی مفهومی</strong> تا <strong>اجرای نهایی</strong> | همراه شما در هر مرحله"
+            },
+            en: {
+                title: "SignSculpt Studio | Premier Facade Design Studio in Iran",
+                tagline: "A perfect blend of creativity, precision and quality in every project",
+                cta: "From <strong>conceptual design</strong> to <strong>final execution</strong> | With you at every step"
+            }
+        };
+
+        // ===== DOM READY =====
         document.addEventListener('DOMContentLoaded', function() {
             console.log('🚀 SignSculpt Studio - فایل نهایی لود شد');
             
-            // ===== فیلترینگ تب‌ها =====
+            initNavigation();
+            initImageHandling();
+            initTabs();
+            initLanguageSwitcher();
+            initVisitorCounter();
+            initBackToTop();
+            initContactForm();
+            initAnimations();
+            initMobileMenu();
+            initPerformanceMonitoring();
+        });
+
+        // ===== INITIALIZATION FUNCTIONS =====
+        function initNavigation() {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        }
+
+        function initMobileMenu() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.querySelector('.nav-links');
+            
+            if (menuBtn && navMenu) {
+                menuBtn.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    navMenu.classList.toggle('active');
+                    this.innerHTML = isExpanded ? '☰' : '✕';
+                });
+                
+                // بستن منو هنگام کلیک خارج
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.nav-container')) {
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                        navMenu.classList.remove('active');
+                        menuBtn.innerHTML = '☰';
+                    }
+                });
+            }
+        }
+
+        function initImageHandling() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                // Lazy loading پیشرفته
+                img.loading = 'lazy';
+                
+                // هندلینگ ایمن خطا
+                img.addEventListener('error', function() {
+                    console.warn('تصویر لود نشد:', this.src);
+                    
+                    const parent = this.closest('.grid-item');
+                    if (parent) {
+                        const fallback = document.createElement('div');
+                        fallback.className = 'image-error-fallback';
+                        fallback.setAttribute('role', 'img');
+                        fallback.setAttribute('aria-label', 'تصویر در دسترس نیست');
+                        fallback.textContent = 'SignSculpt Studio';
+                        
+                        this.replaceWith(fallback);
+                    } else {
+                        this.style.display = 'none';
+                    }
+                });
+                
+                // Preload مهم‌ترین تصاویر
+                if (img.classList.contains('logo')) {
+                    const preloadLink = document.createElement('link');
+                    preloadLink.rel = 'preload';
+                    preloadLink.as = 'image';
+                    preloadLink.href = img.src;
+                    document.head.appendChild(preloadLink);
+                }
+            });
+        }
+
+        function initTabs() {
             const tabButtons = document.querySelectorAll('.tab-btn');
             const gridItems = document.querySelectorAll('.grid-item');
             
+            if (tabButtons.length === 0) return;
+            
             tabButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    // حذف کلاس active از همه
+                    const category = this.getAttribute('data-category');
+                    const tabId = this.getAttribute('id');
+                    
+                    // آپدیت وضعیت تب‌ها
                     tabButtons.forEach(btn => {
                         btn.classList.remove('active');
-                        btn.style.transform = 'translateY(0)';
+                        btn.setAttribute('aria-selected', 'false');
                     });
-                    
-                    // اضافه کردن active به دکمه کلیک شده
                     this.classList.add('active');
-                    this.style.transform = 'translateY(-3px)';
+                    this.setAttribute('aria-selected', 'true');
                     
-                    // فیلتر کردن آیتم‌ها
-                    const category = this.getAttribute('data-category');
-                    
+                    // فیلتر تصاویر
                     gridItems.forEach(item => {
+                        item.style.display = 'none';
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        
                         if (category === 'all' || item.getAttribute('data-category') === category) {
-                            item.style.display = 'block';
                             setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'translateY(0) scale(1)';
-                            }, 50);
-                        } else {
-                            item.style.opacity = '0';
-                            item.style.transform = 'translateY(20px) scale(0.95)';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 400);
+                                item.style.display = 'block';
+                                setTimeout(() => {
+                                    item.style.opacity = '1';
+                                    item.style.transform = 'translateY(0)';
+                                }, 10);
+                            }, 10);
                         }
                     });
-                });
-            });
-            
-            // ===== تغییر زبان =====
-            const langButtons = document.querySelectorAll('.lang-switch button');
-            langButtons.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    langButtons.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
                     
-                    if (this.dataset.lang === 'en') {
-                        document.getElementById('main-headline').textContent = 'SignSculpt Studio | Premier Facade Design Studio in Iran';
-                        document.querySelector('.tagline').textContent = 'A perfect blend of creativity, precision and quality in every project';
-                        document.querySelector('.hero-cta').innerHTML = 'From <strong>conceptual design</strong> to <strong>final execution</strong> | With you at every step';
-                    } else {
-                        document.getElementById('main-headline').textContent = 'SignSculpt Studio | برترین استودیو طراحی نما در ایران';
-                        document.querySelector('.tagline').textContent = 'ترکیبی بی‌نظیر از <strong>خلاقیت، دقت و کیفیت</strong> در هر پروژه';
-                        document.querySelector('.hero-cta').innerHTML = 'از <strong>طراحی مفهومی</strong> تا <strong>اجرای نهایی</strong> | همراه شما در هر مرحله';
+                    // آپدیت ARIA
+                    const grid = document.querySelector('.grid');
+                    if (grid) {
+                        grid.setAttribute('aria-labelledby', tabId);
+                    }
+                    
+                    // ذخیره انتخاب کاربر
+                    try {
+                        localStorage.setItem('selectedTab', category);
+                    } catch (e) {
+                        console.warn('خطا در ذخیره‌سازی:', e);
                     }
                 });
             });
             
-            // ===== شمارنده بازدید =====
-            let count = localStorage.getItem('siteVisitCount');
-            if (!count || count === 'NaN') count = 0;
-            count = parseInt(count) + 1;
-            localStorage.setItem('siteVisitCount', count);
-            document.getElementById('count').textContent = count.toLocaleString('fa-IR');
+            // بازیابی انتخاب کاربر
+            try {
+                const savedTab = localStorage.getItem('selectedTab');
+                if (savedTab) {
+                    const tabToSelect = document.querySelector(`.tab-btn[data-category="${savedTab}"]`);
+                    if (tabToSelect) tabToSelect.click();
+                }
+            } catch (e) {
+                console.warn('خطا در بازیابی:', e);
+            }
+        }
+
+        function initLanguageSwitcher() {
+            const langButtons = document.querySelectorAll('.lang-switch button');
             
-            // ===== دکمه بازگشت به بالا =====
-            const backToTop = document.getElementById('backToTop');
+            // بازیابی زبان ذخیره شده
+            try {
+                const savedLang = localStorage.getItem('preferredLang') || 'fa';
+                state.currentLanguage = savedLang;
+                updateLanguage(savedLang);
+            } catch (e) {
+                console.warn('خطا در بازیابی زبان:', e);
+            }
+            
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    if (lang !== state.currentLanguage) {
+                        state.currentLanguage = lang;
+                        updateLanguage(lang);
+                        
+                        // ذخیره ترجیح کاربر
+                        try {
+                            localStorage.setItem('preferredLang', lang);
+                        } catch (e) {
+                            console.warn('خطا در ذخیره زبان:', e);
+                        }
+                    }
+                });
+            });
+        }
+
+        function updateLanguage(lang) {
+            const langButtons = document.querySelectorAll('.lang-switch button');
+            langButtons.forEach(btn => {
+                const isActive = btn.getAttribute('data-lang') === lang;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-pressed', isActive);
+            });
+            
+            // آپدیت محتوا
+            if (translations[lang]) {
+                document.getElementById('main-headline').textContent = translations[lang].title;
+                document.querySelector('.tagline').textContent = translations[lang].tagline;
+                document.querySelector('.hero-cta').innerHTML = translations[lang].cta;
+            }
+        }
+
+        function initVisitorCounter() {
+            const counterElement = document.getElementById('count');
+            if (!counterElement) return;
+            
+            try {
+                let count = localStorage.getItem('siteVisitCount');
+                
+                // بررسی اعتبار
+                if (!count || count === 'null' || count === 'undefined') {
+                    count = 0;
+                } else {
+                    count = parseInt(count);
+                    if (isNaN(count)) count = 0;
+                }
+                
+                // افزایش شمارنده
+                count++;
+                
+                // ذخیره ایمن
+                try {
+                    localStorage.setItem('siteVisitCount', count.toString());
+                } catch (e) {
+                    if (e.name === 'QuotaExceededError') {
+                        // پاک کردن و شروع مجدد
+                        localStorage.clear();
+                        localStorage.setItem('siteVisitCount', '1');
+                        count = 1;
+                    }
+                }
+                
+                // نمایش
+                counterElement.textContent = count.toLocaleString('fa-IR');
+                
+                // ارسال به سرور (اختیاری)
+                if (typeof ga !== 'undefined') {
+                    ga('send', 'event', 'Visitor', 'Count', count);
+                }
+                
+            } catch (error) {
+                console.error('خطا در شمارنده بازدید:', error);
+                counterElement.textContent = '...';
+            }
+        }
+
+        function initBackToTop() {
+            const backToTopBtn = document.getElementById('backToTop');
+            if (!backToTopBtn) return;
             
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 500) {
-                    backToTop.style.display = 'block';
-                    setTimeout(() => {
-                        backToTop.classList.add('show');
-                    }, 10);
+                    backToTopBtn.classList.add('show');
                 } else {
-                    backToTop.classList.remove('show');
-                    setTimeout(() => {
-                        if (!backToTop.classList.contains('show')) {
-                            backToTop.style.display = 'none';
-                        }
-                    }, 300);
+                    backToTopBtn.classList.remove('show');
                 }
             });
             
-            backToTop.addEventListener('click', function() {
+            backToTopBtn.addEventListener('click', function() {
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
                 });
+                this.blur(); // حذف فوکوس
             });
             
-            // ===== مدیریت خطای تصاویر =====
-            document.querySelectorAll('img').forEach(img => {
-                img.addEventListener('error', function() {
-                    console.warn('تصویر لود نشد:', this.src);
-                    this.classList.add('error');
-                    this.style.backgroundColor = '#f5f1e6';
-                    this.style.padding = '30px';
-                    this.style.display = 'flex';
-                    this.style.alignItems = 'center';
-                    this.style.justifyContent = 'center';
-                    this.style.color = '#999';
-                    this.style.fontSize = '16px';
-                    this.style.textAlign = 'center';
-                    this.innerHTML = 'SignSculpt Studio<br><small>تصویر در دسترس نیست</small>';
-                    this.alt = 'تصویر در دسترس نیست - SignSculpt Studio';
-                });
-            });
-            
-            // ===== فرم تماس =====
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
+            // کلید میانبر
+            document.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'Home') {
                     e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        }
+
+        function initContactForm() {
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+            
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                if (state.isSubmitting) return;
+                state.isSubmitting = true;
+                
+                const submitBtn = this.querySelector('.submit');
+                const originalText = submitBtn.querySelector('span').textContent;
+                
+                // نمایش وضعیت
+                submitBtn.querySelector('span').textContent = 'در حال ارسال...';
+                submitBtn.disabled = true;
+                
+                try {
+                    // اعتبارسنجی
+                    const phone = this.phone.value;
+                    if (phone && !/^[\d\s\+\-\(\)]{10,15}$/.test(phone)) {
+                        throw new Error('شماره تلفن معتبر نیست');
+                    }
                     
-                    const submitBtn = this.querySelector('.submit');
-                    const originalText = submitBtn.querySelector('span').textContent;
-                    submitBtn.querySelector('span').textContent = 'در حال ارسال...';
-                    submitBtn.disabled = true;
+                    // ارسال واقعی
+                    const formData = new FormData(this);
+                    const response = await fetch(this.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
                     
-                    // شبیه‌سازی ارسال
-                    setTimeout(() => {
+                    if (response.ok) {
+                        // موفقیت
                         alert('✅ درخواست مشاوره شما با موفقیت ثبت شد!\nکارشناسان ما طی ۲۴ ساعت کاری با شما تماس خواهند گرفت.');
                         this.reset();
-                        submitBtn.querySelector('span').textContent = originalText;
-                        submitBtn.disabled = false;
                         
-                        // ثبت در localStorage
-                        const formData = {
-                            timestamp: new Date().toISOString(),
-                            action: 'contact_form_submitted'
-                        };
-                        localStorage.setItem('lastContactSubmit', JSON.stringify(formData));
-                    }, 1500);
+                        // ثبت در analytics
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'form_submit', {
+                                'event_category': 'Contact',
+                                'event_label': 'Contact Form'
+                            });
+                        }
+                    } else {
+                        throw new Error('خطا در ارسال فرم');
+                    }
+                    
+                } catch (error) {
+                    console.error('خطا:', error);
+                    alert('❌ خطا در ارسال پیام. لطفاً دوباره تلاش کنید.\n' + error.message);
+                    
+                } finally {
+                    // بازنشانی دکمه
+                    submitBtn.querySelector('span').textContent = originalText;
+                    submitBtn.disabled = false;
+                    state.isSubmitting = false;
+                }
+            });
+            
+            // اعتبارسنجی real-time
+            const phoneInput = form.querySelector('input[name="phone"]');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function() {
+                    if (this.value && !/^[\d\s\+\-\(\)]{10,15}$/.test(this.value)) {
+                        this.setCustomValidity('شماره تلفن باید بین ۱۰ تا ۱۵ رقم باشد');
+                    } else {
+                        this.setCustomValidity('');
+                    }
                 });
             }
-            
-            // ===== انیمیشن اسکرول =====
+        }
+
+        function initAnimations() {
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
             
-            const observer = new IntersectionObserver((entries) => {
+            state.observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('fade-in');
+                        state.observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
             
-            // مشاهده تمام بخش‌ها برای انیمیشن
+            // مشاهده عناصر
             document.querySelectorAll('.work-section, .trust-signals, .article, .contact-form, .map-container, .socials, footer').forEach(el => {
-                observer.observe(el);
+                state.observer.observe(el);
             });
             
-            // ===== تست HTTPS =====
-            if (window.location.protocol === 'https:') {
-                console.log('🔒 سایت روی HTTPS است - امنیت فعال');
-            } else if (window.location.hostname !== 'localhost') {
-                console.warn('⚠️ توصیه می‌شود سایت را به HTTPS منتقل کنید');
-            }
-            
-            // ===== پیش‌بارگذاری تصاویر مهم =====
-            const criticalImages = ['images/Com.jpg', 'images/Te.jpg', 'images/Ch.jpg'];
-            criticalImages.forEach(src => {
-                const img = new Image();
-                img.src = src;
+            // تمیزکاری هنگام unload
+            window.addEventListener('beforeunload', () => {
+                if (state.observer) {
+                    state.observer.disconnect();
+                }
             });
-            
-            // ===== عملکرد چاپ =====
-            window.addEventListener('beforeprint', () => {
-                document.body.classList.add('printing');
-            });
-            
-            window.addEventListener('afterprint', () => {
-                document.body.classList.remove('printing');
-            });
-            
-            // ===== گزارش عملکرد =====
+        }
+
+        function initPerformanceMonitoring() {
+            // اندازه‌گیری performance
             window.addEventListener('load', function() {
-                const perfData = performance.timing;
-                const loadTime = perfData.loadEventEnd - perfData.navigationStart;
-                console.log(`⚡ زمان بارگذاری کامل: ${loadTime}ms`);
-                
-                if (loadTime < 2000) {
-                    console.log('✅ عملکرد عالی');
-                } else if (loadTime < 4000) {
-                    console.log('⚠️ عملکرد خوب، امکان بهینه‌سازی وجود دارد');
-                } else {
-                    console.log('🔧 نیاز به بهینه‌سازی سرعت');
+                if ('performance' in window) {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    if (perfData) {
+                        const loadTime = perfData.loadEventEnd - perfData.startTime;
+                        console.log(`⚡ زمان بارگذاری کامل: ${Math.round(loadTime)}ms`);
+                        
+                        // ارسال به analytics
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'timing_complete', {
+                                'name': 'load',
+                                'value': Math.round(loadTime),
+                                'event_category': 'Performance'
+                            });
+                        }
+                    }
                 }
             });
             
-            // ===== انیمیشن‌های اولیه =====
-            setTimeout(() => {
-                document.querySelector('.hero').style.opacity = '1';
-                document.querySelector('.hero').style.transform = 'translateY(0)';
-            }, 300);
+            // مانیتورینگ آفلاین
+            window.addEventListener('online', () => {
+                console.log('✅ اتصال اینترنت برقرار شد');
+                document.body.classList.remove('offline');
+            });
+            
+            window.addEventListener('offline', () => {
+                console.warn('⚠️ اتصال اینترنت قطع شد');
+                document.body.classList.add('offline');
+                alert('⚠️ اتصال اینترنت شما قطع شده است. برخی قابلیت‌ها ممکن است کار نکنند.');
+            });
+            
+            // تست PWA compatibility
+            if ('serviceWorker' in navigator) {
+                console.log('✅ Service Worker پشتیبانی می‌شود');
+            }
+            
+            if ('localStorage' in window) {
+                console.log('✅ localStorage پشتیبانی می‌شود');
+            }
+        }
+
+        // ===== GLOBAL EVENT LISTENERS =====
+        window.addEventListener('error', function(e) {
+            console.error('❌ خطای جهانی:', e.error);
+            
+            // گزارش به سرور (در صورت نیاز)
+            if (typeof ga !== 'undefined') {
+                ga('send', 'exception', {
+                    exDescription: e.message,
+                    exFatal: false
+                });
+            }
         });
-        
-        // ===== مدیریت وضعیت آفلاین =====
-        window.addEventListener('online', () => {
-            console.log('✅ اتصال اینترنت برقرار شد');
+
+        // ===== UTILITY FUNCTIONS =====
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        function throttle(func, limit) {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        }
+
+        // ===== TEST FUNCTIONS (برای توسعه) =====
+        function runTests() {
+            console.log('🧪 اجرای تست‌های سیستم...');
+            
+            const tests = [
+                { name: 'فرم تماس', element: 'contactForm', passed: !!document.getElementById('contactForm') },
+                { name: 'شمارنده بازدید', element: 'count', passed: !!document.getElementById('count') },
+                { name: 'دکمه بازگشت به بالا', element: 'backToTop', passed: !!document.getElementById('backToTop') },
+                { name: 'تصاویر', passed: document.images.length > 0 },
+                { name: 'لینک‌ها', passed: document.links.length > 0 }
+            ];
+            
+            const results = tests.map(test => {
+                console.log(`${test.passed ? '✅' : '❌'} ${test.name}: ${test.passed ? 'Passed' : 'Failed'}`);
+                return test.passed;
+            });
+            
+            const allPassed = results.every(r => r);
+            console.log(`📊 نتایج: ${allPassed ? 'همه تست‌ها موفق' : 'برخی تست‌ها ناموفق'}`);
+            
+            return allPassed;
+        }
+
+        // اجرای تست‌ها در حالت توسعه
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            setTimeout(runTests, 1000);
+        }
+
+        // ===== SERVICE WORKER REGISTRATION =====
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('✅ Service Worker ثبت شد:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.warn('⚠️ خطا در ثبت Service Worker:', error);
+                    });
+            });
+        }
+
+        // ===== PRINT SUPPORT =====
+        window.addEventListener('beforeprint', () => {
+            document.body.classList.add('printing');
+            document.querySelectorAll('.chat-widgets, #backToTop').forEach(el => {
+                el.style.display = 'none';
+            });
         });
-        
-        window.addEventListener('offline', () => {
-            console.warn('⚠️ اتصال اینترنت قطع شد');
+
+        window.addEventListener('afterprint', () => {
+            document.body.classList.remove('printing');
+            document.querySelectorAll('.chat-widgets, #backToTop').forEach(el => {
+                el.style.display = '';
+            });
         });
-        
-        // ===== کلیدهای میانبر =====
-        document.addEventListener('keydown', (e) => {
-            // Ctrl + B برای بازگشت به بالا
-            if (e.ctrlKey && e.key === 'b') {
+
+        // ===== KEYBOARD SHORTCUTS =====
+        document.addEventListener('keydown', function(e) {
+            // فقط اگر روی input focus نیست
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') {
+                return;
+            }
+            
+            // Ctrl + 1 برای خانه
+            if ((e.ctrlKey || e.metaKey) && e.key === '1') {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
             
-            // Ctrl + F برای رفتن به فرم
-            if (e.ctrlKey && e.key === 'f') {
+            // Ctrl + 2 برای فرم تماس
+            if ((e.ctrlKey || e.metaKey) && e.key === '2') {
                 e.preventDefault();
-                document.querySelector('.contact-form')?.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }
+            
+            // Ctrl + 3 برای نمونه کارها
+            if ((e.ctrlKey || e.metaKey) && e.key === '3') {
+                e.preventDefault();
+                document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
             }
         });
+
+        // ===== OFFLINE SUPPORT =====
+        const CACHE_NAME = 'signsculpt-v1';
+        const urlsToCache = [
+            '/',
+            '/index.html',
+            '/css/styles.css',
+            '/js/main.js',
+            '/images/logo.jpg'
+        ];
+
+        if ('caches' in window) {
+            caches.open(CACHE_NAME)
+                .then(cache => {
+                    console.log('✅ کش باز شد');
+                    return cache.addAll(urlsToCache);
+                })
+                .catch(err => console.warn('⚠️ خطا در کش:', err));
+        }
+
     </script>
 </body>
 </html>
