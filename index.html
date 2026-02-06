@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -704,65 +703,474 @@
                 padding: 50px 30px;
                 margin-top: 30px;
             }
- 
-font-size: 2.6rem;
+            
+            .hero h1 {
+                     /* Responsive - Tablet */
+        @media (max-width: 992px) {
+            .container {
+                padding: 15px;
+                padding-top: 110px;
+            }
+            
+            .hero {
+                padding: 50px 30px;
+                margin-top: 30px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .work-section {
+                padding: 40px 30px;
+            }
+            
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 25px;
+            }
+            
+            .contact-form {
+                padding: 45px 35px;
+            }
+            
+            .chat-widgets {
+                bottom: 25px;
+                left: 25px;
+            }
+            
+            #backToTop {
+                bottom: 140px;
+                left: 25px;
+            }
+        }
+        
+        /* Responsive - Mobile */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+                margin-top: 25px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
             }
             
             .tagline {
                 font-size: 1.2rem;
             }
-
-            .work-section {
-                padding: 40px 25px;
+            
+            .hero-features {
+                gap: 15px;
             }
-
+            
+            .feature {
+                padding: 15px;
+                min-width: 120px;
+            }
+            
+            .feature-icon {
+                font-size: 26px;
+            }
+            
+            .feature-text {
+                font-size: 13px;
+            }
+            
+            .tabs {
+                gap: 10px;
+            }
+            
+            .tab-btn {
+                padding: 14px 22px;
+                font-size: 15px;
+                flex: 1;
+                min-width: 130px;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+                max-width: 450px;
+                margin: 0 auto;
+            }
+            
+            .trust-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .trust-signals {
+                padding: 50px 25px;
+            }
+            
             .article {
-                padding: 35px;
+                padding: 35px 25px;
             }
-
-            .contact-form {
-                padding: 40px 30px;
+            
+            .socials {
+                gap: 25px;
+            }
+            
+            .socials a {
+                min-width: 100px;
+                padding: 20px;
+            }
+            
+            .lang-switch {
+                top: 15px;
+                left: 15px;
+                padding: 8px 15px;
+            }
+            
+            .logo {
+                top: 15px;
+                right: 15px;
+                width: 70px;
+            }
+            
+            footer {
+                padding: 50px 25px;
+            }
+            
+            /* Chat Mobile - 60px height */
+            .chat-widgets {
+                flex-direction: row;
+                bottom: 20px;
+                left: 20px;
+                right: 20px;
+                justify-content: center;
+                gap: 10px;
+            }
+            
+            .chat-btn {
+                flex: 1;
+                justify-content: center;
+                padding: 12px 8px;
+                font-size: 14px;
+                min-height: 60px; /* 60px ارتفاع */
+                min-width: 0;
+            }
+            
+            .chat-btn .icon {
+                font-size: 20px;
+                margin-bottom: 4px;
+            }
+            
+            .chat-btn span {
+                font-size: 12px;
+                line-height: 1.2;
+            }
+            
+            #backToTop {
+                bottom: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-left: 0;
+                width: 55px;
+                height: 55px;
             }
         }
-
-        /* Responsive - Mobile */
-        @media (max-width: 600px) {
+        
+        /* Small Mobile */
+        @media (max-width: 480px) {
             .hero h1 {
-                font-size: 2.1rem;
+                font-size: 1.7rem;
             }
-
+            
             .tagline {
                 font-size: 1.1rem;
             }
-
-            .feature {
-                min-width: 120px;
-                padding: 15px;
-            }
-
+            
             .section-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
-
-            .article h3 {
-                font-size: 1.6rem;
+            
+            .tab-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+                min-width: 115px;
             }
-
-            .article-content {
+            
+            .contact-form {
+                padding: 35px 25px;
+            }
+            
+            input, textarea {
+                padding: 18px;
+            }
+            
+            .socials a {
+                min-width: 85px;
+                padding: 18px 15px;
+            }
+            
+            .socials a .icon {
+                font-size: 26px;
+            }
+            
+            .chat-btn .icon {
+                display: none; /* مخفی کردن آیکون در موبایل کوچک */
+            }
+            
+            .chat-btn span {
+                font-size: 11px;
+            }
+            
+            #visitor-counter {
                 font-size: 16px;
-            }
-
-            .chat-btn {
-                padding: 15px 22px;
-                font-size: 15px;
-                min-height: 60px;
-            }
-
-            #backToTop {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
+                padding: 18px 30px;
             }
         }
     </style>
 </head>
+<body>
+    <!-- لوگو -->
+    <img src="images/IMG_20260204_102126_012.jpg" class="logo" alt="SignSculpt Studio Logo" loading="lazy">
+    
+    <!-- سوئیچ زبان -->
+    <div class="lang-switch">
+        <button class="active" data-lang="fa">فارسی</button>
+        <button data-lang="en">English</button>
+    </div>
+    
+    <!-- چت ویجت‌ها -->
+    <div class="chat-widgets">
+        <a href="https://wa.me/989148127104" target="_blank" class="chat-btn">
+            <span class="icon">💬</span>
+            <span>واتساپ</span>
+        </a>
+        <a href="https://web.rubika.ir/#/im?p=@signsclupt" target="_blank" class="chat-btn rubika">
+            <span class="icon">🟣</span>
+            <span>روبیکا</span>
+        </a>
+    </div>
+    
+    <!-- دکمه بازگشت به بالا -->
+    <button id="backToTop" title="بازگشت به بالا">↑</button>
+    
+    <!-- محتوای اصلی -->
+    <div class="container">
+        <!-- هدر حرفه‌ای -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 id="main-headline">SignSculpt Studio | برترین استودیو طراحی نما در ایران</h1>
+                <p class="tagline">ترکیبی بی‌نظیر از <strong>خلاقیت، دقت و کیفیت</strong> در هر پروژه</p>
+                
+                <div class="hero-features">
+                    <div class="feature">
+                        <span class="feature-icon">🎯</span>
+                        <span class="feature-text">مشاوره رایگان</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">⚡</span>
+                        <span class="feature-text">اجرای سریع</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🏆</span>
+                        <span class="feature-text">تضمین کیفیت</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">📞</span>
+                        <span class="feature-text">پشتیبانی 24/7</span>
+                    </div>
+                </div>
+                
+                <p class="cta">از <strong>طراحی مفهومی</strong> تا <strong>اجرای نهایی</strong> | همراه شما در هر مرحله</p>
+            </div>
+        </section>
+        
+        <!-- نمونه‌کارها -->
+        <div class="work-section">
+            <h2 class="section-title">نمونه‌کارهای ما</h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-category="all">همه کارها</button>
+                <button class="tab-btn" data-category="composite">کامپوزیت</button>
+                <button class="tab-btn" data-category="thermo">ترمو وود</button>
+                <button class="tab-btn" data-category="chlnm">چنلیوم</button>
+                <button class="tab-btn" data-category="parametric">پارامتریک</button>
+                <button class="tab-btn" data-category="element">المان</button>
+                <button class="tab-btn" data-category="origami">اوریگامی</button>
+                <button class="tab-btn" data-category="verona">ورونای</button>
+            </div>
+            
+            <div class="grid">
+                <div class="grid-item" data-category="composite">
+                    <img src="images/Com.jpg" alt="نمونه کار کامپوزیت - SignSculpt Studio" loading="lazy">
+                    <span>کامپوزیت</span>
+                </div>
+                <div class="grid-item" data-category="thermo">
+                    <img src="images/Te.jpg" alt="نمونه کار ترمو وود - SignSculpt Studio" loading="lazy">
+                    <span>ترمو وود</span>
+                </div>
+                <div class="grid-item" data-category="chlnm">
+                    <img src="images/Ch.jpg" alt="نمونه کار چنلیوم - SignSculpt Studio" loading="lazy">
+                    <span>چنلیوم</span>
+                </div>
+                <div class="grid-item" data-category="parametric">
+                    <img src="images/Pa.jpg" alt="نمونه کار پارامتریک - SignSculpt Studio" loading="lazy">
+                    <span>پارامتریک</span>
+                </div>
+                <div class="grid-item" data-category="element">
+                    <img src="images/El.jpg" alt="نمونه کار المان - SignSculpt Studio" loading="lazy">
+                    <span>المان</span>
+                </div>
+                <div class="grid-item" data-category="origami">
+                    <img src="images/Or.jpg" alt="نمونه کار اوریگامی - SignSculpt Studio" loading="lazy">
+                    <span>اوریگامی</span>
+                </div>
+                <div class="grid-item" data-category="verona">
+                    <img src="images/Vo.jpg" alt="نمونه کار ورونای - SignSculpt Studio" loading="lazy">
+                    <span>ورونای</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- نشانه‌های اعتماد -->
+        <div class="trust-signals">
+            <h2 class="section-title">چرا SignSculpt Studio؟</h2>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <span class="icon">✅</span>
+                    <h4>۵+ سال تجربه</h4>
+                    <p>تجربه غنی در طراحی و اجرای پروژه‌های مختلف با بیش از ۱۰۰ پروژه موفق</p>
+                </div>
+                <div class="trust-item">
+                    <span class="icon">📊</span>
+                    <h4>کیفیت تضمینی</h4>
+                    <p>استفاده از بهترین مواد اولیه و تکنولوژی روز دنیا با گارانتی کیفیت</p>
+                </div>
+                <div class="trust-item">
+                    <span class="icon">🏆</span>
+                    <h4>تیم حرفه‌ای</h4>
+                    <p>متخصصان مجرب در زمینه طراحی، مهندسی و اجرای پروژه‌های نما و تابلو</p>
+                </div>
+                <div class="trust-item">
+                    <span class="icon">🕒</span>
+                    <h4>پشتیبانی دائمی</h4>
+                    <p>همراهی و پشتیبانی حتی پس از اتمام پروژه برای رضایت کامل شما</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- مقالات تخصصی -->
+        <div class="articles-section">
+            <h2 class="section-title">مقالات تخصصی</h2>
+            
+            <!-- مقاله کامپوزیت -->
+            <div class="article" id="article-composite">
+                <h3>کامپوزیت: نوآوری در طراحی نما و تابلوهای تبلیغاتی</h3>
+                <div class="article-content">
+                    <p>کامپوزیت‌ها از ترکیب دو یا چند ماده با ویژگی‌های مکمل ساخته می‌شوند تا عملکردی برتر از اجزای جداگانه ارائه دهند. در صنعت طراحی نما و تابلو، کامپوزیت‌های آلومینیومی به دلیل سبکی، استحکام و انعطاف‌پذیری فوق‌العاده، به انتخابی ایده‌آل تبدیل شده‌اند.</p>
+                    
+                    <div class="article-highlight">
+                        <strong>✅ مزایای کلیدی کامپوزیت:</strong>
+                        <ul class="article-list">
+                            <li><strong>وزن سبک:</strong> کاهش بار مرده سازه تا ۴۰٪</li>
+                            <li><strong>مقاومت بالا:</strong> در برابر خوردگی، UV و شرایط جوی</li>
+                            <li><strong>تنوع بی‌نظیر:</strong> طیف رنگی نامحدود با فینیش‌های متنوع</li>
+                            <li><strong>انعطاف‌پذیری:</strong> قابلیت شکل‌دهی و اجرای منحنی‌های پیچیده</li>
+                            <li><strong>اقتصادی:</strong> نصب سریع و هزینه نگهداری ناچیز</li>
+                            <li><strong>طول عمر:</strong> ۱۵-۲۵ سال با گارانتی کیفیت</li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>🔥 کاربردهای ویژه:</strong> کامپوزیت در نماهای مدرن ساختمان‌های اداری و تجاری، تابلوهای تبلیغاتی سه‌بعدی، دکوراسیون داخلی و المان‌های شهری کاربرد دارد. کامپوزیت‌های نسل جدید با پوشش نانو، خاصیت خودتمیزشوندگی داشته و در برابر آلودگی شهری مقاوم‌تر هستند.</p>
+                </div>
+            </div>
+            
+            <!-- مقاله ترمو وود -->
+            <div class="article" id="article-thermowood">
+                <h3>ترمو وود: زیبایی طبیعی با دوام فوق‌العاده</h3>
+                <div class="article-content">
+                    <p>ترمو وود فرآیندی انقلابی در صنعت چوب است که با حرارت‌دهی کنترل‌شده (۱۸۰-۲۱۵°C) در محیط خلأ، دوام چوب را ۱۰ برابر افزایش می‌دهد. این فرآیند رطوبت چوب را به زیر ۶٪ کاهش داده و آن را در برابر پوسیدگی، حشرات و تغییرات آب‌وهوا مقاوم می‌کند.</p>
+                    
+                    <div class="article-highlight">
+                        <strong>✨ ویژگی‌های منحصربه‌فرد ترمو وود:</strong>
+                        <ul class="article-list">
+                            <li><strong>طبیعی و سالم:</strong> بدون مواد شیمیایی مضر و دوستدار محیط زیست</li>
+                            <li><strong>مقاومت بالا:</strong> در برابر رطوبت، کپک، قارچ و موریانه</li>
+                            <li><strong>پایداری ابعادی:</strong> عدم تاب برداشتن و تغییر شکل</li>
+                            <li><strong>رنگ‌پذیری عالی:</strong> با رنگ‌های مخصوص چوب و روغن‌های طبیعی</li>
+                            <li><strong>عایق طبیعی:</strong> حرارتی و صوتی با کارایی بالا</li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>🏆 درجه‌بندی:</strong> ترمو وود در دو کلاس تولید می‌شود: Thermo-S برای محیط‌های بسیار مرطوب و Thermo-D برای محیط‌های معمولی. <strong>🎯 پروژه‌های ایده‌آل:</strong> نماهای چوبی ویلاها و رستوران‌ها، کفپوش تراس و استخر، آلاچیق، پرگولا و مبلمان شهری، سقف‌های کاذب و دیوارپوش‌های لوکس.</p>
+                    
+                    <p><strong>📊 مقایسه:</strong> ترمو وود در مقابل چوب معمولی ۸ برابر در برابر رطوبت و ۵ برابر در برابر حشرات مقاوم‌تر است.</p>
+                </div>
+            </div>
+            
+            <!-- مقاله چنلیوم -->
+            <div class="article" id="article-chenlium">
+                <h3>چنلیوم: انقلاب در تابلوهای تبلیغاتی شهری</h3>
+                <div class="article-content">
+                    <p>چنلیوم (آکریلیک کست) متریالی پیشرفته است که با ترکیب پلیمرهای خالص تولید می‌شود. سطح شیشه‌ای، شفافیت ۹۲٪ (مشابه شیشه) و مقاومت فوق‌العاده، آن را به برترین انتخاب تابلوهای مدرن تبدیل کرده است.</p>
+                    
+                    <div class="article-highlight">
+                        <strong>⚡ مزایای رقابتی چنلیوم:</strong>
+                        <ul class="article-list">
+                            <li><strong>شفافیت بی‌نظیر:</strong> نورگذری عالی برای نورپردازی</li>
+                            <li><strong>وزن سبک:</strong> یک‌سوم شیشه هم‌اندازه</li>
+                            <li><strong>مقاومت ضربه‌ای:</strong> ۱۰ برابر شیشه معمولی</li>
+                            <li><strong>پایداری رنگ:</strong> عدم زردشدگی در طول زمان</li>
+                            <li><strong>دقت بالا:</strong> قابل برش لیزر با دقت ۰.۱ میلی‌متر</li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>🌈 قابلیت‌های ویژه:</strong> چاپ سابلیمیشن با وضوح ۱۴۴۰ dpi، حکاکی لیزری سه‌بعدی، روکش‌های ضدخش و آنتی‌یووی، تولید در ضخامت‌های ۳ تا ۵۰ میلی‌متر.</p>
+                    
+                    <p><strong>🏢 کاربردهای تجاری:</strong> تابلوهای فروشگاهی و برندینگ، ویترین‌های موزه و گالری، پارتیشن‌های اداری دکوراتیو، المان‌های نورپردازی شهری.</p>
+                    
+                    <p><strong>💎 نکته اقتصادی:</strong> چنلیوم با عمر مفید ۱۵+ سال و هزینه نگهداری صفر، سرمایه‌گذاری بلندمدت مقرون‌به‌صرفه‌ای است.</p>
+                </div>
+            </div>
+            
+            <!-- مقاله پارامتریک -->
+            <div class="article" id="article-parametric">
+                <h3>طراحی پارامتریک: هنر دیجیتال در معماری مدرن</h3>
+                <div class="article-content">
+                    <p>طراحی پارامتریک روشی پیشرفته است که با تعریف پارامترها و الگوریتم‌های ریاضی، فرم‌های پیچیده و بهینه‌شده ایجاد می‌کند. این متدولوژی تحولی در ساخت نماهای غیرمتعارف ایجاد کرده است.</p>
+                    
+                    <div class="article-highlight">
+                        <strong>🧠 هسته طراحی پارامتریک:</strong>
+                        <ol class="article-list">
+                            <li>تعریف پارامترهای ورودی (محدودیت‌ها، اهداف)</li>
+                            <li>پیاده‌سازی الگوریتم تولید فرم</li>
+                            <li>بهینه‌سازی ساختاری و عملکردی</li>
+                            <li>خروجی نهایی اجرایی و مستندات فنی</li>
+                        </ol>
+                    </div>
+                    
+                    <p><strong>🛠️ نرم‌افزارهای تخصصی:</strong> Rhinoceros 3D + Grasshopper، Autodesk Dynamo، CATIA Generative Design، Param-O (توسعه داخلی).</p>
+                    
+                    <p><strong>🎨 قابلیت‌های خارق‌العاده:</strong> تولید هزاران طرح در دقیقه، شبیه‌سازی رفتار سازه در شرایط واقعی، بهینه‌سازی مصرف مواد (کاهش تا ۴۰٪)، یکپارچه‌سازی با BIM.</p>
+                    
+                    <p><strong>🏛️ پروژه‌های شاخص:</strong> نماهای مورب و مشبک ساختمان‌های بلندمرتبه، سقف‌های پارامتریک سالن‌های همایش، المان‌های شهری ریاضی‌محور، دکوراسیون داخلی الگوریتمی.</p>
+                    
+                    <p><strong>📈 آمار جالب:</strong> طراحی پارامتریک زمان طراحی را ۶۰٪ کاهش و بهره‌وری مواد را ۳۵٪ افزایش می‌دهد.</p>
+                </div>
+            </div>
+            
+            <!-- مقاله المان -->
+            <div class="article" id="article-element">
+                <h3>المان‌های شهری: هویت‌بخشی به فضاهای عمومی</h3>
+                <div class="article-content">
+                    <p>المان‌های شهری قطعات طراحی‌شده‌ای هستند که علاوه بر کاربرد، هویت و خاطره جمعی ایجاد می‌کنند. این عناصر پلی بین معماری، هنر و جامعه هستند.</p>
+                    
+                    <div class="article-highlight">
+                        <strong>🗺️ دسته‌بندی المان‌های شهری:</strong>
+                        <ul class="article-list">
+                            <li><strong>عملکردی:</strong> نیمکت، آبخوری، روشنایی، سطل زباله</li>
+                            <li><strong>هنری:</strong> مجسمه، دیوارنگاره، اینستالیشن</li>
+                            <li><strong>اطلاع‌رسانی:</strong> تابلوی راهنما، نقشه شهری</li>
+                            <li><strong>تعاملی:</strong> وسایل بازی، فضای اجتماع، المان‌های دیجیتال</li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>🏗️ فرآیند طراحی المان:</strong> مطالعه زمینه (Context Study)، طراحی مفهومی (Concept Design)، مهندسی سازه و مواد، ساخت نمونه و تست میدانی، نصب و مانیتورینگ.</p>
+                    
+                    <p><strong>🌿 رویکردهای نوین:</strong> طراحی مشارکتی با جامعه محلی، استفاده از مواد بازیافتی و پایدار، یکپارچه‌سازی با نورپردازی هوشمند، قابلیت تعامل دیجیتال (AR/QR).</p>
+                    
+                    <p><strong>📍 پروژه‌های موفق:</strong> المان‌های ورودی شهرک‌های صنعتی، میادین اصلی شهر با هویت بصری، فضای داخلی دفاتر شرکت‌های 
