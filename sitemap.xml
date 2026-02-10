@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- صفحه اصلی سایت -->
+  <url>
+    <loc>https://signsculpt.ir/</loc>
+    <priority>1.00</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
   <url>
     <loc>https://www.signsculpt.ir/</loc>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
   </url>
+
+  <!-- صفحه خدمات -->
+  <url>
+    <loc>https://signsculpt.ir/services</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- نمونه‌کارها -->
+  <url>
+    <loc>https://signsculpt.ir/portfolio</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- مقالات -->
+  <url>
+    <loc>https://signsculpt.ir/blog</loc>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- تماس با ما -->
+  <url>
+    <loc>https://signsculpt.ir/contact</loc>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
 </urlset>
